@@ -48,3 +48,5 @@ Thumbs.db
 *.mov
 *.wmv
 
+# fichier temp de word
+~$mpte Rendu.docx
