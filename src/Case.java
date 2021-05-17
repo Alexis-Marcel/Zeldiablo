@@ -1,0 +1,7 @@
+/**
+ * Case
+ */
+public class Case {
+
+    
+}
