@@ -1,5 +1,5 @@
 /**
- * Joueur
+ * Aventurier
  */
 public class Aventurier {
 
