@@ -32,6 +32,16 @@ public class Aventurier {
     }
 
     /**
+     * methode permettant de donner une nouvelle position a l'aventurier
+     * @param nx nouvelle position x
+     * @param ny nouvelle position y
+     */
+    public void nouvellePosition(int nx, int ny) {
+        this.x = nx;
+        this.y = ny;
+    }
+
+    /**
      * getter de l'attribut x
      * @return retourne la position x
      */
