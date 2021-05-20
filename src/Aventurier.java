@@ -3,5 +3,47 @@
  */
 public class Aventurier {
 
+    /**
+     * position x de l'aventurier
+     */
+    private int x;
 
+    /**
+     * position y de l'aventurier
+     */
+    private int y;
+
+    /**
+     * constructeur vide de la classe Aventurier, il est initialise a la position 0,0
+     */
+    public Aventurier(){
+        this.x = 0;
+        this.y = 0;
+    }
+
+    /**
+     * constructeur avec parametre de la classe Aventurier
+     * @param x position x initial de l'aventurier
+     * @param y position y initial de l'aventurier
+     */
+    public Aventurier(int x, int y) {
+        this.x = x;
+        this.y = y;
+    }
+
+    /**
+     * getter de l'attribut x
+     * @return retourne la position x
+     */
+    public int getX() {
+        return this.x;
+    }
+
+    /**
+     * getter de l'attribut y
+     * @return retourne la position y
+     */
+    public int getY() {
+        return this.y;
+    }
 }
