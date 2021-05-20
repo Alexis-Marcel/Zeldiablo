@@ -9,17 +9,29 @@
 -fonctionnalité 2 : Colision du personnage avec les murs(cases pleines) 
 -          descriptif texte : labyrinthe composé de cases qui seront vide ou pleine(représenteront les murs)
 -          critères de validation :
--          critère 1 [...]
--          critère 2 [...]
+-          critère 1 : le personnage s'arrete avant la case pleine il ne peut pas etre dessu
+
 
 -fonctionnalité 3 : Système de labyrinthe
 -          descriptif texte : labyrinthe composé de cases qui seront vide ou pleine(représenteront les murs)
 -          critères de validation :
--          critère 1 [...]
--          critère 2 [...]
+-          critère 1 :un case vide peut etre la position du hero
+-          critère 2 : une case pleine est un mur donc l'aventurier ou le hero ne peut pas etre dessu
+
+-fonctionnalité 3 : Géneration de monstre 
+-          descriptif texte :  
+-          critères de validation :
+-          critère 1 : le monstre doit se retrouver dans l'arene
+-          critère 2 : il doit pas etre dans un mur
+-          critère 3 : il doit se deplacer de trois case
 
 
-
+-fonctionnalité 3 : Géneration de monstre 
+-          descriptif texte :  
+-          critères de validation :
+-          critère 1 : le monstre doit se retrouver dans l'arene
+-          critère 2 : il doit pas etre dans un mur
+-          critère 3 : il doit se deplacer de trois case
 
 
 Decrire fonctionnalité >> Diagrame de classe et/ou Diagrame de séquence >> écrire le code >> écrire classe(s) test
