@@ -1,0 +1,4 @@
+* Fonctionnalités version 1
+
+- fonctionnalité 1 : Labyrinthe
+- mettre en place un systeme de Labyrinthe
