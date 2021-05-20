@@ -14,11 +14,17 @@ public class Aventurier {
     private int y;
 
     /**
+     *nom du personnage
+     */
+     private String nom;
+
+    /**
      * constructeur vide de la classe Aventurier, il est initialise a la position 0,0
      */
-    public Aventurier(){
+    public Aventurier(String pNom){
         this.x = 0;
         this.y = 0;
+        this.nom = pNom;
     }
 
     /**
