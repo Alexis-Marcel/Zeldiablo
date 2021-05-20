@@ -8,10 +8,9 @@ public class Case {
      */
     private String type;
 
-    public static string VIDE = "vide";
-    public static string PLEIN = "plein";
-    public static string DEPART = "depart";
-    public static string ARRIVE = "arrive";
+    public static String VIDE = "vide";
+    public static String PLEIN = "plein";
+    public static String DEPART = "depart";
 
     /**
      * position x de la case
