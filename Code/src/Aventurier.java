@@ -14,9 +14,24 @@ public class Aventurier {
     private int y;
 
     /**
+<<<<<<< HEAD
      * nom de l'aventurier
      */
     private String nom;
+=======
+     *nom du personnage
+     */
+     private String nom;
+
+    /**
+     * constructeur vide de la classe Aventurier, il est initialise a la position 0,0
+     */
+    public Aventurier(String pNom){
+        this.x = 0;
+        this.y = 0;
+        this.nom = pNom;
+    }
+>>>>>>> c3ce29e9d11d712740cb7e9e03610a090bf82eb2
 
     /**
      * constructeur avec parametre de la classe Aventurier
