@@ -1,4 +1,45 @@
-<diagram program="umletino" version="14.4.0-SNAPSHOT"><zoom_level>10</zoom_level><help_text>&lt;diagram program="umletino" version="14.4.0-SNAPSHOT"&gt;&lt;zoom_level&gt;10&lt;/zoom_level&gt;&lt;element&gt;&lt;id&gt;Relation&lt;/id&gt;&lt;coordinates&gt;&lt;x&gt;480&lt;/x&gt;&lt;y&gt;270&lt;/y&gt;&lt;w&gt;30&lt;/w&gt;&lt;h&gt;90&lt;/h&gt;&lt;/coordinates&gt;&lt;panel_attributes&gt;lt=&amp;lt;&amp;lt;&amp;lt;-&lt;/panel_attributes&gt;&lt;additional_attributes&gt;10;10;10;70&lt;/additional_attributes&gt;&lt;/element&gt;&lt;/diagram&gt;&lt;diagram program="umletino" version="14.4.0-SNAPSHOT"&gt;&lt;zoom_level&gt;10&lt;/zoom_level&gt;&lt;element&gt;&lt;id&gt;Relation&lt;/id&gt;&lt;coordinates&gt;&lt;x&gt;240&lt;/x&gt;&lt;y&gt;280&lt;/y&gt;&lt;w&gt;190&lt;/w&gt;&lt;h&gt;30&lt;/h&gt;&lt;/coordinates&gt;&lt;panel_attributes&gt;lt=&amp;lt;&amp;lt;&amp;lt;-&lt;/panel_attributes&gt;&lt;additional_attributes&gt;10;10;170;10&lt;/additional_attributes&gt;&lt;/element&gt;&lt;/diagram&gt;&lt;diagram program="umletino" version="14.4.0-SNAPSHOT"&gt;&lt;zoom_level&gt;10&lt;/zoom_level&gt;&lt;element&gt;&lt;id&gt;UMLClass&lt;/id&gt;&lt;coordinates&gt;&lt;x&gt;80&lt;/x&gt;&lt;y&gt;310&lt;/y&gt;&lt;w&gt;210&lt;/w&gt;&lt;h&gt;190&lt;/h&gt;&lt;/coordinates&gt;&lt;panel_attributes&gt;Case
+<diagram program="umletino" version="14.4.0-SNAPSHOT"><zoom_level>10</zoom_level><help_text>&lt;diagram program="umletino" version="14.4.0-SNAPSHOT"&gt;&lt;zoom_level&gt;10&lt;/zoom_level&gt;&lt;element&gt;&lt;id&gt;UMLClass&lt;/id&gt;&lt;coordinates&gt;&lt;x&gt;450&lt;/x&gt;&lt;y&gt;509&lt;/y&gt;&lt;w&gt;210&lt;/w&gt;&lt;h&gt;190&lt;/h&gt;&lt;/coordinates&gt;&lt;panel_attributes&gt;CaseDepart
+--
+- x : int
+- y : int
+--
++ Case(String,int,int)
++ getType() : String
++ getX() : int
++ getY() : int
+&lt;/panel_attributes&gt;&lt;additional_attributes&gt;&lt;/additional_attributes&gt;&lt;/element&gt;&lt;/diagram&gt;&lt;diagram program="umletino" version="14.4.0-SNAPSHOT"&gt;&lt;zoom_level&gt;10&lt;/zoom_level&gt;&lt;element&gt;&lt;id&gt;UMLClass&lt;/id&gt;&lt;coordinates&gt;&lt;x&gt;250&lt;/x&gt;&lt;y&gt;520&lt;/y&gt;&lt;w&gt;210&lt;/w&gt;&lt;h&gt;190&lt;/h&gt;&lt;/coordinates&gt;&lt;panel_attributes&gt;CaseVide
+--
+- x : int
+- y : int
+--
++ Case(String,int,int)
++ getType() : String
++ getX() : int
++ getY() : int
+&lt;/panel_attributes&gt;&lt;additional_attributes&gt;&lt;/additional_attributes&gt;&lt;/element&gt;&lt;/diagram&gt;&lt;diagram program="umletino" version="14.4.0-SNAPSHOT"&gt;&lt;zoom_level&gt;10&lt;/zoom_level&gt;&lt;element&gt;&lt;id&gt;UMLClass&lt;/id&gt;&lt;coordinates&gt;&lt;x&gt;250&lt;/x&gt;&lt;y&gt;520&lt;/y&gt;&lt;w&gt;210&lt;/w&gt;&lt;h&gt;190&lt;/h&gt;&lt;/coordinates&gt;&lt;panel_attributes&gt;CaseVide
+--
+- x : int
+- y : int
+--
++ Case(String,int,int)
++ getType() : String
++ getX() : int
++ getY() : int
+&lt;/panel_attributes&gt;&lt;additional_attributes&gt;&lt;/additional_attributes&gt;&lt;/element&gt;&lt;/diagram&gt;&lt;diagram program="umletino" version="14.4.0-SNAPSHOT"&gt;&lt;zoom_level&gt;10&lt;/zoom_level&gt;&lt;element&gt;&lt;id&gt;UMLClass&lt;/id&gt;&lt;coordinates&gt;&lt;x&gt;180&lt;/x&gt;&lt;y&gt;250&lt;/y&gt;&lt;w&gt;210&lt;/w&gt;&lt;h&gt;190&lt;/h&gt;&lt;/coordinates&gt;&lt;panel_attributes&gt;&amp;lt;&amp;lt;Interface&amp;gt;&amp;gt;
+Case
+--
+- type : String
+- VIDE: String
+- PLEIN: String
+- DEPART : String
+- x : int
+- y : int
+--
++ Case(String,int,int)
++ getType() : String
++ getX() : int
++ getY() : int
+&lt;/panel_attributes&gt;&lt;additional_attributes&gt;&lt;/additional_attributes&gt;&lt;/element&gt;&lt;/diagram&gt;&lt;diagram program="umletino" version="14.4.0-SNAPSHOT"&gt;&lt;zoom_level&gt;10&lt;/zoom_level&gt;&lt;element&gt;&lt;id&gt;Relation&lt;/id&gt;&lt;coordinates&gt;&lt;x&gt;480&lt;/x&gt;&lt;y&gt;270&lt;/y&gt;&lt;w&gt;30&lt;/w&gt;&lt;h&gt;90&lt;/h&gt;&lt;/coordinates&gt;&lt;panel_attributes&gt;lt=&amp;lt;&amp;lt;&amp;lt;-&lt;/panel_attributes&gt;&lt;additional_attributes&gt;10;10;10;70&lt;/additional_attributes&gt;&lt;/element&gt;&lt;/diagram&gt;&lt;diagram program="umletino" version="14.4.0-SNAPSHOT"&gt;&lt;zoom_level&gt;10&lt;/zoom_level&gt;&lt;element&gt;&lt;id&gt;Relation&lt;/id&gt;&lt;coordinates&gt;&lt;x&gt;240&lt;/x&gt;&lt;y&gt;280&lt;/y&gt;&lt;w&gt;190&lt;/w&gt;&lt;h&gt;30&lt;/h&gt;&lt;/coordinates&gt;&lt;panel_attributes&gt;lt=&amp;lt;&amp;lt;&amp;lt;-&lt;/panel_attributes&gt;&lt;additional_attributes&gt;10;10;170;10&lt;/additional_attributes&gt;&lt;/element&gt;&lt;/diagram&gt;&lt;diagram program="umletino" version="14.4.0-SNAPSHOT"&gt;&lt;zoom_level&gt;10&lt;/zoom_level&gt;&lt;element&gt;&lt;id&gt;UMLClass&lt;/id&gt;&lt;coordinates&gt;&lt;x&gt;80&lt;/x&gt;&lt;y&gt;310&lt;/y&gt;&lt;w&gt;210&lt;/w&gt;&lt;h&gt;190&lt;/h&gt;&lt;/coordinates&gt;&lt;panel_attributes&gt;Case
 --
 
 --
@@ -10,20 +51,83 @@
 --
 
 --
-&lt;/panel_attributes&gt;&lt;additional_attributes&gt;&lt;/additional_attributes&gt;&lt;/element&gt;&lt;/diagram&gt;Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>80</x><y>90</y><w>210</w><h>190</h></coordinates><panel_attributes>Labyrinthe
+&lt;/panel_attributes&gt;&lt;additional_attributes&gt;&lt;/additional_attributes&gt;&lt;/element&gt;&lt;/diagram&gt;Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>400</x><y>0</y><w>210</w><h>190</h></coordinates><panel_attributes>Labyrinthe
 --
+- listeCases : Case[][] 
+--
++ Labyrinthe()
++ Labyrinthe(int,int)
++ coordonneeCaseDepart(): int[ ]
++ getListeCase() : Case[ ][ ]
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>710</x><y>0</y><w>210</w><h>190</h></coordinates><panel_attributes>Jeu
+--
+- aventurier : Aventurier
+- labyrinthe : Labyrinthe 
+--
++Jeu()
++ deplacerAvtenturier(int,int)
++ verificationDeplacement(int,int) : boolean
++ gagner() : boolean
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>250</x><y>270</y><w>210</w><h>190</h></coordinates><panel_attributes>&lt;&lt;Interface&gt;&gt;
+Case
+--
+- x : int
+- y : int
+--
++ Case(String,int,int)
++ getX() : int
++ getY() : int
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>710</x><y>250</y><w>210</w><h>190</h></coordinates><panel_attributes>Aventurier
+--
+- x : int
+- y : int
+- nom : String
+--
++ Aventurier(String)
++ Aventurier(int,int,String)
++ deplacer(int,int) : void
++ getX() : int
++ getY() : int
++ getNom() : String
 
---
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>390</x><y>90</y><w>210</w><h>190</h></coordinates><panel_attributes>Jeu
---
 
---
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>80</x><y>340</y><w>210</w><h>190</h></coordinates><panel_attributes>Case
---
 
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>460</x><y>550</y><w>210</w><h>190</h></coordinates><panel_attributes>CaseVide
 --
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>390</x><y>340</y><w>210</w><h>190</h></coordinates><panel_attributes>Aventurier
+- x : int
+- y : int
 --
-
++ Case(String,int,int)
++ getType() : String
++ getX() : int
++ getY() : int
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>40</x><y>579</y><w>210</w><h>190</h></coordinates><panel_attributes>CasePleine
 --
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>480</x><y>270</y><w>30</w><h>90</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;70</additional_attributes></element><element><id>Relation</id><coordinates><x>280</x><y>180</y><w>130</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;110;10</additional_attributes></element><element><id>Relation</id><coordinates><x>170</x><y>270</y><w>30</w><h>90</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;70;10;10</additional_attributes></element></diagram>
+- x : int
+- y : int
+--
++ Case(String,int,int)
++ getType() : String
++ getX() : int
++ getY() : int
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>620</x><y>779</y><w>210</w><h>190</h></coordinates><panel_attributes>CaseDepart
+--
+- x : int
+- y : int
+--
++ Case(String,int,int)
++ getType() : String
++ getX() : int
++ getY() : int
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>290</x><y>779</y><w>210</w><h>190</h></coordinates><panel_attributes>CaseFin
+--
+- x : int
+- y : int
+--
++ Case(String,int,int)
++ getType() : String
++ getX() : int
++ getY() : int
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>450</x><y>380</y><w>150</w><h>190</h></coordinates><panel_attributes>lt=&lt;.
+&lt;&lt;instanceOf&gt;&gt;</panel_attributes><additional_attributes>10;10;120;170</additional_attributes></element><element><id>Relation</id><coordinates><x>130</x><y>361</y><w>150</w><h>240</h></coordinates><panel_attributes>lt=&lt;.
+&lt;&lt;instanceOf&gt;&gt;</panel_attributes><additional_attributes>120;10;10;220</additional_attributes></element><element><id>Relation</id><coordinates><x>660</x><y>640</y><w>80</w><h>160</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;60;140</additional_attributes></element><element><id>Relation</id><coordinates><x>380</x><y>641</y><w>100</w><h>160</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>80;10;10;140</additional_attributes></element><element><id>Relation</id><coordinates><x>800</x><y>180</y><w>30</w><h>90</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;70;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>340</x><y>180</y><w>180</w><h>110</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;90;160;10</additional_attributes></element><element><id>Relation</id><coordinates><x>600</x><y>90</y><w>130</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;110;10</additional_attributes></element></diagram>

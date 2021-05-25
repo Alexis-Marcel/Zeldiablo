@@ -44,9 +44,9 @@ public class Aventurier {
      * @param nx nouvelle position x
      * @param ny nouvelle position y
      */
-    public void nouvellePosition(int nx, int ny) {
-        this.x = nx;
-        this.y = ny;
+    public void deplacer(int nx, int ny) {
+        this.x += nx;
+        this.y += ny;
     }
 
     /**
