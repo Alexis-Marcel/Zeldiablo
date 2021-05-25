@@ -14,19 +14,33 @@ public class Aventurier {
     private int y;
 
     /**
+<<<<<<< HEAD
+     * nom de l'aventurier
+     */
+    private String nom;
+=======
+     *nom du personnage
+     */
+     private String nom;
+
+    /**
      * constructeur vide de la classe Aventurier, il est initialise a la position 0,0
      */
-    public Aventurier(){
+    public Aventurier(String pNom){
         this.x = 0;
         this.y = 0;
+        this.nom = pNom;
     }
+>>>>>>> c3ce29e9d11d712740cb7e9e03610a090bf82eb2
 
     /**
      * constructeur avec parametre de la classe Aventurier
      * @param x position x initial de l'aventurier
      * @param y position y initial de l'aventurier
+     * @param nom nom de l'aventurier
      */
-    public Aventurier(int x, int y) {
+    public Aventurier(int x, int y, String nom) {
+        this.nom = nom;
         this.x = x;
         this.y = y;
     }
@@ -55,5 +69,13 @@ public class Aventurier {
      */
     public int getY() {
         return this.y;
+    }
+
+    /**
+     * getter du nom de l'aventurier
+     * @return retourne le nom de l'aventurier
+     */
+    public String getNom() {
+        return nom;
     }
 }

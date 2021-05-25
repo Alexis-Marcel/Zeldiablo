@@ -1,7 +1,0 @@
-/**
- * Labyrinthe
- */
-public class Labyrinthe {
-
-    
-}
