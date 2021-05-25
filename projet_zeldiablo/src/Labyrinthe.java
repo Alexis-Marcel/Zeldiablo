@@ -45,7 +45,6 @@ public class Labyrinthe {
         return res;
     }
 
-    public recupTaillex
 
 
     
