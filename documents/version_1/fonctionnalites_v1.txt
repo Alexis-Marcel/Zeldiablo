@@ -3,8 +3,10 @@
 -fonctionnalité 1 : Système de labyrinthe
 -          descriptif texte : labyrinthe composé de cases qui seront vide ou pleine(représenteront les murs)
 -          critères de validation :
--          critère 1 [...]
--          critère 2 [...]
+		• Le labyrinthe par défaut est constitué d'une arène de taille 10*10 ;
+		• Le personnage est placé au centre de l'arène ;
+		• Les monstres (s'il y en a) sont placés sur des cases vides (à adapter).
+
 
 
 
