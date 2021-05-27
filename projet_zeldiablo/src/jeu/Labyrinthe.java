@@ -1,22 +1,24 @@
-import Case.*;
+package jeu;
+
+import jeu.cases.*;
 /**
  * Class créan un Labyrinthe dans lequel un aventurier devra trouver la sorti
  */
 public class Labyrinthe {
 
-    //ATTRIBUTS
+    //ATTRIBUTSA
     private Case[][] listeCases;
 
 
     /** 
      * CONSTRUCTEUR
      */ 
-    //Constructeur Vide
+    //Constructeur Vide   
     public Labyrinthe(){
         this.listeCases = new Case[10][10];
         for(int i = 0; i<10; i++){
             for(int j = 0; i<10; i++){
-                listeCases[i][j] = new Case("vide",i,j);
+                listeCases[i][j] = new CaseVide(i,j);
             }
         }
     }
@@ -30,7 +32,7 @@ public class Labyrinthe {
         this.listeCases = new Case[tailleX][tailleY];
         for(int i = 0; i<tailleX; i++){
             for(int j = 0; i<tailleY; i++){
-                listeCases[i][j] = new Case("vide",i,j);
+                listeCases[i][j] = new CaseVide(i,j);
             }
         }
     }
@@ -49,8 +51,5 @@ public class Labyrinthe {
     public Case[][] getListeCase(){
         return this.listeCases;
     }
-
-
-
-    
+ 
 }
