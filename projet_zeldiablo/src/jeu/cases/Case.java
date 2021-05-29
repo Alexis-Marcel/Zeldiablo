@@ -2,7 +2,7 @@ package jeu.cases;
 /**
  * Case
  */
-public class Case {
+public abstract class Case {
 
 
     /**

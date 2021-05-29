@@ -1,6 +1,7 @@
 package jeu;
 
 import jeu.cases.*;
+
 /**
  * Class créan un Labyrinthe dans lequel un aventurier devra trouver la sorti
  */
@@ -11,30 +12,12 @@ public class Labyrinthe {
 
 
     /** 
-     * CONSTRUCTEUR
+     * CONSTRUCTEUR,
      */ 
-    //Constructeur Vide   
-    public Labyrinthe(){
-        this.listeCases = new Case[10][10];
-        for(int i = 0; i<10; i++){
-            for(int j = 0; i<10; i++){
-                listeCases[i][j] = new CaseVide(i,j);
-            }
-        }
-    }
 
-    /**
-     * Constructeur
-     * @param tailleX : taille en abscisse du Labyrinthe
-     * @param tailleY : taille en ordonnee du Labyrinthe
-     */
-    public Labyrinthe(int tailleX, int tailleY){
-        this.listeCases = new Case[tailleX][tailleY];
-        for(int i = 0; i<tailleX; i++){
-            for(int j = 0; i<tailleY; i++){
-                listeCases[i][j] = new CaseVide(i,j);
-            }
-        }
+    public Labyrinthe(){
+
+        this.listeCases = new Case[10][10];
     }
 
     /**
@@ -51,5 +34,11 @@ public class Labyrinthe {
     public Case[][] getListeCase(){
         return this.listeCases;
     }
+
+    public void setListeCase(int x,int y, Case c){
+        
+        this.listeCases[x][y] = c;
+    }
+
  
 }

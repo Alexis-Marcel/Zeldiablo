@@ -2,14 +2,24 @@ package jeu;
 
 public class Monstre implements Personnage{
      /**
-     * position x de l'aventurier
+     * position x du monstre
      */
     private int x;
 
     /**
-     * position y de l'aventurier
+     * position y du monstre
     */
     private int y;
+
+    /**
+     * points de vie du monstre
+    */
+    private int pv;
+
+    /**
+     * degat du monstre
+    */
+    private int degat;
 
 
     /**
@@ -18,6 +28,8 @@ public class Monstre implements Personnage{
     public Monstre(){
         this.x = 0;
         this.y = 0;
+        this.pv = 1;
+        this.degat =1;
     }
 
     /**
@@ -26,9 +38,11 @@ public class Monstre implements Personnage{
      * @param y position y initial de l'aventurier
      * @param nom nom de l'aventurier
      */
-    public Monstre(int x, int y) {
+    public Monstre(int x, int y, int pPv, int pDegat) {
         this.x = x;
         this.y = y;
+        this.pv = pPv;
+        this.degat = pDegat;
     }
 
     /**
@@ -55,6 +69,22 @@ public class Monstre implements Personnage{
      */
     public int getY() {
         return this.y;
+    }
+
+    /**
+     * getter des points de vie du monstre
+     * @return retourne les points de vie du monstre
+     */
+    public int getPv() {
+        return this.pv;
+    }
+
+    /**
+     * getter des points de vie du monstre
+     * @return retourne les points de vie du monstre
+     */
+    public int getDegat() {
+        return this.degat;
     }
 
 }

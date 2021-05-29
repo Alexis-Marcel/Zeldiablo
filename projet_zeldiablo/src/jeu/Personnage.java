@@ -7,4 +7,8 @@ public interface Personnage {
     public int getX();
     
     public int getY();
+
+    public int getPv();
+
+    public int getDegat();
 }

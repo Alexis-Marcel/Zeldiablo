@@ -19,6 +19,16 @@ public class Aventurier implements Personnage {
      */
     private String nom;
 
+     /**
+     * points de vie de l'aventurier
+     */
+    private int pv;
+
+     /**
+     * degat de l'aventurier
+     */
+    private int degat;
+
     /**
      * constructeur vide de la classe Aventurier, il est initialise a la position 0,0
      */
@@ -26,6 +36,8 @@ public class Aventurier implements Personnage {
         this.x = 0;
         this.y = 0;
         this.nom = pNom;
+        this.pv = 10;
+        this.degat = 1;
     }
 
     /**
@@ -34,10 +46,12 @@ public class Aventurier implements Personnage {
      * @param y position y initial de l'aventurier
      * @param nom nom de l'aventurier
      */
-    public Aventurier(int x, int y, String nom) {
+    public Aventurier(int pX, int pY, String nom, int pPv, int pDegat) {
         this.nom = nom;
-        this.x = x;
-        this.y = y;
+        this.x = pX;
+        this.y = pY;
+        this.pv = pPv;
+        this.degat = pDegat;
     }
 
     /**
@@ -72,5 +86,21 @@ public class Aventurier implements Personnage {
      */
     public String getNom() {
         return nom;
+    }
+
+    /**
+     * getter des points de vie de l'aventurier
+     * @return retourne les points de vie de l'aventurier
+     */
+    public int getPv() {
+        return this.pv;
+    }
+
+    /**
+     * getter des points de vie de l'aventurier
+     * @return retourne les points de vie de l'aventurier
+     */
+    public int getDegat() {
+        return this.degat;
     }
 }
