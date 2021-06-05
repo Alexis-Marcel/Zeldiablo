@@ -1,35 +1,43 @@
-package jeu;
+package jeu.personnage;
+/**
+ * Aventurier
+ */
+public class Aventurier{
 
-public class Monstre implements Personnage{
-     /**
-     * position x du monstre
+    /**
+     * position x de l'aventurier
      */
     private int x;
 
     /**
-     * position y du monstre
+     * position y de l'aventurier
     */
     private int y;
 
     /**
-     * points de vie du monstre
-    */
+     * nom de l'aventurier
+     */
+    private String nom;
+
+     /**
+     * points de vie de l'aventurier
+     */
     private int pv;
 
-    /**
-     * degat du monstre
-    */
+     /**
+     * degat de l'aventurier
+     */
     private int degat;
-
 
     /**
      * constructeur vide de la classe Aventurier, il est initialise a la position 0,0
      */
-    public Monstre(){
+    public Aventurier(String pNom){
         this.x = 0;
         this.y = 0;
-        this.pv = 1;
-        this.degat =1;
+        this.nom = pNom;
+        this.pv = 10;
+        this.degat = 1;
     }
 
     /**
@@ -38,9 +46,10 @@ public class Monstre implements Personnage{
      * @param y position y initial de l'aventurier
      * @param nom nom de l'aventurier
      */
-    public Monstre(int x, int y, int pPv, int pDegat) {
-        this.x = x;
-        this.y = y;
+    public Aventurier(int pX, int pY, String nom, int pPv, int pDegat) {
+        this.nom = nom;
+        this.x = pX;
+        this.y = pY;
         this.pv = pPv;
         this.degat = pDegat;
     }
@@ -72,19 +81,36 @@ public class Monstre implements Personnage{
     }
 
     /**
-     * getter des points de vie du monstre
-     * @return retourne les points de vie du monstre
+     * getter du nom de l'aventurier
+     * @return retourne le nom de l'aventurier
+     */
+    public String getNom() {
+        return nom;
+    }
+
+    /**
+     * getter des points de vie de l'aventurier
+     * @return retourne les points de vie de l'aventurier
      */
     public int getPv() {
         return this.pv;
     }
 
     /**
-     * getter des points de vie du monstre
-     * @return retourne les points de vie du monstre
+     * getter des points de vie de l'aventurier
+     * @return retourne les points de vie de l'aventurier
      */
     public int getDegat() {
         return this.degat;
     }
 
+    public void attaquer(Monstre m){
+        this.pv-=m.prendreDegats(this.degat);
+    }
+
+
+    public String toString() {
+
+        return "Bonjour, je suis l'aventurier " + this.nom + ". Je suis perdu dans un labyrithe est ce que vous pouvez m'aider à sortir ?";
+    }
 }
