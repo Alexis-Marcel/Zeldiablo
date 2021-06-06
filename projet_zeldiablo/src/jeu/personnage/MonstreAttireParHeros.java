@@ -33,6 +33,7 @@ public class MonstreAttireParHeros implements Monstre{
         
         this.x = x;
         this.y = y;
+        this.pv = 50;
     }
 
     /**
@@ -71,15 +72,20 @@ public class MonstreAttireParHeros implements Monstre{
 
     /**
      * getter des points de vie du monstre
-     * @return retourne les points de vie du monstre
+     * @return retourne les degats du monstre
      */
     public int getDegat() {
         return this.degat;
     }
 
     public int prendreDegats(int deg){
-        this.pv-=deg;
-        return this.degat;
+        if (pv >= deg){
+            this.pv-=deg
+        } else{
+            this.pv = 0;
+        }
+        
+        return this.pv;
     }
 
     public String toString() {

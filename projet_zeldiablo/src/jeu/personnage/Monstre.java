@@ -32,7 +32,7 @@ public interface Monstre{
 
     /**
      * getter des points de vie du monstre
-     * @return retourne les points de vie du monstre
+     * @return retourne les degats du monstre
      */
     public int getDegat();
 

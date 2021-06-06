@@ -34,16 +34,10 @@ public class MonstreImmobile implements Monstre{
         
         this.x = x;
         this.y = y;
+        this.pv = 50;
     }
 
-    /**
-     * methode permettant de donner une nouvelle position a l'aventurier
-     * @param nx nouvelle position x
-     */
-    public void deplacer(Aventurier a){
-
-
-    }
+   
 
     /**
      * getter de l'attribut x
@@ -72,15 +66,20 @@ public class MonstreImmobile implements Monstre{
 
     
     /**
-     * getter des points de vie du monstre
-     * @return retourne les points de vie du monstre
+     * getter des degats du monstre
+     * @return retourne les degats du monstre
      */
     public int getDegat() {
         return this.degat;
     }
 
     public int prendreDegats(int deg){
-        this.pv-=deg;
+        if ( pv >= deg){
+            this.pv-=deg;
+        } else {
+            this.pv = 0;
+        }
+       
         return this.degat;
     }
 
