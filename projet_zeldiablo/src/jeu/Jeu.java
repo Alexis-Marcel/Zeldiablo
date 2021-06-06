@@ -2,6 +2,8 @@ package jeu;
 import java.util.ArrayList;
 import java.io.*;
 
+import jeu.personnage.*;
+
 /**
  * Main
  */
@@ -13,37 +15,59 @@ public class Jeu {
     /**
      * Aventurier
      */
-    ArrayList<Personnage> listePersonnage;
+    private ArrayList<Monstre> listeMonstre;
+
+    private Aventurier aventurier;
 
     /**
      * Aventurier
      */
-    Labyrinthe labyrinthe;
+    private Labyrinthe labyrinthe;
 
     /** 
      * CONSTRUCTEUR
      */ 
     public Jeu(String src){
 
+        
+
         this.labyrinthe = new Labyrinthe();
-        this.listePersonnage = new ArrayList<Personnage>();
+        this.listeMonstre = new ArrayList<Monstre>();
 
         chargerJeu(src);
         
     }
 
-    public void deplacerPersonnage(int n,int deplacementX, int deplacementY){
+    public void deplacerToutMonstre(){
 
-        Personnage p = this.listePersonnage.get(n);
+        
+        for(int i=0; i<this.listeMonstre.size();i++){
 
-        if(verificationDeplacement(p,deplacementX,deplacementY)){
-            p.deplacer(deplacementX, deplacementY);
+            Monstre m = this.listeMonstre.get(i);
+
+        }
+
+    }
+        
+
+    public void deplacerUnMonstreAleatoire(){
+
+    }
+
+
+    public void deplacerAvtenturier(int deplacementX, int deplacementY){
+
+        if(verificationMur(this.aventurier.getX()+deplacementX,this.aventurier.getY()+deplacementY) && 
+           verificationPersonnage(this.aventurier.getX()+deplacementX,this.aventurier.getY()+deplacementY)){
+            this.aventurier.deplacer(deplacementX, deplacementY);
+
+            this.aventurier.deplacer(deplacementX,deplacementY);
         }
     }
 
-    public boolean verificationDeplacement(Personnage p,int nx, int ny){ 
+    public boolean verificationMur(int x,int y){ 
 
-        Case c = this.labyrinthe.getListeCase()[p.getX()+nx][p.getY()+ny];
+        Case c = this.labyrinthe.getListeCase()[x][y];
 
         if(c instanceof CasePleine ){
                 return false;
@@ -53,11 +77,46 @@ public class Jeu {
         return true;
     }
 
+    public boolean verificationPersonnage(int x,int y){ 
+
+        for(int i=0; i<this.listeMonstre.size();i++){
+
+            Monstre m = this.listeMonstre.get(i);
+
+            if(m.getX() == x && m.getY() == y){
+                return false;
+            }
+
+        }
+
+        if(this.aventurier.getX() == x && this.aventurier.getY() == y){
+            return false;
+        }
+
+        return true;
+       
+    }
+
+    public ArrayList<Monstre> getListeMontre(){
+
+        return this.listeMonstre;
+    }
+
+    public Aventurier getAventurier(){
+
+        return this.aventurier;
+    }
+
+    public Labyrinthe getLabyrinthe(){
+
+        return this.labyrinthe;
+    }
+
      /**
     * méthode permettant de charger une sauvegarde du jeu fait préalablement
     * @param src source à laquelle charger le fichier de sauvegarde
 	*/
-    public void chargerJeu(String src) {
+    private void chargerJeu(String src) {
 
         try {
 
@@ -77,13 +136,13 @@ public class Jeu {
                     }	
                     else if (tempLigne.charAt(i) == 'D'){
                         this.labyrinthe.setListeCase(ord, i, new CaseDepart(i, ord));
-                        this.listePersonnage.add(new Aventurier(i,ord,"Bebert",10,1));
+                        this.aventurier = new Aventurier(i,ord,"Bebert",10,1);
                     }
                     else if (tempLigne.charAt(i) == 'S'){
                         this.labyrinthe.setListeCase(ord, i,new CaseFin(i, ord));
                     }
                     else if (tempLigne.charAt(i) == 'M'){
-                        this.listePersonnage.add(new Monstre());
+                        this.listeMonstre.add( new MonstreImmobile(i,ord));
                     }
 
                 }

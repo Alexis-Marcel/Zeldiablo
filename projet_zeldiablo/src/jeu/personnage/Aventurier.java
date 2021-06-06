@@ -1,8 +1,8 @@
-package jeu;
+package jeu.personnage;
 /**
  * Aventurier
  */
-public class Aventurier implements Personnage {
+public class Aventurier{
 
     /**
      * position x de l'aventurier
@@ -102,5 +102,15 @@ public class Aventurier implements Personnage {
      */
     public int getDegat() {
         return this.degat;
+    }
+
+    public void attaquer(Monstre m){
+        this.pv-=m.prendreDegats(this.degat);
+    }
+
+
+    public String toString() {
+
+        return "Bonjour, je suis l'aventurier " + this.nom + ". Je suis perdu dans un labyrithe est ce que vous pouvez m'aider à sortir ?";
     }
 }

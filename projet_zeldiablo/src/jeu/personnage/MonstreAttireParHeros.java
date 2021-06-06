@@ -1,6 +1,6 @@
-package jeu;
+package jeu.personnage;
 
-public class Monstre implements Personnage{
+public class MonstreAttireParHeros implements Monstre{
      /**
      * position x du monstre
      */
@@ -22,15 +22,6 @@ public class Monstre implements Personnage{
     private int degat;
 
 
-    /**
-     * constructeur vide de la classe Aventurier, il est initialise a la position 0,0
-     */
-    public Monstre(){
-        this.x = 0;
-        this.y = 0;
-        this.pv = 1;
-        this.degat =1;
-    }
 
     /**
      * constructeur avec parametre de la classe Aventurier
@@ -38,21 +29,21 @@ public class Monstre implements Personnage{
      * @param y position y initial de l'aventurier
      * @param nom nom de l'aventurier
      */
-    public Monstre(int x, int y, int pPv, int pDegat) {
+    public MonstreAttireParHeros(int x, int y) {
+        
         this.x = x;
         this.y = y;
-        this.pv = pPv;
-        this.degat = pDegat;
+        this.pv = 50;
     }
 
     /**
      * methode permettant de donner une nouvelle position a l'aventurier
      * @param nx nouvelle position x
-     * @param ny nouvelle position y
      */
-    public void deplacer(int nx, int ny) {
-        this.x += nx;
-        this.y += ny;
+    public void deplacer(Aventurier a){
+
+        
+
     }
 
     /**
@@ -81,10 +72,25 @@ public class Monstre implements Personnage{
 
     /**
      * getter des points de vie du monstre
-     * @return retourne les points de vie du monstre
+     * @return retourne les degats du monstre
      */
     public int getDegat() {
         return this.degat;
+    }
+
+    public int prendreDegats(int deg){
+        if (pv >= deg){
+            this.pv-=deg
+        } else{
+            this.pv = 0;
+        }
+        
+        return this.pv;
+    }
+
+    public String toString() {
+
+        return "Bonjour, je suis un monstre immobile. Je suis la pour empecher l'aventurier d'arriver à la fin du labyrithe  car il s'y trouve un trésor.";
     }
 
 }

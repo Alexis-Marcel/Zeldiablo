@@ -7,7 +7,6 @@ public class CaseVide extends Case{
 
     /**
      * constructeur de la classe Case
-     * @param type type de la case
      * @param x position x de la case
      * @param y position y de la case
      */
