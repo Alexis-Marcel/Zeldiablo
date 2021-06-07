@@ -7,32 +7,32 @@ import jeu.cases.*;
  */
 public class Labyrinthe {
 
-    //ATTRIBUTSA
+    // ATTRIBUTSA
     private Case[][] listeCases;
 
-
-    /** 
+    /**
      * CONSTRUCTEUR,
-     */ 
+     */
 
-    public Labyrinthe(){
+    public Labyrinthe() {
 
         this.listeCases = new Case[10][10];
     }
 
     /**
      * methode permettant de récupérer les coordonnées du millieu du labyrinthe
-     * @return un tableau de int ayant la coordonnée en abscisse du millieu en index 0 et la coordonnée des ordonnées en index 1
+     * 
+     * @return un tableau de int ayant la coordonnée en abscisse du millieu en index
+     *         0 et la coordonnée des ordonnées en index 1
      */
 
-    public Case[][] getListeCase(){
+    public Case[][] getListeCase() {
         return this.listeCases;
     }
 
-    public void setListeCase(int x,int y, Case c){
-        
+    public void setListeCase(int x, int y, Case c) {
+
         this.listeCases[x][y] = c;
     }
 
- 
 }

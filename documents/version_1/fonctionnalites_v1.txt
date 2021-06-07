@@ -1,11 +1,27 @@
 *Fonctionnalités version 1
 
 -fonctionnalité 1 :  Création d'un labyrinthe par défaut
--          descriptif texte : Au lancement du jeu, un labyrinthe par défaut est créé et le personnage est placé au centre de celui-ci.
+-          descriptif texte : Au lancement du Niveau, un labyrinthe par défaut est créé et le personnage est placé au centre de celui-ci.
 -          critères de validation :
-		• Le labyrinthe par défaut est constitué d'une arène de taille 10*10 ;
-		• Le personnage est placé au centre de l'arène ;
-		• Les monstres (s'il y en a) sont placés sur des cases vides (à adapter).
+		• Le labyrinthe par défaut utilise une liste de case qui constituront l'arene;
+		• creation d'une class case qui aura des coordonnée qui est abstract et extendre differente class qui auront des fonctionnalité 
+		
+
+-fonctionnamité 2 : Création de Chemin
+-          descriptif texte : on crée une case vide qui extends de Case. Elles seront les cases ou hero et monstre peuvent se déplacer
+-          critères de validation : 
+		• prends en attribut une coordonnée X et Y;
+		• le constructeur prend en parametre un int x et int y qui seront les coordonnée de la case;
+
+-fonctionnamité 2 : Création de Mur
+-          descriptif texte : on crée une case pleine qui extends de Case. Elles seront les murs du labyrinthe
+-          critères de validation : 
+		• prends en attribut une coordonnée X et Y;
+		• le constructeur prend en parametre un int x et int y qui seront les coordonnée de la case;
+
+
+  
+		
 
 
 
