@@ -1,4 +1,6 @@
 package jeu.personnage;
+
+
 /**
  * Aventurier
  */

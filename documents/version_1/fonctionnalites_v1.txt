@@ -1,7 +1,7 @@
 *Fonctionnalités version 1
 
 -fonctionnalité 1 :  Création d'un labyrinthe par défaut
--          descriptif texte : Au lancement du jeu, un labyrinthe par défaut est créé et le personnage est placé au centre de celui-ci.
+-          descriptif texte : Au lancement du Niveau, un labyrinthe par défaut est créé et le personnage est placé au centre de celui-ci.
 -          critères de validation :
 		• Le labyrinthe par défaut utilise une liste de case qui constituront l'arene;
 		• Le constructeur par defaut prendra un tableau a deux dimenssion de 10, 10;

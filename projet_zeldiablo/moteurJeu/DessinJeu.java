@@ -1,4 +1,4 @@
-package moteurJeu.moteur;
+package moteurJeu;
 
 import java.awt.image.BufferedImage;
 
@@ -7,7 +7,7 @@ import java.awt.image.BufferedImage;
  * 
  * @author vthomas
  */
-public interface DessinAbstract {
+public interface DessinJeu {
 
 	/**
 	 * methode dessiner a completer. Elle construit une image correspondant au

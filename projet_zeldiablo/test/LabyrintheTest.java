@@ -6,7 +6,7 @@ import org.junit.Test;
 import jeu.Labyrinthe;
 import jeu.cases.*;
 
-import jeu.Jeu;
+import jeu.Niveau;
 
 public class LabyrintheTest{
 
@@ -20,7 +20,7 @@ public class LabyrintheTest{
 
     @Test
     public void testSetListeCase(){
-        Jeu j = new Jeu("../niveaux/niveau_1.txt");
+        Niveau j = new Niveau("../niveaux/niveau1.txt");
         Labyrinthe l = j.getLabyrinthe();
         l.setListeCase(0, 0, new CaseVide(0, 0));
         boolean res = l.getListeCase()[0][0] instanceof CaseVide;
