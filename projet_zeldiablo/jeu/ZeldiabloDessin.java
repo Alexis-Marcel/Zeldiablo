@@ -6,6 +6,10 @@ import java.awt.image.BufferedImage;
 import jeu.cases.*;
 import moteurJeu.*;
 
+import java.io.*;
+
+import javax.imageio.*;
+
 public class ZeldiabloDessin implements DessinJeu {
 
     private ZeldiabloJeu zJeu;
@@ -26,6 +30,8 @@ public class ZeldiabloDessin implements DessinJeu {
         int longueurCase = image.getWidth() / 10;
         int largeurCase = image.getHeight() / 10;
 
+
+        /*
         g.setColor(Color.BLACK);
 
         Case[][] lC = zJeu.getLabyrinthe().getListeCase();
@@ -44,6 +50,17 @@ public class ZeldiabloDessin implements DessinJeu {
             }
             
         }
+        */
+        
+
+        try {
+            BufferedImage fond = ImageIO.read(new File(zJeu.getUrlFond()));
+            g.drawImage(fond, 0, 0, 800, 800, null);
+        } catch (Exception e) {
+            //TODO: handle exception
+        }
+        
+      
 
         g.setColor(Color.RED);
         int coordX = (int) Math.floor(zJeu.getAventurier().getX() * longueurCase);

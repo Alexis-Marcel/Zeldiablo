@@ -27,15 +27,19 @@ public class ZeldiabloJeu implements Jeu {
      */
     private Labyrinthe labyrinthe;
 
+    private String urlFond;
+
     /**
      * CONSTRUCTEUR
      */
-    public ZeldiabloJeu(String src) {
+    public ZeldiabloJeu(String src,String url ) {
 
         this.labyrinthe = new Labyrinthe();
         this.listeMonstre = new ArrayList<Monstre>();
 
         chargerNiveau(src);
+
+        this.urlFond = url;
 
     }
 
@@ -201,6 +205,11 @@ public class ZeldiabloJeu implements Jeu {
     public Labyrinthe getLabyrinthe() {
 
         return this.labyrinthe;
+    }
+
+    public String getUrlFond(){
+
+        return this.urlFond;
     }
 
     /**
