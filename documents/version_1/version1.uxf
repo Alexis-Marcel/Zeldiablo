@@ -8,19 +8,19 @@ Case
 - x : int 
 - y : int
 --
-+ case() 
++ Case() 
 + getX() : int
 + getY() : int </panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>200</x><y>620</y><w>210</w><h>190</h></coordinates><panel_attributes>CaseVide
 --
 
 --
-+ caseVide() 
++ CaseVide() 
 + getX() : int
 + getY() : int </panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>530</x><y>630</y><w>210</w><h>190</h></coordinates><panel_attributes>CasePleine
 --
 
 --
-+ casePleine() 
++ CasePleine() 
 + getX() : int
 + getY() : int </panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>480</x><y>178</y><w>30</w><h>130</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;110;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>200</x><y>108</y><w>210</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>190;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>510</x><y>470</y><w>140</w><h>180</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;120;160</additional_attributes></element><element><id>Relation</id><coordinates><x>340</x><y>468</y><w>110</w><h>170</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>90;10;10;150</additional_attributes></element><element><id>UMLClass</id><coordinates><x>390</x><y>0</y><w>210</w><h>190</h></coordinates><panel_attributes>Labyrinthe 
 --

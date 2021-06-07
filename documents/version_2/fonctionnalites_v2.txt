@@ -1,7 +1,18 @@
 *Fonctionnalités version 2
 
--fonctionnalité 2 :  Collision avec les Murs
--          descriptif texte : Lorsque le joueur demande à déplacer le personnage en direction d'un mur, le personnage reste bloqué et ne se déplace pas.
+-fonctionnalité 1 :  Création d'une class abstract Personnage 
+-          descriptif texte : personnage va avoir les fonctionnalité en commun des différent type de personnage qui vont extendre  
 -          critères de validation :
-		• La collision fonctionne dans les 4 directions ;
-		• Si la case est vide, le personnage avance.
+		• attribut X et Y qui sont les coordonée du personnage;
+		• attribut Pv qui va être la vie du personnage;
+		• attribut degat qui va être les degat du personnage;
+		• un constructeur qui va prendre en parametre les coordonnées la vie et les degats du personnage;
+		• 4 getter qui vont renvoyer chacun les coordonnées, la vie et les dégats;
+
+-fonctionnalité 2 :  Création d'un  Aventurier
+-          descriptif texte : Aventurier est un type de personnage   
+-          critères de validation :
+      
+
+
+
