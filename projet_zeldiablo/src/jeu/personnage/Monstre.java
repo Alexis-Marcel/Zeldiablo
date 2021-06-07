@@ -1,41 +1,20 @@
 package jeu.personnage;
 
-public interface Monstre{
+public abstract class Monstre extends Personnage{
 
 
-    /**
-     * methode permettant de donner une nouvelle position a l'aventurier
-     * @param nx nouvelle position x
-     * @param ny nouvelle position y
-     */
-    public void deplacer(Aventurier a);
+    public Monstre(int pX, int pY, int pPv, int pDegat) {
 
-    /**
-     * getter de l'attribut x
-     * @return retourne la position x
-     */
-    public int getX();
+        super(pX, pY,pPv,pDegat);
+           
+    }
+    
+    public abstract void seDeplacer(Aventurier a);
 
-    /**
-     * getter de l'attribut y
-     * @return retourne la position y
-     */
-    public int getY();
+    public String toString() {
 
+        return "Bonjour, je suis un monstre";
+    }
 
-
-    /**
-     * getter des points de vie du monstre
-     * @return retourne les points de vie du monstre
-     */
-    public int getPv();
-
-    /**
-     * getter des points de vie du monstre
-     * @return retourne les degats du monstre
-     */
-    public int getDegat();
-
-    public int prendreDegats(int deg);
-
+    
 }

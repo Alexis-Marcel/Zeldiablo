@@ -13,14 +13,17 @@ import jeu.cases.*;
 public class Jeu {
 
     /**
-     * Aventurier
+     * liseMonstre
      */
     private ArrayList<Monstre> listeMonstre;
 
+    /**
+     * Aventurier controlable par le joueur
+     */
     private Aventurier aventurier;
 
     /**
-     * Aventurier
+     * labyrinthe sur lequel se deplaceront et attaqueront les monstres et l'acventurier
      */
     private Labyrinthe labyrinthe;
 
@@ -45,23 +48,27 @@ public class Jeu {
 
             Monstre m = this.listeMonstre.get(i);
 
+
+
         }
 
     }
-        
+         
 
     public void deplacerUnMonstreAleatoire(){
 
     }
+
+    
 
 
     public void deplacerAvtenturier(int deplacementX, int deplacementY){
 
         if(verificationMur(this.aventurier.getX()+deplacementX,this.aventurier.getY()+deplacementY) && 
            verificationPersonnage(this.aventurier.getX()+deplacementX,this.aventurier.getY()+deplacementY)){
-            this.aventurier.deplacer(deplacementX, deplacementY);
+            this.aventurier.seDeplacer(deplacementX, deplacementY);
 
-            this.aventurier.deplacer(deplacementX,deplacementY);
+            this.aventurier.seDeplacer(deplacementX,deplacementY);
         }
     }
 
@@ -142,7 +149,7 @@ public class Jeu {
                         this.labyrinthe.setListeCase(ord, i,new CaseFin(i, ord));
                     }
                     else if (tempLigne.charAt(i) == 'M'){
-                        this.listeMonstre.add( new MonstreImmobile(i,ord));
+                        this.listeMonstre.add( new MonstreImmobile(i,ord,10,1));
                     }
 
                 }
