@@ -24,14 +24,6 @@ public class Aventurier extends Personnage{
         
     }
 
-    public void seDeplacer(int pX, int pY){
-
-       super.x += pX;
-       super.y += pY;
-    }
-
-    
-
      /**
      * getter du nom de l'aventurier
      * @return retourne le nom de l'aventurier

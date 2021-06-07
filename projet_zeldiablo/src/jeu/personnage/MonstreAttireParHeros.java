@@ -16,16 +16,42 @@ public class MonstreAttireParHeros extends Monstre{
     }
 
 
-    public void seDeplacer(Aventurier a){
+    public int[] verifierCoord(Aventurier a){
 
-        
+        int[] l = {0,0};
+
+        if(distance(a.getX(),this.x)>distance(a.getY(), this.y)){
+            if(a.getX() > this.x){
+                l[0]++;
+            }else{
+                l[0]--;
+            }
+        }else{
+            if(a.getY() > this.y){
+                l[1]++;
+            }else{
+                l[1]--;
+            }
+
+        }  
+
+        return l;
+    }
+
+
+    private int distance(int a, int b){
+        if(a>b){
+            return a-b;
+        }else{
+            return b-a;
+        }
     }
 
 
 
     public String toString() {
 
-        return super.toString() + "attire par le heros";
+        return super.toString() + " attire par le heros";
     }
 
 }

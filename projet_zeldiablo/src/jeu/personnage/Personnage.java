@@ -49,6 +49,12 @@ public abstract class Personnage {
        
     }
 
+    public void seDeplacer(int pX, int pY){
+
+        this.x += pX;
+        this.y += pY;
+     }
+
     /**
      * getter de l'attribut x
      * @return retourne la position x

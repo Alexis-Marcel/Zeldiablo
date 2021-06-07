@@ -9,7 +9,7 @@ public abstract class Monstre extends Personnage{
            
     }
     
-    public abstract void seDeplacer(Aventurier a);
+    public abstract int[] verifierCoord(Aventurier a);
 
     public String toString() {
 

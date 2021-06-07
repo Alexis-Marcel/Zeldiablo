@@ -48,7 +48,19 @@ public class Jeu {
 
             Monstre m = this.listeMonstre.get(i);
 
+            int[] l = m.verifierCoord(this.aventurier);
 
+            System.out.println(l[0]);
+            System.out.println(l[1]);
+
+
+            if(verificationMur(m.getX()+l[0],m.getY()+l[1]) && 
+           verificationPersonnage(m.getX()+l[0],m.getY()+l[1])){
+            
+            System.out.println("go");
+            m.seDeplacer(l[0],l[1]);
+        }
+            
 
         }
 
@@ -66,9 +78,10 @@ public class Jeu {
 
         if(verificationMur(this.aventurier.getX()+deplacementX,this.aventurier.getY()+deplacementY) && 
            verificationPersonnage(this.aventurier.getX()+deplacementX,this.aventurier.getY()+deplacementY)){
+
             this.aventurier.seDeplacer(deplacementX, deplacementY);
 
-            this.aventurier.seDeplacer(deplacementX,deplacementY);
+            
         }
     }
 
@@ -77,6 +90,7 @@ public class Jeu {
         Case c = this.labyrinthe.getListeCase()[x][y];
 
         if(c instanceof CasePleine ){
+                System.out.println("plein");
                 return false;
         }
 
@@ -135,22 +149,35 @@ public class Jeu {
             while(tempLigne != null) { //tant que la lecture du fichier n'est pas fini
                 for(int i = 0; i<tempLigne.length(); i++) { // pour chaque caractère de la ligne
                     
-                    if(tempLigne.charAt(i) == '#') { 
-                        this.labyrinthe.setListeCase(ord, i, new CasePleine(i, ord));
+                    if(tempLigne.charAt(i) == '#') {
+                        
+                        this.labyrinthe.setListeCase(i,ord, new CasePleine(i, ord));
                     }
                     else if (tempLigne.charAt(i) == ' '){
-                        this.labyrinthe.setListeCase(ord, i,new CaseVide(i, ord));
+                        
+                        this.labyrinthe.setListeCase(i,ord,new CaseVide(i, ord));
                     }	
                     else if (tempLigne.charAt(i) == 'D'){
-                        this.labyrinthe.setListeCase(ord, i, new CaseDepart(i, ord));
+                        
+                        this.labyrinthe.setListeCase(i,ord, new CaseDepart(i, ord));
                         this.aventurier = new Aventurier(i,ord,"Bebert",10,1);
                     }
                     else if (tempLigne.charAt(i) == 'S'){
-                        this.labyrinthe.setListeCase(ord, i,new CaseFin(i, ord));
+                        
+                        this.labyrinthe.setListeCase(i,ord,new CaseFin(i, ord));
                     }
                     else if (tempLigne.charAt(i) == 'M'){
+
+                        this.labyrinthe.setListeCase(i,ord,new CaseVide(i, ord));
                         this.listeMonstre.add( new MonstreImmobile(i,ord,10,1));
                     }
+                    else if (tempLigne.charAt(i) == 'A'){
+                       
+                        this.labyrinthe.setListeCase(i,ord,new CaseVide(i, ord));
+                        this.listeMonstre.add( new MonstreAttireParHeros(i,ord,10,1));
+                    }
+
+                    
 
                 }
                 ord++; // passe à la ligne suivante

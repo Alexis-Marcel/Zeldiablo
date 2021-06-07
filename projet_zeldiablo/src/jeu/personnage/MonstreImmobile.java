@@ -1,4 +1,4 @@
-<package jeu.personnage;
+package jeu.personnage;
 
 public class MonstreImmobile extends Monstre{
      
@@ -16,9 +16,11 @@ public class MonstreImmobile extends Monstre{
     }
 
 
-    public void seDeplacer(Aventurier a){
+    public int[] verifierCoord(Aventurier a){
 
-        
+        int[] l = {0,0};
+
+        return l;
     }
 
 

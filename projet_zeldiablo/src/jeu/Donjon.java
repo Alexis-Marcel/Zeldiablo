@@ -13,7 +13,6 @@ public class Donjon {
 
     public Donjon() {
         this.listeJeu = new ArrayList<Jeu>();
-        this.listeJeu.add(new Jeu(Donjon.chemin + "niveau1.txt"));
         this.listeJeu.add(new Jeu(Donjon.chemin + "niveau2.txt"));
 
     }
