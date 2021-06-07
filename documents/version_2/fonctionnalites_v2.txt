@@ -12,6 +12,47 @@
 -fonctionnalité 2 :  Création d'un  Aventurier
 -          descriptif texte : Aventurier est un type de personnage   
 -          critères de validation :
+		• attribut nom qui va être le nom de l'hero;
+		• constructeur qui prendre en parametre les coordonnées, le nom, la vie et les dégats du personnage;
+		• un getter qui renvoi le nom du personnage;
+
+-fonctionnalité 3 :  Création d'une class Monstre
+-          descriptif texte : Monstre est une class abstract qui est un type de personnage mais va avoir les fonctionnalité en commun 
+								des différent type de personnage qui vont extendre   
+-          critères de validation :
+		• constructeur qui prendre en parametre les coordonnées, la vie et les dégats du monstre;
+
+-fonctionnalité 4 :  Création d'un  MonstreImmobile
+-          descriptif texte : MonstreImmobile est un type de monstre   
+-          critères de validation :
+		• constructeur qui prendre en parametre les coordonnées, la vie et les dégats du monstre;
+
+-fonctionnalité 5 :  Création d'un  MonstreDeplacementAleatoire
+-          descriptif texte : MonstreDeplacementAleatoire est un type de monstre   
+-          critères de validation :
+		• constructeur qui prendre en parametre les coordonnées, la vie et les dégats du monstre;
+
+-fonctionnalité 6 :  Création d'un  MonstreAttireParHeros
+-          descriptif texte : MonstreAttireParHeros est un type de monstre   
+-          critères de validation :
+		• constructeur qui prendre en parametre les coordonnées, la vie et les dégats du monstre;
+
+-fonctionnalité 7 :  Création de CaseDepart
+-          descriptif texte : CaseDepart est la case sur lequel l'Aventurier commence 
+-          critères de validation :
+		• le constructeur prend en parametre un int x et int y qui seront les coordonnée de la case;
+		• deux getter qui retourne chacun les coordonée X et Y de la case;
+
+-fonctionnalité 8 :  Création de CaseFin
+-          descriptif texte : CaseFin est la case sur lequel l'Aventurier doit atteindre pour finir le niveau 
+-          critères de validation :
+		• le constructeur prend en parametre un int x et int y qui seront les coordonnée de la case;
+		• deux getter qui retourne chacun les coordonée X et Y de la case;
+
+
+
+
+
       
 
 

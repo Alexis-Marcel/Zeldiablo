@@ -1,6 +1,8 @@
-<diagram program="umletino" version="14.4.0-SNAPSHOT"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>230</x><y>20</y><w>210</w><h>190</h></coordinates><panel_attributes>Niveau
+<diagram program="umletino" version="14.4.0-SNAPSHOT"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>230</x><y>20</y><w>210</w><h>190</h></coordinates><panel_attributes>ZeldiabloJeu
 --
 - labyrinthe : Labyrinthe
+- aventurier : Aventurier
+-  listeMonstre : ArrayList&lt;Monstre&gt;
 --
 </panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1090</x><y>290</y><w>210</w><h>190</h></coordinates><panel_attributes>&lt;&lt;Abstract&gt;&gt;
 Case
