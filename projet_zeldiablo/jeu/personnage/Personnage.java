@@ -83,6 +83,7 @@ public abstract class Personnage {
         return this.degat;
     }
 
+    
     public boolean etreMort(){
 
         if(this.pv == 0){

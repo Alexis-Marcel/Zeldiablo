@@ -1,16 +1,18 @@
 package jeu;
+
 import java.util.ArrayList;
 import java.util.Random;
 import java.io.*;
 import jeu.personnage.*;
-import moteurJeu.*;
 import jeu.cases.*;
-import jeu.Labyrinthe;
+
+
+import moteurJeu.*;
 
 public class ZeldiabloJeu implements Jeu {
 
     /**
-     * listeMonstre
+     * liste des monstres présent dans le niveau
      */
     private ArrayList<Monstre> listeMonstre;
 
@@ -48,10 +50,19 @@ public class ZeldiabloJeu implements Jeu {
 
     @Override
     public boolean etreFini() {
-        // TODO Auto-generated method stub
+
+        Case c = this.labyrinthe.getListeCase()[this.aventurier.getX()][this.aventurier.getY()];
+
+        if(c instanceof CaseFin){
+            return true;
+        }
+
         return false;
     }
 
+    /**
+     * methode permettant deplacer tout les monstres de la liste selon le methode verifierCoord respectif
+     */
     public void deplacerToutMonstre() {
 
         for (int i = 0; i < this.listeMonstre.size(); i++) {
@@ -69,6 +80,10 @@ public class ZeldiabloJeu implements Jeu {
 
     }
 
+    
+    /**
+     * methode permettant deplacer un monstre aleatoirement
+     */
     public void deplacerUnMonstreAleatoire() {
 
         Random rand = new Random();
@@ -77,14 +92,17 @@ public class ZeldiabloJeu implements Jeu {
 
         int[] l = m.verifierCoord(this.aventurier);
 
-        if (verificationMur(m.getX() + l[0], m.getY() + l[1])
-                && verificationPersonnage(m.getX() + l[0], m.getY() + l[1])) {
+        if (verificationMur(m.getX() + l[0], m.getY() + l[1]) // permet de vérifier que le deplacement ne se fasse pas sur les murs
+                && verificationPersonnage(m.getX() + l[0], m.getY() + l[1])) { // permet de vérifier que le deplacement ne se fasse pas à travers les personnages
 
             m.seDeplacer(l[0], l[1]);
         }
 
     }
 
+    /**
+     * methode permettant deplacer l'aventurier selon la commande
+     */
     public void deplacerAvtenturier(Commande c) {
 
         int deplacementX = 0;
@@ -112,14 +130,22 @@ public class ZeldiabloJeu implements Jeu {
 
         }
 
-        if (verificationMur(this.aventurier.getX() + deplacementX, this.aventurier.getY() + deplacementY)
-            && verificationPersonnage(this.aventurier.getX() + deplacementX,
+        if (verificationMur(this.aventurier.getX() + deplacementX, this.aventurier.getY() + deplacementY) // permet de vérifier que le deplacement ne se fasse pas sur les murs
+            && verificationPersonnage(this.aventurier.getX() + deplacementX, // permet de vérifier que le deplacement ne se fasse pas à travers les personnages
                        this.aventurier.getY() + deplacementY)) {
 
             this.aventurier.seDeplacer(deplacementX, deplacementY);
+
         }
 
     }
+
+    /**
+     * Methode permettant de vérifier que le deplacement ne se fasse pas sur les murs
+     * @param x
+     * @param y
+     * @return un boolean indiquant si le déplacement peut etre réalisé
+     */
 
     public boolean verificationMur(int x, int y) {
 
@@ -134,6 +160,12 @@ public class ZeldiabloJeu implements Jeu {
         return true;
     }
 
+    /**
+     * Methode permettant de vérifier que le deplacement ne se fasse pas à travers les personnages
+     * @param x
+     * @param y
+     * @return un boolean indiquant si le déplacement peut etre réalisé
+     */
     public boolean verificationPersonnage(int x, int y) {
 
         for (int i = 0; i < this.listeMonstre.size(); i++) {
@@ -154,6 +186,8 @@ public class ZeldiabloJeu implements Jeu {
 
     }
 
+    // ---------------- GETTER ------------------  //
+
     public ArrayList<Monstre> getListeMonstre() {
 
         return this.listeMonstre;
@@ -170,9 +204,9 @@ public class ZeldiabloJeu implements Jeu {
     }
 
     /**
-     * méthode permettant de charger une sauvegarde du Niveau fait préalablement
+     * méthode permettant de charger un fichier .txt du Niveau fait préalablement
      * 
-     * @param src source à laquelle charger le fichier de sauvegarde
+     * @param src source à laquelle charger le fichier texte
      */
     private void chargerNiveau(String src) {
 
