@@ -32,7 +32,7 @@ public abstract class Personnage {
 
     public void attaquer(Personnage p){
 
-        this.attaquer(p);
+        p.prendreDegats(this.degat);
     }
 
 
@@ -86,6 +86,15 @@ public abstract class Personnage {
      */
     public int getDegat() {
         return this.degat;
+    }
+
+    public boolean etreMort(){
+
+        if(this.pv == 0){
+            return true;
+        }
+
+        return false;
     }
 
     

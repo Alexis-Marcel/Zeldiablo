@@ -1,5 +1,6 @@
 package jeu;
 import java.util.ArrayList;
+import java.util.Random;
 import java.io.*;
 
 import jeu.personnage.*;
@@ -50,14 +51,10 @@ public class Jeu {
 
             int[] l = m.verifierCoord(this.aventurier);
 
-            System.out.println(l[0]);
-            System.out.println(l[1]);
-
 
             if(verificationMur(m.getX()+l[0],m.getY()+l[1]) && 
            verificationPersonnage(m.getX()+l[0],m.getY()+l[1])){
             
-            System.out.println("go");
             m.seDeplacer(l[0],l[1]);
         }
             
@@ -69,6 +66,19 @@ public class Jeu {
 
     public void deplacerUnMonstreAleatoire(){
 
+        Random rand = new Random();
+
+        Monstre m = this.listeMonstre.get(rand.nextInt(this.listeMonstre.size()));
+
+            int[] l = m.verifierCoord(this.aventurier);
+
+
+            if(verificationMur(m.getX()+l[0],m.getY()+l[1]) && 
+           verificationPersonnage(m.getX()+l[0],m.getY()+l[1])){
+            
+             m.seDeplacer(l[0],l[1]);
+           }
+        
     }
 
     
@@ -118,7 +128,7 @@ public class Jeu {
        
     }
 
-    public ArrayList<Monstre> getListeMontre(){
+    public ArrayList<Monstre> getListeMonstre(){
 
         return this.listeMonstre;
     }

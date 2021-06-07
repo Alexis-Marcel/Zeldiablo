@@ -8,11 +8,12 @@ public class Donjon {
      */
     ArrayList<Jeu> listeJeu;
 
-    private final static String chemin = "projet_zeldiablo/src/niveaux/";
+    private final static String chemin = "projet_zeldiablo/niveaux/";
 
 
     public Donjon() {
         this.listeJeu = new ArrayList<Jeu>();
+        this.listeJeu.add(new Jeu(Donjon.chemin + "niveau1.txt"));
         this.listeJeu.add(new Jeu(Donjon.chemin + "niveau2.txt"));
 
     }
