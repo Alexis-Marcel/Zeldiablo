@@ -30,12 +30,12 @@ public class ZeldiabloJeu implements Jeu {
     /**
      * CONSTRUCTEUR
      */
-    public ZeldiabloJeu() {
+    public ZeldiabloJeu(String src) {
 
         this.labyrinthe = new Labyrinthe();
         this.listeMonstre = new ArrayList<Monstre>();
 
-        chargerNiveau("projet_zeldiablo/niveaux/niveau2.txt");
+        chargerNiveau(src);
 
     }
 

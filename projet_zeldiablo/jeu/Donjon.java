@@ -6,21 +6,21 @@ public class Donjon {
     /**
      * Aventurier
      */
-    ArrayList<Niveau> listeNiveau;
+    ArrayList<ZeldiabloJeu> listeNiveau;
 
-    private final static String chemin = "projet_zeldiablo/niveaux/";
+    private final static String chemin = "niveaux/";
 
 
     public Donjon() {
-        this.listeNiveau = new ArrayList<Niveau>();
-        /*
-        this.listeNiveau.add(new Niveau(Donjon.chemin + "niveau1.txt"));
-        this.listeNiveau.add(new Niveau(Donjon.chemin + "niveau2.txt"));
-        */
+        this.listeNiveau = new ArrayList<ZeldiabloJeu>();
+        
+        this.listeNiveau.add(new ZeldiabloJeu(Donjon.chemin + "niveau1.txt"));
+        this.listeNiveau.add(new ZeldiabloJeu(Donjon.chemin + "niveau2.txt"));
+        
 
     }
 
-    public ArrayList<Niveau> getListeNiveau(){
+    public ArrayList<ZeldiabloJeu> getListeNiveau(){
 
         
         return this.listeNiveau;
