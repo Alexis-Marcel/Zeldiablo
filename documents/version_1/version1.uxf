@@ -1,0 +1,35 @@
+<diagram program="umletino" version="14.4.0-SNAPSHOT"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>0</x><y>10</y><w>210</w><h>190</h></coordinates><panel_attributes>jeu
+--
+
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>380</x><y>290</y><w>210</w><h>190</h></coordinates><panel_attributes>&lt;&lt;Abstract&gt;&gt;
+Case
+--
+- x : int 
+- y : int
+--
++ case() 
++ getX() : int
++ getY() : int </panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>200</x><y>620</y><w>210</w><h>190</h></coordinates><panel_attributes>CaseVide
+--
+- x : int 
+- y : int
+--
++ caseVide() 
++ getX() : int
++ getY() : int </panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>550</x><y>610</y><w>210</w><h>190</h></coordinates><panel_attributes>CasePleine
+--
+- x : int 
+- y : int
+--
++ casePleine() 
++ getX() : int
++ getY() : int </panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>480</x><y>178</y><w>30</w><h>130</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;110;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>200</x><y>108</y><w>210</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>190;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>510</x><y>470</y><w>160</w><h>160</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;140;140</additional_attributes></element><element><id>Relation</id><coordinates><x>340</x><y>468</y><w>110</w><h>170</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>90;10;10;150</additional_attributes></element><element><id>UMLClass</id><coordinates><x>390</x><y>0</y><w>210</w><h>190</h></coordinates><panel_attributes>Labyrinthe 
+--
+- listeCases : Case [ ] [ ] 
+--
++ Labyrinthe() 
++ getListeCase() : Case [ ] [ ]
++ setListeCase( int, int, Case) 
+
+</panel_attributes><additional_attributes></additional_attributes></element></diagram>
