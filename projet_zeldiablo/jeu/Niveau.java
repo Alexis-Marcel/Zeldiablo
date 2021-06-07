@@ -4,6 +4,9 @@ import java.util.Random;
 import java.io.*;
 
 import jeu.personnage.*;
+import moteurJeu.moteur.*;
+import jeu.cases.*;
+import jeu.Labyrinthe;
 
 /**
  * Main
@@ -11,7 +14,7 @@ import jeu.personnage.*;
 
 import jeu.cases.*;
 
-public class Jeu {
+public class Niveau {
 
     /**
      * liseMonstre
@@ -31,14 +34,14 @@ public class Jeu {
     /** 
      * CONSTRUCTEUR
      */ 
-    public Jeu(String src){
+    public Niveau(){
 
         
 
         this.labyrinthe = new Labyrinthe();
         this.listeMonstre = new ArrayList<Monstre>();
 
-        chargerJeu(src);
+        chargerNiveau("projet_zeldiablo/niveaux/niveau1.txt");
         
     }
 
@@ -84,16 +87,34 @@ public class Jeu {
     
 
 
-    public void deplacerAvtenturier(int deplacementX, int deplacementY){
+    public void deplacerAvtenturier(Commande c){
 
+        int deplacementX;
+        int deplacementY; 
+
+        if(c.haut){
+
+        }
+        else if(c.bas){
+
+        }
+        else if(c.gauche){
+
+        }
+        else if(c.droite){
+
+        }
+
+        /*
         if(verificationMur(this.aventurier.getX()+deplacementX,this.aventurier.getY()+deplacementY) && 
            verificationPersonnage(this.aventurier.getX()+deplacementX,this.aventurier.getY()+deplacementY)){
 
             this.aventurier.seDeplacer(deplacementX, deplacementY);
 
-            
+        */
+          
         }
-    }
+    
 
     public boolean verificationMur(int x,int y){ 
 
@@ -144,10 +165,10 @@ public class Jeu {
     }
 
      /**
-    * méthode permettant de charger une sauvegarde du jeu fait préalablement
+    * méthode permettant de charger une sauvegarde du Niveau fait préalablement
     * @param src source à laquelle charger le fichier de sauvegarde
 	*/
-    private void chargerJeu(String src) {
+    private void chargerNiveau(String src) {
 
         try {
 
@@ -202,10 +223,5 @@ public class Jeu {
             };
 
     }
-
-
-
-
-
 
 }
