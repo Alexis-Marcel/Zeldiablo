@@ -59,32 +59,7 @@ public class Jeu {
 
     }
 
-    public int[][] getListeCaseVideDisponible(int x, int y){
-
-        int[][] getListeCaseVideDisponible = new int[4][];
-        int nb =0;
-
-        for(int i=-1; i<2;i+=2){
-
-            if(verificationMur(x+i,y)){
-                getListeCaseVideDisponible[nb][0] = x+i;
-                getListeCaseVideDisponible[nb][1] = y;
-                nb++;
-            }
-        }
-
-        for(int i=-1; i<2;i+=2){
-
-            if(verificationMur(x,y+i)){
-                getListeCaseVideDisponible[nb][0] = x;
-                getListeCaseVideDisponible[nb][1] = y+i;
-                nb++;
-            }
-        }
-
-        return getListeCaseVideDisponible;
-
-    }
+    
 
 
     public void deplacerAvtenturier(int deplacementX, int deplacementY){
