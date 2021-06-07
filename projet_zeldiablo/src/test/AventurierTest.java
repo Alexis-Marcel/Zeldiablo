@@ -3,7 +3,7 @@ package test;
 import static org.junit.Assert.*;
 import org.junit.Test;
 
-import jeu.Aventurier;
+import jeu.personnage.Aventurier;
 
 public class AventurierTest {
 

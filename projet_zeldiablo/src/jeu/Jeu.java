@@ -48,7 +48,7 @@ public class Jeu {
 
             Monstre m = this.listeMonstre.get(i);
 
-            
+
 
         }
 
@@ -59,14 +59,41 @@ public class Jeu {
 
     }
 
+    public int[][] getListeCaseVideDisponible(int x, int y){
+
+        int[][] getListeCaseVideDisponible = new int[4][];
+        int nb =0;
+
+        for(int i=-1; i<2;i+=2){
+
+            if(verificationMur(x+i,y)){
+                getListeCaseVideDisponible[nb][0] = x+i;
+                getListeCaseVideDisponible[nb][1] = y;
+                nb++;
+            }
+        }
+
+        for(int i=-1; i<2;i+=2){
+
+            if(verificationMur(x,y+i)){
+                getListeCaseVideDisponible[nb][0] = x;
+                getListeCaseVideDisponible[nb][1] = y+i;
+                nb++;
+            }
+        }
+
+        return getListeCaseVideDisponible;
+
+    }
+
 
     public void deplacerAvtenturier(int deplacementX, int deplacementY){
 
         if(verificationMur(this.aventurier.getX()+deplacementX,this.aventurier.getY()+deplacementY) && 
            verificationPersonnage(this.aventurier.getX()+deplacementX,this.aventurier.getY()+deplacementY)){
-            this.aventurier.deplacer(deplacementX, deplacementY);
+            this.aventurier.seDeplacer(deplacementX, deplacementY);
 
-            this.aventurier.deplacer(deplacementX,deplacementY);
+            this.aventurier.seDeplacer(deplacementX,deplacementY);
         }
     }
 
@@ -147,7 +174,7 @@ public class Jeu {
                         this.labyrinthe.setListeCase(ord, i,new CaseFin(i, ord));
                     }
                     else if (tempLigne.charAt(i) == 'M'){
-                        this.listeMonstre.add( new MonstreImmobile(i,ord));
+                        this.listeMonstre.add( new MonstreImmobile(i,ord,10,1));
                     }
 
                 }
