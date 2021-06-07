@@ -1,6 +1,30 @@
-*Fonctionnalités version 2
+*Fonctionnalités version 3
 
--fonctionnalité 2 :  Ajout de monstres
--          descriptif texte : Le monstre peut infliger des degats au joueur
+-fonctionnalité 1 :  attaquer 
+-          descriptif texte : Dans avanturier, elle attaque un monstre
 -          critères de validation :
-		• Peut infliger des degats au joueur
+		• elle prend en parametre une ArrayListe<Monstre>  qui est la liste des monstres present sur le labyrinthe;
+		• elle prend en parametre une commande qui permet d'attaquer 
+
+-fonctionnalité 2 :  prendreDegat
+-          descriptif texte : Dans personnage, elle fait subir des dégats au personnage
+-          critères de validation :
+		• elle prend en parametre un entier qui va être les dégats subit;
+		• on enleve au pv les degats place en paramètre;
+
+-fonctionnalité 3 :  seDeplacer
+-          descriptif texte : Dans personnage, elle permet de déplacer un personnage
+-          critères de validation :	
+		• elle prend en parametre un entier px et py;
+		• on ajoute px au coordonnée x du personnage et py au coordonnée y du personnage;
+
+-fonctionnalité 4 :  etreMort
+-          descriptif texte : Dans personnage, elle permet de savooir si un personnage et mort ou pas
+-          critères de validation :	
+		• elle regarde si les pv sont a zero si ou elle retourne true si non false;
+		
+-fonctionnalité 5 :  verifierCoord
+-          descriptif texte : Dans Monstre et type de monstre, elle permet verifier les cordonnée du deplacement pour savoir si il y a un mur ou pas
+-          critères de validation :	
+		• abstract dans monstre qui va être defini dans les types de monstre;
+		• elle prend un parametre un avanturier qui sera utile pour certain deplacement de monstre(MonstreAttireParHeros);
