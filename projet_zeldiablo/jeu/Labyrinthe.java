@@ -1,6 +1,6 @@
-package Niveau;
+package jeu;
 
-import Niveau.cases.*;
+import jeu.cases.*;
 
 /**
  * Class créan un Labyrinthe dans lequel un aventurier devra trouver la sorti

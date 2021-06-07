@@ -6,13 +6,7 @@ import java.io.*;
 import jeu.personnage.*;
 import moteurJeu.moteur.*;
 import jeu.cases.*;
-import jeu.Labyrinthe;
 
-/**
- * Main
- */
-
-import jeu.cases.*;
 
 public class Niveau {
 
