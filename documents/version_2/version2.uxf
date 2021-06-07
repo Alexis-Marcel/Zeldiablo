@@ -1,0 +1,74 @@
+<diagram program="umletino" version="14.4.0-SNAPSHOT"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>230</x><y>34</y><w>210</w><h>190</h></coordinates><panel_attributes>Niveau
+--
+- labyrinthe : Labyrinthe
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1090</x><y>304</y><w>210</w><h>190</h></coordinates><panel_attributes>&lt;&lt;Abstract&gt;&gt;
+Case
+--
+- x : int 
+- y : int
+--
++ case() 
++ getX() : int
++ getY() : int </panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>910</x><y>634</y><w>210</w><h>190</h></coordinates><panel_attributes>CaseVide
+--
+- x : int 
+- y : int
+--
++ caseVide() 
++ getX() : int
++ getY() : int </panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1260</x><y>624</y><w>210</w><h>190</h></coordinates><panel_attributes>CasePleine
+--
+- x : int 
+- y : int
+--
++ casePleine() 
++ getX() : int
++ getY() : int </panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1220</x><y>484</y><w>160</w><h>160</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;140;140</additional_attributes></element><element><id>Relation</id><coordinates><x>1050</x><y>482</y><w>110</w><h>170</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>90;10;10;150</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1100</x><y>14</y><w>210</w><h>190</h></coordinates><panel_attributes>Labyrinthe 
+--
+- listeCases : Case [ ] [ ] 
+--
++ Labyrinthe() 
++ getListeCase() : Case [ ] [ ]
++ setListeCase( int, int, Case) 
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>240</x><y>344</y><w>210</w><h>190</h></coordinates><panel_attributes>&lt;&lt;Abstract&gt;&gt;
+Personnage
+--
+#  x : int 
+# y : int 
+- pv : int 
+- degat : int 
+--
++ Personnage(int, int, int, int) 
++ getX() : int
++ getY() : int 
++ getPv() : int
++ getDegat() : int
+
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>654</y><w>210</w><h>190</h></coordinates><panel_attributes>Aventurier
+--
+- nom String
+--
++ Aventurier(int, int, String, int, int) 
++ getNom() : String 
++ toString() : String 
+
+
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>110</x><y>522</y><w>190</w><h>150</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>170;10;10;130</additional_attributes></element><element><id>UMLClass</id><coordinates><x>300</x><y>654</y><w>210</w><h>190</h></coordinates><panel_attributes>&lt;&lt;Abstract&gt;&gt;
+Monstre
+--
+- nom String
+--
++ Aventurier(int, int, String, int, int) 
++ getNom() : String 
++ toString() : String 
+
+
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>380</x><y>522</y><w>60</w><h>150</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;40;130</additional_attributes></element><element><id>Relation</id><coordinates><x>330</x><y>212</y><w>30</w><h>150</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;130;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1192</x><y>191</y><w>30</w><h>130</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;110;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>434</x><y>121</y><w>680</w><h>40</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>660;10;10;20</additional_attributes></element></diagram>

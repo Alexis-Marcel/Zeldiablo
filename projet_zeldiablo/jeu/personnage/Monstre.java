@@ -1,4 +1,4 @@
-package jeu.personnage;
+package Niveau.personnage;
 
 public abstract class Monstre extends Personnage{
 
