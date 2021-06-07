@@ -1,7 +1,0 @@
-*Fonctionnalités version 2
-
--fonctionnalité 2 :  Collision avec les Murs
--          descriptif texte : Lorsque le joueur demande à déplacer le personnage en direction d'un mur, le personnage reste bloqué et ne se déplace pas.
--          critères de validation :
-		• La collision fonctionne dans les 4 directions ;
-		• Si la case est vide, le personnage avance.
