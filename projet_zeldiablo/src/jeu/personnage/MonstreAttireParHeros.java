@@ -39,10 +39,29 @@ public class MonstreAttireParHeros implements Monstre{
      * methode permettant de donner une nouvelle position a l'aventurier
      * @param nx nouvelle position x
      */
-    public void deplacer(Aventurier a){
+    public void seDeplacer(Aventurier a){
 
         
 
+    }
+
+    public void attaquer(Aventurier a){
+
+        a.prendreDegats(this.degat);
+
+    }
+
+    public void prendreDegats(int deg){
+
+        if(this.pv-degat<0){
+
+            this.pv = 0;
+
+        }
+        else{
+
+            this.pv -= degat;
+        }
     }
 
     /**
@@ -74,11 +93,6 @@ public class MonstreAttireParHeros implements Monstre{
      * @return retourne les points de vie du monstre
      */
     public int getDegat() {
-        return this.degat;
-    }
-
-    public int prendreDegats(int deg){
-        this.pv-=deg;
         return this.degat;
     }
 

@@ -8,7 +8,11 @@ public interface Monstre{
      * @param nx nouvelle position x
      * @param ny nouvelle position y
      */
-    public void deplacer(Aventurier a);
+    public void seDeplacer(Aventurier a);
+
+    public void attaquer(Aventurier a);
+
+    public void prendreDegats(int deg);
 
     /**
      * getter de l'attribut x
@@ -35,7 +39,5 @@ public interface Monstre{
      * @return retourne les points de vie du monstre
      */
     public int getDegat();
-
-    public int prendreDegats(int deg);
 
 }

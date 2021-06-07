@@ -59,9 +59,28 @@ public class Aventurier{
      * @param nx nouvelle position x
      * @param ny nouvelle position y
      */
-    public void deplacer(int nx, int ny) {
+    public void seDeplacer(int nx, int ny) {
         this.x += nx;
         this.y += ny;
+    }
+
+    public void attaquer(Monstre m){
+
+        m.prendreDegats(this.degat);
+
+    }
+
+    public void prendreDegats(int degat){
+        if(this.pv-degat<0){
+
+            this.pv = 0;
+
+        }
+        else{
+
+            this.pv -= degat;
+        }
+       
     }
 
     /**
@@ -102,10 +121,6 @@ public class Aventurier{
      */
     public int getDegat() {
         return this.degat;
-    }
-
-    public void attaquer(Monstre m){
-        this.pv-=m.prendreDegats(this.degat);
     }
 
 

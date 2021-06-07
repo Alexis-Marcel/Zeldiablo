@@ -13,14 +13,17 @@ import jeu.cases.*;
 public class Jeu {
 
     /**
-     * Aventurier
+     * liseMonstre
      */
     private ArrayList<Monstre> listeMonstre;
 
+    /**
+     * Aventurier controlable par le joueur
+     */
     private Aventurier aventurier;
 
     /**
-     * Aventurier
+     * labyrinthe sur lequel se deplaceront et attaqueront les monstres et l'acventurier
      */
     private Labyrinthe labyrinthe;
 
@@ -45,10 +48,12 @@ public class Jeu {
 
             Monstre m = this.listeMonstre.get(i);
 
+            
+
         }
 
     }
-        
+         
 
     public void deplacerUnMonstreAleatoire(){
 
