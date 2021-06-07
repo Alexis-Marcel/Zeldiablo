@@ -1,4 +1,4 @@
-package Niveau;
+package jeu;
 import java.util.ArrayList;
 
 public class Donjon {
@@ -13,8 +13,10 @@ public class Donjon {
 
     public Donjon() {
         this.listeNiveau = new ArrayList<Niveau>();
+        /*
         this.listeNiveau.add(new Niveau(Donjon.chemin + "niveau1.txt"));
         this.listeNiveau.add(new Niveau(Donjon.chemin + "niveau2.txt"));
+        */
 
     }
 

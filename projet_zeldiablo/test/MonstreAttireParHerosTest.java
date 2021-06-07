@@ -4,7 +4,7 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 
-import Niveau.personnage.*;
+import jeu.personnage.*;
 
 public class MonstreAttireParHerosTest {
 

@@ -1,6 +1,5 @@
 package jeu.personnage;
 
-import moteurJeu.moteur.Commande;
 
 /**
  * Aventurier

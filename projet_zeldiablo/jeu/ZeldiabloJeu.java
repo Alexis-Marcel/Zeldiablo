@@ -1,16 +1,13 @@
 package jeu;
-
-import java.awt.image.BufferedImage;
-import moteurJeu.moteur.*;
 import java.util.ArrayList;
 import java.util.Random;
 import java.io.*;
 import jeu.personnage.*;
-import moteurJeu.moteur.*;
+import moteurJeu.*;
 import jeu.cases.*;
 import jeu.Labyrinthe;
 
-public class ZeldiabloJeu implements JeuAbstract {
+public class ZeldiabloJeu implements Jeu {
 
     /**
      * listeMonstre
@@ -41,9 +38,10 @@ public class ZeldiabloJeu implements JeuAbstract {
     }
 
     @Override
-    public String evoluer(CClavier clavier, CSouris souris) {
-        // TODO Auto-generated method stub
-        return null;
+    public void evoluer(Commande commandeUser) {
+        
+        deplacerAvtenturier(commandeUser);
+
     }
 
     @Override
@@ -94,12 +92,12 @@ public class ZeldiabloJeu implements JeuAbstract {
         if (c.haut) {
 
             deplacementX = 0;
-            deplacementY = 1;
+            deplacementY = -1;
 
         } else if (c.bas) {
 
             deplacementX = 0;
-            deplacementY = -1;
+            deplacementY = 1;
 
         } else if (c.gauche) {
 
@@ -114,8 +112,8 @@ public class ZeldiabloJeu implements JeuAbstract {
         }
 
         if (verificationMur(this.aventurier.getX() + deplacementX, this.aventurier.getY() + deplacementY)
-                && verificationPersonnage(this.aventurier.getX() + deplacementX,
-                        this.aventurier.getY() + deplacementY)) {
+            && verificationPersonnage(this.aventurier.getX() + deplacementX,
+                       this.aventurier.getY() + deplacementY)) {
 
             this.aventurier.seDeplacer(deplacementX, deplacementY);
         }
@@ -128,7 +126,7 @@ public class ZeldiabloJeu implements JeuAbstract {
         Case c = tC[x][y];
 
         if (c instanceof CasePleine) {
-            System.out.println("plein");
+            
             return false;
         }
 

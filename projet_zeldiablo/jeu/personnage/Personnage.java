@@ -1,4 +1,4 @@
-package Niveau.personnage;
+package jeu.personnage;
 
 public abstract class Personnage {
 

@@ -1,4 +1,4 @@
-package Niveau.personnage;
+package jeu.personnage;
 
 import java.util.Random;
 
