@@ -33,7 +33,7 @@ public class ZeldiabloJeu implements Jeu {
         this.labyrinthe = new Labyrinthe();
         this.listeMonstre = new ArrayList<Monstre>();
 
-        chargerNiveau("projet_zeldiablo/niveaux/niveau1.txt");
+        chargerNiveau("projet_zeldiablo/niveaux/niveau2.txt");
 
     }
 
@@ -41,6 +41,8 @@ public class ZeldiabloJeu implements Jeu {
     public void evoluer(Commande commandeUser) {
         
         deplacerAvtenturier(commandeUser);
+        deplacerToutMonstre();
+        this.aventurier.attaquer(this.listeMonstre,commandeUser);
 
     }
 
@@ -63,7 +65,6 @@ public class ZeldiabloJeu implements Jeu {
 
                 m.seDeplacer(l[0], l[1]);
             }
-
         }
 
     }

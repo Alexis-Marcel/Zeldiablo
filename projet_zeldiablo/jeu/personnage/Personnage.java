@@ -21,18 +21,13 @@ public abstract class Personnage {
      /**
      * degat du personnage
      */
-    private int degat;
+    protected int degat;
 
     public Personnage(int pX, int pY,int pPv, int pDegat) {
         this.x = pX;
         this.y = pY;
         this.pv = pPv;
         this.degat = pDegat;
-    }
-
-    public void attaquer(Personnage p){
-
-        p.prendreDegats(this.degat);
     }
 
 

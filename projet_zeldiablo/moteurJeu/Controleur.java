@@ -68,6 +68,12 @@ public class Controleur implements KeyListener {
 			this.commandeEnCours.bas = true;
 			this.commandeARetourner.bas = true;
 			break;
+		
+		}
+
+		if(e.getKeyChar() == KeyEvent.VK_SPACE){
+			this.commandeEnCours.attaque = true;
+			this.commandeARetourner.attaque = true;
 		}
 
 	}
@@ -90,6 +96,10 @@ public class Controleur implements KeyListener {
 		case 's':
 			this.commandeEnCours.bas = false;
 			break;
+		}
+		if(e.getKeyChar() == KeyEvent.VK_SPACE){
+			this.commandeEnCours.attaque = false;
+			
 		}
 
 	}

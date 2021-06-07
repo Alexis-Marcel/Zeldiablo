@@ -10,7 +10,7 @@ public class Main {
         ZeldiabloDessin dess = new ZeldiabloDessin(jeu);
         MoteurGraphique m = new MoteurGraphique(jeu, dess);
         try{
-            m.lancerJeu(500, 500);
+            m.lancerJeu(800, 800);
         }
         catch(Exception e){
             System.out.println(e);
