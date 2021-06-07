@@ -20,8 +20,8 @@ public class MonstreDeplacementAleatoireTest {
     @Test 
     public void testPrendreDegats(){
         MonstreImmobile a = new  MonstreImmobile ("5,5");
-         a.prendreDegats(10);
-         boolean res = a.getPv() == 40;
+        a.prendreDegats(10);
+        boolean res = a.getPv() == 40;
         assertEquals("il devrait avoir 40 pv", res, true);
     }
 
