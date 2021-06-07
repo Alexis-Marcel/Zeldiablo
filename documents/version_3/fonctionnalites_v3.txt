@@ -1,0 +1,6 @@
+*Fonctionnalités version 2
+
+-fonctionnalité 2 :  Ajout de monstres
+-          descriptif texte : Le monstre peut infliger des degats au joueur
+-          critères de validation :
+		• Peut infliger des degats au joueur
