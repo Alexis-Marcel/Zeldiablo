@@ -33,11 +33,19 @@ public abstract class Personnage {
     public abstract void seDeplacer(Case[] tabCase);
 
     public void attaquer(Case c){
-        c.getOccupant().prendreDegat(degat);
+        if(c.getOccupant() != null){
+            c.getOccupant().prendreDegat(degat);
+            System.out.println("Donne ton gouter");
+        }   
     }
 
     public void prendreDegat(int degats){
         this.pv -= degats;
+        if(this.pv <= 0){
+            System.out.println("aie");
+            this.caseOccupe.setOccupant(null);
+            this.caseOccupe = null;
+        }
     }
 
     public int getX() {

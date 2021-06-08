@@ -61,22 +61,24 @@ public class ZeldiabloDessin implements DessinJeu {
         }
         
       
+        if(!zJeu.getAventurier().etreMort()){
+            g.setColor(Color.RED);
+            int coordX = (int) Math.floor(zJeu.getAventurier().getX() * longueurCase);
+            int coordY = (int) Math.floor(zJeu.getAventurier().getY() * largeurCase);
+            g.fillOval(coordX + 5, coordY + 5, longueurCase - 10, largeurCase - 10);
+        }
 
-        g.setColor(Color.RED);
-        int coordX = (int) Math.floor(zJeu.getAventurier().getX() * longueurCase);
-        int coordY = (int) Math.floor(zJeu.getAventurier().getY() * largeurCase);
-
-        g.fillOval(coordX + 5, coordY + 5, longueurCase - 10, largeurCase - 10);
+        
 
         g.setColor(Color.BLUE);
 
         for(int i=0;i<zJeu.getListeMonstre().size();i++){
 
-           
-                int coordXMonstre = (int) Math.floor(zJeu.getListeMonstre().get(i).getX() * longueurCase);
-                int coordYMonstre = (int) Math.floor(zJeu.getListeMonstre().get(i).getY() * largeurCase);
-                g.fillOval(coordXMonstre + 5, coordYMonstre + 5, longueurCase - 10, largeurCase - 10);
-            
+                if(!zJeu.getListeMonstre().get(i).etreMort()){
+                    int coordXMonstre = (int) Math.floor(zJeu.getListeMonstre().get(i).getX() * longueurCase);
+                    int coordYMonstre = (int) Math.floor(zJeu.getListeMonstre().get(i).getY() * largeurCase);
+                    g.fillOval(coordXMonstre + 5, coordYMonstre + 5, longueurCase - 10, largeurCase - 10);
+                }
 
         }
 

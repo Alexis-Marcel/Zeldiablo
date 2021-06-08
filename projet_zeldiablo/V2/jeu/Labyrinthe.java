@@ -39,7 +39,6 @@ public class Labyrinthe{
      * @param orientation orientation du personnage
      */
     public Case getCase(int x,int y,char orientation){
-        System.out.println("ya");
         Case l;
 
         switch(orientation){
