@@ -8,10 +8,10 @@ public abstract class Personnage {
     private char orientation;
     private Case caseOccupe;
 
-    final static char NORD ='N';
-    final static char SUD  ='S';
-    final static char EST  ='E';
-    final static char OUEST='O';
+    public final static char NORD ='N';
+    public final static char SUD  ='S';
+    public final static char EST  ='E';
+    public final static char OUEST='O';
 
 
     public Personnage(int px,int py,int ppv,int pdegat,Case pcase){
