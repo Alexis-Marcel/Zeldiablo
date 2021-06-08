@@ -1,12 +1,7 @@
 {
     "java.project.referencedLibraries": [
         "lib/**/*.jar",
-<<<<<<< HEAD
-        "c:\\Users\\Alexi\\OneDrive\\IUT\\Programmation\\GIT\\TP12-13\\2021_coo_cd_alexismarcel_leobernard\\Jar\\hamcrest-core-1.3.jar",
-        "c:\\Users\\Alexi\\OneDrive\\IUT\\Programmation\\GIT\\TP12-13\\2021_coo_cd_alexismarcel_leobernard\\Jar\\junit-4.12.jar"
-=======
-        "projet_zeldiablo/Jar/hamcrest-core-1.3.jar",
-        "projet_zeldiablo/Jar/junit-4.12.jar"
->>>>>>> 518337cc376962d01e9b807afef7758aef58fb82
-    ]
+        "projet_zeldiablo/V2/Jar/hamcrest-core-1.3.jar",
+        "projet_zeldiablo/V2/Jar/junit-4.12.jar"
+]
 }
