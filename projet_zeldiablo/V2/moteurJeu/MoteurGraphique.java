@@ -1,4 +1,4 @@
-package moteurJeu;
+package V2.moteurJeu;
 
 /**
  * classe MoteurGraphique represente un moteur de jeu generique. On lui passe un

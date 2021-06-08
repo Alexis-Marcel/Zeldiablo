@@ -54,10 +54,11 @@ public class Niveau implements Jeu{
      * méthode permettant de mofiier les objets composants le jeu 
      */
     public void evoluer(Commande commandeUser){
+
             deplacerAventurier(commandeUser);
             deplacerMonstre();
             aventurierAttaque(commandeUser);
-            
+
     }
 
     /**
@@ -77,6 +78,7 @@ public class Niveau implements Jeu{
 
         if (c.haut) {
 
+            System.out.println("yo");
             ca[0] = this.laby.getCase(this.heros.getX(),this.heros.getY(), this.heros.getOrientation());
             this.heros.setOrientation(Personnage.NORD);
         } else if (c.bas) {

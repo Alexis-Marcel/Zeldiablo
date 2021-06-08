@@ -1,4 +1,4 @@
-package moteurJeu;
+package V2.moteurJeu;
 
 import java.awt.image.BufferedImage;
 

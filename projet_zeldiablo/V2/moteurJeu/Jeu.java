@@ -1,4 +1,4 @@
-package moteurJeu;
+package V2.moteurJeu;
 
 /**
  * interface qui permet de representer un jeu :
