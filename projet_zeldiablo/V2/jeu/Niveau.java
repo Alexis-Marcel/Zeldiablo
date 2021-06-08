@@ -34,6 +34,8 @@ public class Niveau implements Jeu{
      */
     public String UrlFond;
 
+    private int itearation = 0;
+
 
     /**
      * Constructeur permettant d'initialiser le labyrithe, l'aventurier et la liste des monstres grâce à un fichier texte
@@ -56,9 +58,15 @@ public class Niveau implements Jeu{
     public void evoluer(Commande commandeUser){
 
             deplacerAventurier(commandeUser);
-            deplacerMonstre();
             aventurierAttaque(commandeUser);
-            monstreAttaque();
+
+            if (itearation == 8){
+                itearation=0;
+                monstreAttaque();
+                deplacerMonstre();
+            }
+            itearation++;
+            
 
     }
 

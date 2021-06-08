@@ -25,7 +25,7 @@ public abstract class Personnage {
         this.degat = pdegat;
         this.caseOccupe = pcase;
 
-        this.orientation = Personnage.NORD;
+        this.orientation = Personnage.SUD;
 
         this.caseOccupe.setOccupant(this);
     }

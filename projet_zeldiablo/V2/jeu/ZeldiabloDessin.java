@@ -122,7 +122,51 @@ public class ZeldiabloDessin implements DessinJeu {
       
                     int coordXMonstre = (int) Math.floor(zJeu.getListeMonstre().get(i).getX() * longueurCase);
                     int coordYMonstre = (int) Math.floor(zJeu.getListeMonstre().get(i).getY() * largeurCase);
-                    g.fillOval(coordXMonstre + 5, coordYMonstre + 5, longueurCase - 10, largeurCase - 10);
+
+                    switch (zJeu.getListeMonstre().get(i).getOrientation()) {
+
+            
+                        case Personnage.NORD:
+            
+                            try {
+                                BufferedImage fond = ImageIO.read(new File("projet_zeldiablo/V2/fond/monstreDerriere.png"));
+                                g.drawImage(fond, coordXMonstre+13, coordYMonstre-8, 54, 65, null);
+                                } catch (Exception e) {
+                                    System.out.println(e);
+                            }
+                            
+                            break;
+                        case Personnage.SUD:
+                           
+                            try {
+                                BufferedImage fond = ImageIO.read(new File("projet_zeldiablo/V2/fond/monstreFace.png"));
+                                g.drawImage(fond, coordXMonstre+13, coordYMonstre-8, 54, 65, null);
+                                } catch (Exception e) {
+                                    System.out.println(e);
+                            }
+                            break;
+                        case Personnage.EST:
+            
+                            try {
+                                BufferedImage fond = ImageIO.read(new File("projet_zeldiablo/V2/fond/monstreDroite.png"));
+                                g.drawImage(fond, coordXMonstre+13, coordYMonstre-8, 54, 65, null);
+                                } catch (Exception e) {
+                                    System.out.println(e);
+                            }
+                           
+                            break;
+                        case Personnage.OUEST:
+            
+                            try {
+                                BufferedImage fond = ImageIO.read(new File("projet_zeldiablo/V2/fond/monstreGauche.png"));
+                                g.drawImage(fond, coordXMonstre+13, coordYMonstre-8, 54, 65, null);
+                                } catch (Exception e) {
+                                    System.out.println(e);
+                            }
+                           
+                            break;        
+                    }
+                    
 
         }
 
