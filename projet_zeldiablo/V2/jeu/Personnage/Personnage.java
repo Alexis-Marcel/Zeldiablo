@@ -8,4 +8,7 @@ abstract class Personnage {
     private char orientation;
     private Case caseOccupe;
 
+    public Personnage(int px,int py,int ppv,int pdegat,Case pcase){
+        
+    }
 }
