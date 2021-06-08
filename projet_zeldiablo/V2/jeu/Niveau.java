@@ -110,7 +110,8 @@ public class Niveau implements Jeu{
 
         if(c.attaque){
 
-            this.heros.attaquer();
+            Case[] caseDevant = this.laby.getCase(this.heros.getX(), this.heros.getY());
+            this.heros.attaquer(caseDevant);
         }
 
     }
