@@ -21,12 +21,12 @@ abstract class Personnage {
         this.degat = pdegat;
         this.caseOccupe = pcase;
 
-        this.orientation = this.NORD;
+        this.orientation = Personnage.NORD;
 
         this.caseOccupe.setOccupant(this);
     }
 
-    abstract void seDeplacer(Case[]);
+    abstract void seDeplacer(Case[] tabCase);
 
     public void attaquer(Case c){
 
