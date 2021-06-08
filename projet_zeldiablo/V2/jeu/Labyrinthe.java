@@ -27,7 +27,7 @@ public class Labyrinthe{
         l[0] = this.listeCases[x][y-1];
         l[1] = this.listeCases[x][y+1];
         l[2] = this.listeCases[x-1][y];
-        l[2] = this.listeCases[x+1][y];
+        l[3] = this.listeCases[x+1][y];
 
         return l;
     }
@@ -39,7 +39,7 @@ public class Labyrinthe{
      * @param orientation orientation du personnage
      */
     public Case getCase(int x,int y,char orientation){
-
+        System.out.println("ya");
         Case l;
 
         switch(orientation){
@@ -56,10 +56,12 @@ public class Labyrinthe{
            l = this.listeCases[x-1][y];
            break;
         default : 
+            
             l = this.listeCases[x][y-1];
+            break;
         }
 
-           return l;
+        return l;
     }
 
     /**

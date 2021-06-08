@@ -78,26 +78,28 @@ public class Niveau implements Jeu{
 
         if (c.haut) {
 
-            System.out.println("yo");
+            
             ca[0] = this.laby.getCase(this.heros.getX(),this.heros.getY(), this.heros.getOrientation());
             this.heros.setOrientation(Personnage.NORD);
+            this.heros.seDeplacer(ca);
         } else if (c.bas) {
 
             ca[0] = this.laby.getCase(this.heros.getX(),this.heros.getY(), this.heros.getOrientation());
             this.heros.setOrientation(Personnage.SUD);
+            this.heros.seDeplacer(ca);
 
         } else if (c.gauche) {
 
             ca[0] = this.laby.getCase(this.heros.getX(),this.heros.getY(), this.heros.getOrientation());
             this.heros.setOrientation(Personnage.OUEST);
+            this.heros.seDeplacer(ca);
         } else if (c.droite) {
 
             ca[0] = this.laby.getCase(this.heros.getX(),this.heros.getY(), this.heros.getOrientation());
             this.heros.setOrientation(Personnage.EST);
-
+            this.heros.seDeplacer(ca);
         }
-
-        this.heros.seDeplacer(ca);
+        
 
     }
 
@@ -176,32 +178,33 @@ public class Niveau implements Jeu{
             while (tempLigne != null) { // tant que la lecture du fichier n'est pas fini
                 for (int i = 0; i < tempLigne.length(); i++) { // pour chaque caractère de la ligne
 
+                    
                     if (tempLigne.charAt(i) == '#') {
 
-                        this.laby.setListeCase(i, ord, new Case(false));
+                        this.laby.setListeCase(i, ord, new Case(false, null));
                     } else if (tempLigne.charAt(i) == ' ') {
 
-                        this.laby.setListeCase(i, ord, new Case(true));
+                        this.laby.setListeCase(i, ord, new Case(true, null));
                     } else if (tempLigne.charAt(i) == 'D') {
 
-                        Case c = new  Case (true);
+                        Case c = new  Case (true,null);
                         this.heros = new Aventurier(i, ord, "Anakin", 10, 1,c);
                         this.laby.setListeCase(i, ord,c);
 
                     } else if (tempLigne.charAt(i) == 'S') {
 
-                        this.laby.setListeCase(i, ord, new Case(true));
+                        this.laby.setListeCase(i, ord, new Case(true, null));
                         this.laby.setSortie(i,ord);
                     } else if (tempLigne.charAt(i) == 'M') {
 
-                        Case c = new  Case (true);
+                        Case c = new  Case (true,null);
                         Monstre m = new MonstreImmobile(i, ord, 10, 1,c);
                         this.laby.setListeCase(i, ord,c);
                         this.listeMonstre.add(m);
                         
                     } else if (tempLigne.charAt(i) == 'A') {
 
-                        Case c = new  Case (true);
+                        Case c = new  Case (true,null);
                         Monstre m = new MonstreDeplacementAleatoire(i, ord, 10, 1,c);
                         this.laby.setListeCase(i, ord,c);
                         this.listeMonstre.add(m);

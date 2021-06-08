@@ -17,9 +17,9 @@ public class Case {
     /**
      * CONSTRUCTEUR
      */
-    public Case(boolean tr ){
+    public Case(boolean tr, Personnage p){
         this.traversable = tr ;
-        this.occupant = null;
+        this.occupant = p;
     }
 
     /**
