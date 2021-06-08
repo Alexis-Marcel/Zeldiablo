@@ -15,14 +15,7 @@ public class Monstre extends Personnage{
     public Monstre(int x, int y, int pv, int degats, Case pCase){
         super(x, y, pv,degats, pCase);
     }
-    /**
-     * Methode permettant d'infliger des degats
-     * @param d : degats à infliger au Monstre
-     */
-    public void prendreDegat(int d){
-        this.pv -= d;
-    }
-
+    
     /**
      * Methode qui permet de deplacer le Monstre
      */
