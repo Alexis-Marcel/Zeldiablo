@@ -3,10 +3,10 @@ package V2.jeu;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 
+import V2.jeu.Personnage.*;
+
 import V2.moteurJeu.*;
-
 import java.io.*;
-
 import javax.imageio.*;
 
 public class ZeldiabloDessin implements DessinJeu {
@@ -59,10 +59,59 @@ public class ZeldiabloDessin implements DessinJeu {
            
         }
     
-            g.setColor(Color.RED);
-            int coordX = (int) Math.floor(zJeu.getAventurier().getX() * longueurCase);
-            int coordY = (int) Math.floor(zJeu.getAventurier().getY() * largeurCase);
-            g.fillOval(coordX + 5, coordY + 5, longueurCase - 10, largeurCase - 10);
+        Aventurier a = zJeu.getAventurier();
+
+        int coordX = (int) Math.floor(zJeu.getAventurier().getX() * longueurCase);
+        int coordY = (int) Math.floor(zJeu.getAventurier().getY() * largeurCase);
+
+        switch (a.getOrientation()) {
+
+            
+            case Personnage.NORD:
+
+                try {
+                    BufferedImage fond = ImageIO.read(new File("projet_zeldiablo/V2/fond/herosDerriere.png"));
+                    g.drawImage(fond, coordX-5, coordY-5, longueurCase-10, largeurCase-10, null);
+                    } catch (Exception e) {
+                        System.out.println(e);
+                }
+                
+                break;
+            case Personnage.SUD:
+               
+                try {
+                    BufferedImage fond = ImageIO.read(new File("projet_zeldiablo/V2/fond/herosFace.png"));
+                    g.drawImage(fond, coordX-5, coordY-5, longueurCase-10, largeurCase-10, null);
+                    } catch (Exception e) {
+                        System.out.println(e);
+                }
+                break;
+            case Personnage.EST:
+
+                try {
+                    BufferedImage fond = ImageIO.read(new File("projet_zeldiablo/V2/fond/herosDroite.png"));
+                    g.drawImage(fond, coordX-5, coordY-5, longueurCase-10, largeurCase-10, null);
+                    } catch (Exception e) {
+                        System.out.println(e);
+                }
+               
+                break;
+            case Personnage.OUEST:
+
+                try {
+                    BufferedImage fond = ImageIO.read(new File("projet_zeldiablo/V2/fond/herosGauche.png"));
+                    g.drawImage(fond, coordX-5, coordY-5, longueurCase-10, largeurCase-10, null);
+                    } catch (Exception e) {
+                        System.out.println(e);
+                }
+               
+                break;        
+        }
+        
+
+            
+           
+            //g.fillOval(coordX + 5, coordY + 5, longueurCase - 10, largeurCase - 10);
         
 
         
