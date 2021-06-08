@@ -1,4 +1,4 @@
-package jeu.Monstre;
+package V2.jeu.Personnage;
 
 import jeu.Personnage.Aventurier;
 
