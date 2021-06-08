@@ -12,8 +12,8 @@ public class Monstre extends Personnage{
      * @param pv : points de vie
      * @param degats : degats du monstre
      */
-    public Monstre(int x, int y, int pv, int degats, Case pCase){
-        super(x,y,pv,degats, pCase);
+    public Monstre(int pv, int degats, Case pCase){
+        super(pv,degats, pCase);
     }
     /**
      * Methode permettant d'infliger des degats
@@ -23,9 +23,18 @@ public class Monstre extends Personnage{
         this.pv -= d;
     }
 
+    /**
+     * Methode qui permet de deplacer le Monstre
+     */
     @Override
     public void seDeplacer(Case[] tabCase) {
         
+    }
+
+    public void attaquer(Case c){
+        if(c.getOccupant() != null){
+            c.getOccupant().prendreDegat(this.degat);
+        }
     }
 
 

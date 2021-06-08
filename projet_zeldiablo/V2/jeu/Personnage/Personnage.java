@@ -6,8 +6,10 @@ public abstract class Personnage {
     /**
      * ATTRIBUTS
      */
+
     protected int x,y,pv,degat;
     private char orientation;
+
     protected Case caseOccupe;
 
     public final static char NORD ='N';

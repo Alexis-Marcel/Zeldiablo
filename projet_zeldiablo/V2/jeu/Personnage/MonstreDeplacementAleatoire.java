@@ -10,8 +10,8 @@ public class MonstreDeplacementAleatoire extends Monstre{
      * @param pv : points de vie
      * @param degats : degats du monstre
      */
-    public MonstreDeplacementAleatoire(int x, int y, int pv, int degats, Case pCase){
-        super(x,y,pv,degats, pCase);
+    public MonstreDeplacementAleatoire(int pv, int degats, Case pCase){
+        super(pv,degats, pCase);
     }
 
     /**
@@ -19,11 +19,14 @@ public class MonstreDeplacementAleatoire extends Monstre{
      * @param cases : tableau de de Cases (cases autour du Monstre où il peut se déplacer)
      */
     public void seDeplacer(Case[] cases){
-       int rand = (int)Math.floor(Math.random() * cases.length);
-       if(cases[rand].estTraversable()){
-           this.caseOccupe.setOccupant(null);
-           this.caseOccupe = cases[rand];
-       }
+       int rand;
+       do{
+            rand = (int)Math.floor(Math.random() * cases.length);
+       }while(!cases[rand].estTraversable());
+
+        this.caseOccupe.setOccupant(null);
+        this.caseOccupe = cases[rand];
+        this.caseOccupe.setOccupant(this);
     }
 
     /**
