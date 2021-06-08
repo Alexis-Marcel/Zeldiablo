@@ -6,6 +6,7 @@ import V2.jeu.Personnage.*;
 import V2.moteurJeu.*;
 
 import java.util.ArrayList;
+import java.io.*;
 
 /**
  * Niveau
@@ -26,8 +27,13 @@ public class Niveau implements Jeu{
     /**
      * Aventurier qui va etre controler par l'utilisateur
      */
-    private Aventurier hero;
+    private Aventurier heros;
 
+
+    /**
+     * Constructeur permettant d'initialiser le labyrithe, l'aventurier et la liste des monstres grâce à un fichier texte
+     * @param src source du fichier texte initialisant le jeu
+     */
     public Niveau(String src){
 
         this.laby = new Labyrinthe();
@@ -37,38 +43,52 @@ public class Niveau implements Jeu{
         
     }
 
+    /**
+     * méthode permettant de mofiier les objets composants le jeu 
+     */
     public void evoluer(Commande commandeUser){
 
     }
 
+    /**
+     * méthode permettant d'indiquer si le jeu est fini
+     */
     public boolean etreFini(){
         return false;
     }
 
+    /**
+     * méthode permettant de déplacer l'aventurier
+     * @param c commande envoyé par l'utilisateur pour controler l'aventurier
+     */
     public void deplacerAventurier(Commande c){
 
         Case[] c = new Case[1];
 
         if (c.haut) {
 
-            c[0] = this.laby.getCase(this.aventurier.getX(),this.aventurier.getY()-1);
+            c[0] = this.laby.getCase(this.heros.getX(),this.heros.getY()-1);
         } else if (c.bas) {
 
-            c[0] = this.laby.getCase(this.aventurier.getX(),this.aventurier.getY()+1);
+            c[0] = this.laby.getCase(this.heros.getX(),this.heros.getY()+1);
 
         } else if (c.gauche) {
 
-            c[0] = this.laby.getCase(this.aventurier.getX()-1,this.aventurier.getY());
+            c[0] = this.laby.getCase(this.heros.getX()-1,this.heros.getY());
         } else if (c.droite) {
 
-            c[0] = this.laby.getCase(this.aventurier.getX()+1,this.aventurier.getY()-1);
+            c[0] = this.laby.getCase(this.heros.getX()+1,this.heros.getY()-1);
 
         }
 
-        this.aventurier.seDeplacer(c);
+        this.heros.seDeplacer(c);
 
     }
 
+
+    /**
+     * méthode permettant de déplacer tout les monstres 
+     */
     public void deplacerMonstre(){
 
         for(int i=0; i < this.listeMonstre.size(); i++){
@@ -82,15 +102,22 @@ public class Niveau implements Jeu{
 
     }
 
+    /**
+     * méthode permettant à l'aventurier d'attaquer un monstre devant lui selon la commande envoyé par l'utlisateur
+     * @param c commande envoyé par l'utilisateur
+     */
     public void aventurierAttaque(Commande c){
 
         if(c.attaque){
 
-            this.aventurier.attaquer();
+            this.heros.attaquer();
         }
 
     }
 
+    /**
+     * méthode permettant à tous les monstres d'attaquer devant eux
+     */
     public void monstreAttaque(){
 
         for(int i = 0; i < this.listeMonstre.size(); i++){
@@ -122,25 +149,26 @@ public class Niveau implements Jeu{
 
                     if (tempLigne.charAt(i) == '#') {
 
-                        this.labyrinthe.setListeCase(i, ord, new CasePleine(i, ord));
+                        this.laby.setListeCase(i, ord, new Case(true));
                     } else if (tempLigne.charAt(i) == ' ') {
 
-                        this.labyrinthe.setListeCase(i, ord, new CaseVide(i, ord));
+                        this.laby.setListeCase(i, ord, new Case(false));
                     } else if (tempLigne.charAt(i) == 'D') {
 
-                        this.labyrinthe.setListeCase(i, ord, new CaseDepart(i, ord));
-                        this.aventurier = new Aventurier(i, ord, "Anakin", 10, 1);
+                        this.heros = new Aventurier(i, ord, "Anakin", 10, 1);
+
                     } else if (tempLigne.charAt(i) == 'S') {
 
-                        this.labyrinthe.setListeCase(i, ord, new CaseFin(i, ord));
+                        this.laby.setListeCase(i, ord, new Case(false));
+                        this.laby.setSortie(i,ord);
                     } else if (tempLigne.charAt(i) == 'M') {
 
-                        this.labyrinthe.setListeCase(i, ord, new CaseVide(i, ord));
+                        this.laby.setListeCase(i, ord, new Case(false));
                         this.listeMonstre.add(new MonstreImmobile(i, ord, 10, 1));
                     } else if (tempLigne.charAt(i) == 'A') {
 
-                        this.labyrinthe.setListeCase(i, ord, new CaseVide(i, ord));
-                        this.listeMonstre.add(new MonstreAttireParHeros(i, ord, 10, 1));
+                        this.laby.setListeCase(i, ord, new Case(false));
+                        this.listeMonstre.add(new MonstreDeplacementAleatoire(i, ord, 10, 1));
                     }
 
                 }
@@ -154,7 +182,7 @@ public class Niveau implements Jeu{
             System.out.println(e.getMessage());
 
         }
-        ;
+        
 
     }
 
