@@ -24,8 +24,7 @@ public class Monstre extends Personnage{
     }
 
     @Override
-    void seDeplacer() {
-        // TODO Auto-generated method stub
+    public void seDeplacer(Case[] tabCase) {
         
     }
 

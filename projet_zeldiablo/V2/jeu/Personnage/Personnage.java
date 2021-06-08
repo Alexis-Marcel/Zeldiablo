@@ -6,7 +6,7 @@ public abstract class Personnage {
     
     private int x,y,pv,degat;
     private char orientation;
-    private Case caseOccupe;
+    protected Case caseOccupe;
 
     final static char NORD ='N';
     final static char SUD  ='S';
