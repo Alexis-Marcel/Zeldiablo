@@ -35,4 +35,11 @@ public class Labyrinthe {
         this.listeCases[x][y] = c;
     }
 
+    public boolean estSurCaseFin(int x, int y){
+        if(this.listeCases[x][y] instanceof CaseFin){
+            return true;
+        }
+        return false;
+    }
+
 }

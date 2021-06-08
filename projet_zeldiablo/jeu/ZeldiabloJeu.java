@@ -1,16 +1,18 @@
 package jeu;
+
 import java.util.ArrayList;
 import java.util.Random;
 import java.io.*;
 import jeu.personnage.*;
-import moteurJeu.*;
 import jeu.cases.*;
-import jeu.Labyrinthe;
+
+
+import moteurJeu.*;
 
 public class ZeldiabloJeu implements Jeu {
 
     /**
-     * listeMonstre
+     * liste des monstres présent dans le niveau
      */
     private ArrayList<Monstre> listeMonstre;
 
@@ -25,15 +27,23 @@ public class ZeldiabloJeu implements Jeu {
      */
     private Labyrinthe labyrinthe;
 
+    private String urlFond;
+
     /**
      * CONSTRUCTEUR
      */
-    public ZeldiabloJeu() {
+    public ZeldiabloJeu(String src,String url ) {
 
         this.labyrinthe = new Labyrinthe();
         this.listeMonstre = new ArrayList<Monstre>();
 
+<<<<<<< HEAD
         chargerNiveau("niveaux/niveau1.txt");
+=======
+        chargerNiveau(src);
+
+        this.urlFond = url;
+>>>>>>> aca412905868b89257e3fc081be1bb1435bd69d9
 
     }
 
@@ -41,15 +51,26 @@ public class ZeldiabloJeu implements Jeu {
     public void evoluer(Commande commandeUser) {
         
         deplacerAvtenturier(commandeUser);
+        deplacerToutMonstre();
+        this.aventurier.attaquer(this.listeMonstre,commandeUser);
 
     }
 
     @Override
     public boolean etreFini() {
-        // TODO Auto-generated method stub
+
+        Case c = this.labyrinthe.getListeCase()[this.aventurier.getX()][this.aventurier.getY()];
+
+        /**if(c instanceof CaseFin){
+            return true;
+        }*/
+
         return false;
     }
 
+    /**
+     * methode permettant deplacer tout les monstres de la liste selon le methode verifierCoord respectif
+     */
     public void deplacerToutMonstre() {
 
         for (int i = 0; i < this.listeMonstre.size(); i++) {
@@ -63,11 +84,14 @@ public class ZeldiabloJeu implements Jeu {
 
                 m.seDeplacer(l[0], l[1]);
             }
-
         }
 
     }
 
+    
+    /**
+     * methode permettant deplacer un monstre aleatoirement
+     */
     public void deplacerUnMonstreAleatoire() {
 
         Random rand = new Random();
@@ -76,14 +100,17 @@ public class ZeldiabloJeu implements Jeu {
 
         int[] l = m.verifierCoord(this.aventurier);
 
-        if (verificationMur(m.getX() + l[0], m.getY() + l[1])
-                && verificationPersonnage(m.getX() + l[0], m.getY() + l[1])) {
+        if (verificationMur(m.getX() + l[0], m.getY() + l[1]) // permet de vérifier que le deplacement ne se fasse pas sur les murs
+                && verificationPersonnage(m.getX() + l[0], m.getY() + l[1])) { // permet de vérifier que le deplacement ne se fasse pas à travers les personnages
 
             m.seDeplacer(l[0], l[1]);
         }
 
     }
 
+    /**
+     * methode permettant deplacer l'aventurier selon la commande
+     */
     public void deplacerAvtenturier(Commande c) {
 
         int deplacementX = 0;
@@ -111,14 +138,22 @@ public class ZeldiabloJeu implements Jeu {
 
         }
 
-        if (verificationMur(this.aventurier.getX() + deplacementX, this.aventurier.getY() + deplacementY)
-            && verificationPersonnage(this.aventurier.getX() + deplacementX,
+        if (verificationMur(this.aventurier.getX() + deplacementX, this.aventurier.getY() + deplacementY) // permet de vérifier que le deplacement ne se fasse pas sur les murs
+            && verificationPersonnage(this.aventurier.getX() + deplacementX, // permet de vérifier que le deplacement ne se fasse pas à travers les personnages
                        this.aventurier.getY() + deplacementY)) {
 
             this.aventurier.seDeplacer(deplacementX, deplacementY);
+
         }
 
     }
+
+    /**
+     * Methode permettant de vérifier que le deplacement ne se fasse pas sur les murs
+     * @param x
+     * @param y
+     * @return un boolean indiquant si le déplacement peut etre réalisé
+     */
 
     public boolean verificationMur(int x, int y) {
 
@@ -133,6 +168,12 @@ public class ZeldiabloJeu implements Jeu {
         return true;
     }
 
+    /**
+     * Methode permettant de vérifier que le deplacement ne se fasse pas à travers les personnages
+     * @param x
+     * @param y
+     * @return un boolean indiquant si le déplacement peut etre réalisé
+     */
     public boolean verificationPersonnage(int x, int y) {
 
         for (int i = 0; i < this.listeMonstre.size(); i++) {
@@ -149,9 +190,15 @@ public class ZeldiabloJeu implements Jeu {
             return false;
         }
 
+        if(this.labyrinthe.estSurCaseFin(this.aventurier.getX(), this.aventurier.getY())){
+            chargerNiveau("projet_zeldiablo/niveaux/niveau2.txt");
+        }
+
         return true;
 
     }
+
+    // ---------------- GETTER ------------------  //
 
     public ArrayList<Monstre> getListeMonstre() {
 
@@ -168,10 +215,15 @@ public class ZeldiabloJeu implements Jeu {
         return this.labyrinthe;
     }
 
+    public String getUrlFond(){
+
+        return this.urlFond;
+    }
+
     /**
-     * méthode permettant de charger une sauvegarde du Niveau fait préalablement
+     * méthode permettant de charger un fichier .txt du Niveau fait préalablement
      * 
-     * @param src source à laquelle charger le fichier de sauvegarde
+     * @param src source à laquelle charger le fichier texte
      */
     private void chargerNiveau(String src) {
 

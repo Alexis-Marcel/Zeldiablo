@@ -1,6 +1,7 @@
 package jeu.personnage;
 
-
+import moteurJeu.Commande;
+import java.util.ArrayList;
 /**
  * Aventurier
  */
@@ -25,6 +26,28 @@ public class Aventurier extends Personnage{
         this.nom = nom;
         
     }
+
+    public void attaquer(ArrayList<Monstre> l,Commande c){
+
+        if(c.attaque){
+
+            for(int i=0; i<l.size();i++){
+
+                int distanceX = Math.abs(this.x-l.get(i).getX());
+                int distanceY = Math.abs(this.y-l.get(i).getY());
+
+                
+                if((distanceX == 1 && distanceY == 0) ||(distanceX == 0 && distanceY == 1)){
+                    
+                    l.get(i).prendreDegats(this.degat);
+                    if(l.get(i).etreMort()){
+                        l.remove(i);
+                    }
+                }
+            }
+        }
+    }
+
 
      /**
      * getter du nom de l'aventurier
