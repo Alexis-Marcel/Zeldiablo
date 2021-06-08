@@ -129,13 +129,11 @@ m2=*</panel_attributes>
       <x>935</x>
       <y>220</y>
       <w>231</w>
-      <h>330</h>
+      <h>220</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Abstract&gt;&gt;
 Personnage
 --
-- x : int
-- y : int
 - pv : int
 - degat : int
 - orientation : char
@@ -146,8 +144,6 @@ Personnage
 + attaquer(Case) : void
 + prendreDegat(int) : void
 --
-+ getX() : int
-+ getY() : int
 +getPv() : int
 +getDegat() : int
 +etreMort() : boolean
@@ -160,7 +156,7 @@ Personnage
     <id>UMLClass</id>
     <coordinates>
       <x>913</x>
-      <y>627</y>
+      <y>495</y>
       <w>297</w>
       <h>165</h>
     </coordinates>
@@ -169,7 +165,7 @@ Monstre
 --
 
 --
-+ Monstre(int,int,int,int,Case)
++ Monstre(int,int,Case)
 --
 
 
@@ -183,18 +179,18 @@ Monstre
     <id>Relation</id>
     <coordinates>
       <x>1045</x>
-      <y>539</y>
+      <y>429</y>
       <w>33</w>
-      <h>110</h>
+      <h>88</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1353</x>
-      <y>473</y>
+      <x>1320</x>
+      <y>396</y>
       <w>297</w>
       <h>143</h>
     </coordinates>
@@ -202,7 +198,7 @@ Monstre
 --
 
 --
-+ MonstreImmobile(int,int,int,int,Case)
++ MonstreImmobile(int,int,Case)
 + seDeplacer(Cases[]) : void
 
 
@@ -216,23 +212,23 @@ Monstre
     <id>Relation</id>
     <coordinates>
       <x>1199</x>
-      <y>528</y>
-      <w>176</w>
-      <h>165</h>
+      <y>451</y>
+      <w>143</w>
+      <h>110</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;130.0;140.0;10.0</additional_attributes>
+    <additional_attributes>10.0;80.0;110.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>1199</x>
-      <y>726</y>
-      <w>187</w>
-      <h>88</h>
+      <y>594</y>
+      <w>143</w>
+      <h>99</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;150.0;60.0</additional_attributes>
+    <additional_attributes>10.0;10.0;110.0;70.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -257,7 +253,7 @@ Monstre
 --
 - nom : String
 --
-+ Aventurier(int,int,int,int,Case,String)
++ Aventurier(int,int,Case,String)
 + seDeplacer(Cases[]) : void
 --
 
@@ -288,19 +284,19 @@ m2=*</panel_attributes>
       <x>748</x>
       <y>451</y>
       <w>187</w>
-      <h>319</h>
+      <h>187</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 listeMonstre
 m1=*
 m2=*</panel_attributes>
-    <additional_attributes>150.0;270.0;10.0;10.0</additional_attributes>
+    <additional_attributes>150.0;150.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1364</x>
-      <y>726</y>
+      <x>1320</x>
+      <y>605</y>
       <w>330</w>
       <h>143</h>
     </coordinates>
@@ -308,7 +304,7 @@ m2=*</panel_attributes>
 --
 
 --
-+ MonstreDeplacementAleatoire(int,int,int,int,Case)
++ MonstreDeplacementAleatoire(int,int,Case)
 + seDeplacer(Cases[]) : void
 
 
