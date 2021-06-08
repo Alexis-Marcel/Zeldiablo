@@ -155,7 +155,9 @@ public class Niveau implements Jeu{
                         this.laby.setListeCase(i, ord, new Case(false));
                     } else if (tempLigne.charAt(i) == 'D') {
 
-                        this.heros = new Aventurier(i, ord, "Anakin", 10, 1);
+                        Case c = new  Case (false);
+                        this.heros = new Aventurier(i, ord, "Anakin", 10, 1,c);
+                        this.laby.setListeCase(i, ord,c);
 
                     } else if (tempLigne.charAt(i) == 'S') {
 
@@ -163,12 +165,17 @@ public class Niveau implements Jeu{
                         this.laby.setSortie(i,ord);
                     } else if (tempLigne.charAt(i) == 'M') {
 
-                        this.laby.setListeCase(i, ord, new Case(false));
-                        this.listeMonstre.add(new MonstreImmobile(i, ord, 10, 1));
+                        Case c = new  Case (false);
+                        Monstre m = new MonstreImmobile(i, ord, 10, 1,c);
+                        this.laby.setListeCase(i, ord,c);
+                        this.listeMonstre.add(m);
+                        
                     } else if (tempLigne.charAt(i) == 'A') {
 
-                        this.laby.setListeCase(i, ord, new Case(false));
-                        this.listeMonstre.add(new MonstreDeplacementAleatoire(i, ord, 10, 1));
+                        Case c = new  Case (false);
+                        Monstre m = new MonstreDeplacementAleatoire(i, ord, 10, 1,c);
+                        this.laby.setListeCase(i, ord,c);
+                        this.listeMonstre.add(m);
                     }
 
                 }
