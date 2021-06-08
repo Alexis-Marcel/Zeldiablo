@@ -17,4 +17,8 @@ abstract class Personnage {
 
         this.caseOccupe.setOccupant(this);
     }
+
+    abstract void seDeplacer(Case[]);
+
+    
 }
