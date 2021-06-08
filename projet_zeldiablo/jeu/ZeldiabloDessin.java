@@ -57,7 +57,7 @@ public class ZeldiabloDessin implements DessinJeu {
             BufferedImage fond = ImageIO.read(new File(zJeu.getUrlFond()));
             g.drawImage(fond, 0, 0, 800, 800, null);
         } catch (Exception e) {
-            //TODO: handle exception
+           
         }
         
       

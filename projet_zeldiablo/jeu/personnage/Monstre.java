@@ -16,5 +16,20 @@ public abstract class Monstre extends Personnage{
         return "Bonjour, je suis un monstre";
     }
 
+    public void attaquer(Aventurier a){
+
+        int distanceX = Math.abs(this.x-a.getX());
+        int distanceY = Math.abs(this.y-a.getY());
+
+                
+        if((distanceX == 1 && distanceY == 0) ||(distanceX == 0 && distanceY == 1)){
+                    
+            a.prendreDegats(this.degat);
+                    
+        }
+        
+    
+    }
+
     
 }
