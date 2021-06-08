@@ -2,7 +2,7 @@ package V2.jeu.Personnage;
 
 import V2.jeu.*;
 
-abstract class Personnage {
+public abstract class Personnage {
     
     private int x,y,pv,degat;
     private char orientation;
@@ -26,10 +26,10 @@ abstract class Personnage {
         this.caseOccupe.setOccupant(this);
     }
 
-    abstract void seDeplacer(Case[] tabCase);
+    public abstract void seDeplacer(Case[] tabCase);
 
     public void attaquer(Case c){
-
+        
     }
 
     public void prendreDegat(int degats){
