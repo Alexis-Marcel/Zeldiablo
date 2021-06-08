@@ -1,5 +1,21 @@
 package V2.jeu.Personnage;
 
-public class Aventurier {
+import V2.jeu.Case;
+
+public class Aventurier extends Personnage{
+
+    private String nom;
+
+    public Aventurier(int x,int y,String n,int pv,int deg ,Case c){
+
+        super(x, y,pv,deg,c);
+
+        this.nom = n;
+        
+    }
+
+    public void seDeplacer(Case[] c){
+
+    }
     
 }
