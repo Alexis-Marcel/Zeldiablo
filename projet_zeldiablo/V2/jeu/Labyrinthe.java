@@ -1,5 +1,7 @@
 package V2.jeu;
 
+import V2.jeu.Personnage.*;
+
 public class Labyrinthe{
 
     private Case[][] listeCases;
@@ -8,7 +10,11 @@ public class Labyrinthe{
 
     public Labyrinthe(){
 
+        this.listeCases = new Case[10][10];
+        this.sortie = new int[2];
     }
+
+
 
     /**
      * méthode permattant de récuprer les 4 cases adjacents à un personnage de coordonées x et y
@@ -16,7 +22,14 @@ public class Labyrinthe{
      * @param y ordonnée autour duquel il va falloir récupérer les caes adjacentes
      */
     public Case[] casesAdjacentes(int x,int y){
+        Case [] l = new Case[4];
 
+        l[0] = this.listeCases[x][y-1];
+        l[1] = this.listeCases[x][y+1];
+        l[2] = this.listeCases[x-1][y];
+        l[2] = this.listeCases[x+1][y];
+
+        return l;
     }
 
     /**
@@ -27,6 +40,23 @@ public class Labyrinthe{
      */
     public Case[] getCase(int x,int y,char orientation){
 
+        Case [] l = new Case[1];
+
+        switch(orientation)
+        case Personnage.NORD:
+           l [0] = this.listeCases[x][y-1];
+           break;
+        case Personnage.SUD:
+           l [0] = this.listeCases[x][y+1];
+           break;
+        case Personnage.EST:
+           l [0] = this.listeCases[x+1][y];
+           break;
+        case Personnage.OUEST:
+           l [0] = this.listeCases[x-1][y];
+           break;
+
+           return l;
     }
 
     /**
@@ -36,7 +66,7 @@ public class Labyrinthe{
      * @param c la case a ajouter au tableau
      */
     public void setListeCase(int x,int y,Case c){
-
+        this.listeCases[x][y] = c;
     }
 
     /**
@@ -45,6 +75,7 @@ public class Labyrinthe{
      * @param y ordonnée de la sortie
     */
     public void setSortie(int x,int y){
-
+        this.sortie[0] = x;
+        this.sortie[1] = y;
     }
 }
