@@ -57,9 +57,9 @@ public class ZeldiabloJeu implements Jeu {
 
         Case c = this.labyrinthe.getListeCase()[this.aventurier.getX()][this.aventurier.getY()];
 
-        if(c instanceof CaseFin){
+        /**if(c instanceof CaseFin){
             return true;
-        }
+        }*/
 
         return false;
     }
@@ -184,6 +184,10 @@ public class ZeldiabloJeu implements Jeu {
 
         if (this.aventurier.getX() == x && this.aventurier.getY() == y) {
             return false;
+        }
+
+        if(this.labyrinthe.estSurCaseFin(this.aventurier.getX(), this.aventurier.getY())){
+            chargerNiveau("projet_zeldiablo/niveaux/niveau2.txt");
         }
 
         return true;
