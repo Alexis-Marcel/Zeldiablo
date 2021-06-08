@@ -3,7 +3,9 @@ package V2.jeu.Personnage;
 import V2.jeu.*;
 
 public abstract class Personnage {
-    
+    /**
+     * ATTRIBUTS
+     */
     protected int pv,degat;
     private char orientation;
     protected Case caseOccupe;
