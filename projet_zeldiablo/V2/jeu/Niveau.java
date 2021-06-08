@@ -29,15 +29,22 @@ public class Niveau implements Jeu{
      */
     private Aventurier heros;
 
+    /**
+     * Url du fond du labyrinthe
+     */
+    public String UrlFond;
+
 
     /**
      * Constructeur permettant d'initialiser le labyrithe, l'aventurier et la liste des monstres grâce à un fichier texte
      * @param src source du fichier texte initialisant le jeu
      */
-    public Niveau(String src){
+    public Niveau(String src,String url){
 
         this.laby = new Labyrinthe();
         this.listeMonstre = new ArrayList<Monstre>();
+
+        this.UrlFond = url;
 
         chargerNiveau(src);
         
@@ -114,8 +121,9 @@ public class Niveau implements Jeu{
 
         if(c.attaque){
 
-            Case[] caseDevant = this.laby.getCase(this.heros.getX(), this.heros.getY());
-            this.heros.attaquer(caseDevant);
+            Case[] caseDevant = new Case[1];
+            caseDevant[0] = this.laby.getCase(this.heros.getX(),this.heros.getY(), this.heros.getOrientation());
+            this.heros.attaquer(caseDevant[0]);
         }
 
     }
@@ -129,8 +137,19 @@ public class Niveau implements Jeu{
 
             Monstre m = this.listeMonstre.get(i);
 
-            m.attaquer();
+
+            Case[] caseDevant = new Case[1];
+            caseDevant[0]= this.laby.getCase(m.getX(),m.getY(),m.getOrientation());
+            m.attaquer(caseDevant[0]);
         }
+    }
+
+    public Aventurier getAventurier(){
+        return this.heros;
+    }
+
+    public ArrayList<Monstre> getListeMonstre(){
+        return this.listeMonstre;
     }
 
 
