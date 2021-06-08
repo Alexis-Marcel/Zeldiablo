@@ -44,6 +44,10 @@ public abstract class Personnage {
         return orientation;
     }
 
+    public Case getCase(){
+        return caseOccupe;
+    }
+
     public boolean etreMort(){
         return this.pv <= 0;
     }
