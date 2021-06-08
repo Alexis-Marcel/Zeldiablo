@@ -129,11 +129,13 @@ m2=*</panel_attributes>
       <x>935</x>
       <y>220</y>
       <w>231</w>
-      <h>220</h>
+      <h>231</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Abstract&gt;&gt;
 Personnage
 --
+- x : int
+- y : int
 - pv : int
 - degat : int
 - orientation : char
@@ -144,6 +146,8 @@ Personnage
 + attaquer(Case) : void
 + prendreDegat(int) : void
 --
++getX() : int
++getY() : int
 +getPv() : int
 +getDegat() : int
 +etreMort() : boolean
@@ -165,7 +169,7 @@ Monstre
 --
 
 --
-+ Monstre(int,int,Case)
++ Monstre(int,int,int,int,Case)
 --
 
 
@@ -179,12 +183,12 @@ Monstre
     <id>Relation</id>
     <coordinates>
       <x>1045</x>
-      <y>429</y>
+      <y>440</y>
       <w>33</w>
-      <h>88</h>
+      <h>77</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
@@ -198,7 +202,7 @@ Monstre
 --
 
 --
-+ MonstreImmobile(int,int,Case)
++ MonstreImmobile(int,int,int,int,Case)
 + seDeplacer(Cases[]) : void
 
 
@@ -253,7 +257,7 @@ Monstre
 --
 - nom : String
 --
-+ Aventurier(int,int,Case,String)
++ Aventurier(int,int,int,int,Case,String)
 + seDeplacer(Cases[]) : void
 --
 
@@ -304,7 +308,7 @@ m2=*</panel_attributes>
 --
 
 --
-+ MonstreDeplacementAleatoire(int,int,Case)
++ MonstreDeplacementAleatoire(int,int,int,int,Case)
 + seDeplacer(Cases[]) : void
 
 
