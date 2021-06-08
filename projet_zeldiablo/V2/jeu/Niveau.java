@@ -144,19 +144,28 @@ public class Niveau implements Jeu{
 
             this.heros.attaquer(caseDevant[0]);
 
-            if(caseDevant[0].getOccupant() != null){
+            monstreMort(caseDevant[0].getOccupant());
 
-                Monstre m = (Monstre) caseDevant[0].getOccupant();
-                if(m.etreMort()){
+        }
 
-                    System.out.println("aie");
-                    caseDevant[0].setOccupant(null);
-                    this.listeMonstre.remove(m);
-                    
-        
-                }
+    }
+
+    /**
+     * méthode permettant de supprimer un personnage quand il est mort
+     * @param m Personnage a supprimer
+     */
+    public void monstreMort(Personnage m){
+
+        if(m != null){
+
+            if(m.etreMort()){
+
+                System.out.println("aie");
+                m.getCase().setOccupant(null);
+                this.listeMonstre.remove(m);
+                
+    
             }
-
         }
 
     }
