@@ -64,7 +64,7 @@ Monstre
 --
 - nom String
 --
-+ Aventurier(int, int, String, int, int) 
++ Monstre(int, int, String, int, int) 
 + getNom() : String 
 + toString() : String 
 
