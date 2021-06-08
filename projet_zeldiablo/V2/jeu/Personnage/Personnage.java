@@ -29,7 +29,7 @@ public abstract class Personnage {
     public abstract void seDeplacer(Case[] tabCase);
 
     public void attaquer(Case c){
-        
+        c.getOccupant().prendreDegat(degat);
     }
 
     public void prendreDegat(int degats){
