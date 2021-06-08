@@ -34,8 +34,8 @@
 - traversable : boolean
 - occupant : Personnage
 --
-+Case(boolean)
-/estTraversable() : boolean/
++ Case(boolean)
++ estTraversable() : boolean
 + estOccupe() : boolean
 + setOccupant(Personnage) : void
 + getOccupant() : Personnage
@@ -71,7 +71,7 @@ m2=*</panel_attributes>
 - aventurier : Aventurier
 - url : String
 --
-+Niveau(String)
++ Niveau(String)
 + deplacerAventurier(Commande) : void
 + deplaceMonstres() : void
 + aventurierAttaque(Commande) : void
