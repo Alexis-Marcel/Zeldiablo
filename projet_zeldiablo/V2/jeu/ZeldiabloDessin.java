@@ -71,7 +71,7 @@ public class ZeldiabloDessin implements DessinJeu {
 
                 try {
                     BufferedImage fond = ImageIO.read(new File("projet_zeldiablo/V2/fond/herosDerriere.png"));
-                    g.drawImage(fond, coordX-5, coordY-5, longueurCase-10, largeurCase-10, null);
+                    g.drawImage(fond, coordX+20, coordY-10, 40, 61, null);
                     } catch (Exception e) {
                         System.out.println(e);
                 }
@@ -81,7 +81,7 @@ public class ZeldiabloDessin implements DessinJeu {
                
                 try {
                     BufferedImage fond = ImageIO.read(new File("projet_zeldiablo/V2/fond/herosFace.png"));
-                    g.drawImage(fond, coordX-5, coordY-5, longueurCase-10, largeurCase-10, null);
+                    g.drawImage(fond, coordX+20, coordY-10, 40, 61, null);
                     } catch (Exception e) {
                         System.out.println(e);
                 }
@@ -90,7 +90,7 @@ public class ZeldiabloDessin implements DessinJeu {
 
                 try {
                     BufferedImage fond = ImageIO.read(new File("projet_zeldiablo/V2/fond/herosDroite.png"));
-                    g.drawImage(fond, coordX-5, coordY-5, longueurCase-10, largeurCase-10, null);
+                    g.drawImage(fond, coordX+20, coordY-10, 40, 61, null);
                     } catch (Exception e) {
                         System.out.println(e);
                 }
@@ -100,7 +100,7 @@ public class ZeldiabloDessin implements DessinJeu {
 
                 try {
                     BufferedImage fond = ImageIO.read(new File("projet_zeldiablo/V2/fond/herosGauche.png"));
-                    g.drawImage(fond, coordX-5, coordY-5, longueurCase-10, largeurCase-10, null);
+                    g.drawImage(fond, coordX+20, coordY-10, 40, 61, null);
                     } catch (Exception e) {
                         System.out.println(e);
                 }
