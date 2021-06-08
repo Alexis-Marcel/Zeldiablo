@@ -4,8 +4,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>315</x>
-      <y>462</y>
+      <x>105</x>
+      <y>280</y>
       <w>168</w>
       <h>133</h>
     </coordinates>
@@ -22,8 +22,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>0</x>
-      <y>497</y>
+      <x>126</x>
+      <y>490</y>
       <w>147</w>
       <h>133</h>
     </coordinates>
@@ -43,22 +43,22 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>140</x>
-      <y>525</y>
-      <w>189</w>
-      <h>42</h>
+      <x>189</x>
+      <y>406</y>
+      <w>63</w>
+      <h>98</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 listeCases
 m1=*
 m2=*</panel_attributes>
-    <additional_attributes>10.0;30.0;250.0;20.0</additional_attributes>
+    <additional_attributes>10.0;120.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>525</x>
-      <y>301</y>
+      <x>406</x>
+      <y>238</y>
       <w>182</w>
       <h>161</h>
     </coordinates>
@@ -82,22 +82,22 @@ m2=*</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>371</x>
-      <y>385</y>
-      <w>168</w>
-      <h>91</h>
+      <x>266</x>
+      <y>315</y>
+      <w>154</w>
+      <h>35</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 labyrinthe
 m1=1
 m2=*</panel_attributes>
-    <additional_attributes>10.0;110.0;220.0;10.0</additional_attributes>
+    <additional_attributes>10.0;20.0;200.0;20.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1022</x>
-      <y>224</y>
+      <x>700</x>
+      <y>196</y>
       <w>147</w>
       <h>210</h>
     </coordinates>
@@ -129,8 +129,8 @@ Personnage
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1008</x>
-      <y>525</y>
+      <x>686</x>
+      <y>455</y>
       <w>189</w>
       <h>105</h>
     </coordinates>
@@ -154,19 +154,19 @@ Monstre
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1092</x>
-      <y>427</y>
+      <x>770</x>
+      <y>399</y>
       <w>21</w>
-      <h>112</h>
+      <h>70</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;140.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1302</x>
-      <y>469</y>
+      <x>966</x>
+      <y>357</y>
       <w>189</w>
       <h>91</h>
     </coordinates>
@@ -187,41 +187,41 @@ Monstre
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1190</x>
-      <y>504</y>
-      <w>126</w>
-      <h>63</h>
+      <x>868</x>
+      <y>392</y>
+      <w>112</w>
+      <h>105</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;70.0;160.0;10.0</additional_attributes>
+    <additional_attributes>10.0;130.0;140.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1190</x>
-      <y>588</y>
-      <w>126</w>
-      <h>91</h>
+      <x>868</x>
+      <y>518</y>
+      <w>119</w>
+      <h>56</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;160.0;110.0</additional_attributes>
+    <additional_attributes>10.0;10.0;150.0;60.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1092</x>
-      <y>98</y>
+      <x>770</x>
+      <y>154</y>
       <w>21</w>
-      <h>140</h>
+      <h>56</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;180.0;10.0;10.0</additional_attributes>
+    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1001</x>
-      <y>0</y>
+      <x>679</x>
+      <y>56</y>
       <w>189</w>
       <h>105</h>
     </coordinates>
@@ -243,36 +243,36 @@ Monstre
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>700</x>
-      <y>28</y>
-      <w>315</w>
-      <h>315</h>
+      <x>581</x>
+      <y>84</y>
+      <w>112</w>
+      <h>196</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 aventurier
 m1=1
 m2=*</panel_attributes>
-    <additional_attributes>430.0;10.0;10.0;430.0</additional_attributes>
+    <additional_attributes>140.0;10.0;10.0;260.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>700</x>
-      <y>406</y>
-      <w>322</w>
-      <h>210</h>
+      <x>581</x>
+      <y>343</y>
+      <w>119</w>
+      <h>203</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 listeMonstre
 m1=*
 m2=*</panel_attributes>
-    <additional_attributes>440.0;280.0;10.0;10.0</additional_attributes>
+    <additional_attributes>150.0;270.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1302</x>
-      <y>623</y>
+      <x>973</x>
+      <y>518</y>
       <w>210</w>
       <h>91</h>
     </coordinates>
