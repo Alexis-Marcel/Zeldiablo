@@ -4,7 +4,7 @@ import V2.jeu.*;
 
 public abstract class Personnage {
     
-    private int x,y,pv,degat;
+    protected int x,y,pv,degat;
     private char orientation;
     private Case caseOccupe;
 
