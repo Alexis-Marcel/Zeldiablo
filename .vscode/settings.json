@@ -1,7 +1,0 @@
-{
-    "java.project.referencedLibraries": [
-        "lib/**/*.jar",
-        "/home/werilo/coo_2021_domotique_alexis-marcel_theo-faedo/Jar/junit-4.12.jar",
-        "/home/werilo/coo_2021_domotique_alexis-marcel_theo-faedo/Jar/hamcrest-core-1.3.jar"
-    ]
-}
