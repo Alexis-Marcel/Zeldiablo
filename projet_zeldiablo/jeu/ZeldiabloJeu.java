@@ -37,9 +37,13 @@ public class ZeldiabloJeu {
         this.labyrinthe = new Labyrinthe();
         this.listeMonstre = new ArrayList<Monstre>();
 
+<<<<<<< HEAD
+        chargerNiveau("niveaux/niveau1.txt");
+=======
         chargerNiveau(src);
 
         this.urlFond = url;
+>>>>>>> aca412905868b89257e3fc081be1bb1435bd69d9
 
     }
 
