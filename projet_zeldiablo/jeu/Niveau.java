@@ -34,7 +34,7 @@ public class Niveau {
         this.labyrinthe = new Labyrinthe();
         this.listeMonstre = new ArrayList<Monstre>();
 
-        chargerNiveau("projet_zeldiablo/niveaux/niveau1.txt");
+        chargerNiveau("niveaux/niveau1.txt");
 
     }
 
