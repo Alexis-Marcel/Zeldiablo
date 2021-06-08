@@ -6,8 +6,10 @@ public abstract class Personnage {
     /**
      * ATTRIBUTS
      */
-    protected int pv,degat;
+
+    protected int x,y,pv,degat;
     private char orientation;
+
     protected Case caseOccupe;
 
     public final static char NORD ='N';
@@ -16,7 +18,9 @@ public abstract class Personnage {
     public final static char OUEST='O';
 
 
-    public Personnage(int ppv,int pdegat,Case pcase){
+    public Personnage(int px,int py,int ppv,int pdegat,Case pcase){
+        this.x = px;
+        this.y = py;
         this.pv = ppv;
         this.degat = pdegat;
         this.caseOccupe = pcase;
@@ -34,6 +38,13 @@ public abstract class Personnage {
 
     public void prendreDegat(int degats){
         this.pv -= degats;
+    }
+
+    public int getX() {
+        return x;
+    }
+    public int getY() {
+        return y;
     }
 
     public void setOrientation(char c){
