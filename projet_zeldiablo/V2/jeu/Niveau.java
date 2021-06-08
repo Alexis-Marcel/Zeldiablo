@@ -60,12 +60,11 @@ public class Niveau implements Jeu{
             deplacerAventurier(commandeUser);
             aventurierAttaque(commandeUser);
 
-            if (itearation == 8){
-                itearation=0;
+            
+            
                 monstreAttaque();
                 deplacerMonstre();
-            }
-            itearation++;
+       
             
 
     }
@@ -92,25 +91,25 @@ public class Niveau implements Jeu{
         if (c.haut) {
 
             this.heros.setOrientation(Personnage.NORD);
-            ca[0] = this.laby.getCase(this.heros.getX(),this.heros.getY(), this.heros.getOrientation());
+            ca[0] = this.laby.getCase(this.heros.getX(),this.heros.getY(), Personnage.NORD);
             this.heros.seDeplacer(ca);
 
         } else if (c.bas) {
 
             this.heros.setOrientation(Personnage.SUD);
-            ca[0] = this.laby.getCase(this.heros.getX(),this.heros.getY(), this.heros.getOrientation());
+            ca[0] = this.laby.getCase(this.heros.getX(),this.heros.getY(), Personnage.SUD);
             this.heros.seDeplacer(ca);
 
         } else if (c.gauche) {
 
             this.heros.setOrientation(Personnage.OUEST);
-            ca[0] = this.laby.getCase(this.heros.getX(),this.heros.getY(), this.heros.getOrientation());
+            ca[0] = this.laby.getCase(this.heros.getX(),this.heros.getY(), Personnage.OUEST);
             this.heros.seDeplacer(ca);
 
         } else if (c.droite) {
 
             this.heros.setOrientation(Personnage.EST);
-            ca[0] = this.laby.getCase(this.heros.getX(),this.heros.getY(), this.heros.getOrientation());
+            ca[0] = this.laby.getCase(this.heros.getX(),this.heros.getY(), Personnage.EST);
             this.heros.seDeplacer(ca);
 
         }
