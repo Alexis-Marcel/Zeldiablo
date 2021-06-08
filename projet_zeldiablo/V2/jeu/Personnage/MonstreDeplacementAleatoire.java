@@ -10,8 +10,8 @@ public class MonstreDeplacementAleatoire extends Monstre{
      * @param pv : points de vie
      * @param degats : degats du monstre
      */
-    public MonstreDeplacementAleatoire(int pv, int degats, Case pCase){
-        super(pv,degats, pCase);
+    public MonstreDeplacementAleatoire(int x, int y, int pv, int degats, Case pCase){
+        super(x, y, pv,degats, pCase);
     }
 
     /**
@@ -29,11 +29,5 @@ public class MonstreDeplacementAleatoire extends Monstre{
         this.caseOccupe.setOccupant(this);
     }
 
-    /**
-     * Methode permettant d'infliger des degats
-     * @param d : degats à infliger au Monstre
-     */
-    public void prendreDegat(int d){
-        this.pv-=d;
-    }
+
 }
