@@ -31,7 +31,9 @@ public class Niveau {
         
     }
 
-    public void deplacerAventurier()
+    public void deplacerAventurier(){
+        
+    }
 
     
     
