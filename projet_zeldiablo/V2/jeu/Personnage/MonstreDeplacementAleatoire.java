@@ -20,13 +20,18 @@ public class MonstreDeplacementAleatoire extends Monstre{
      */
     public void seDeplacer(Case[] cases){
        int rand;
+       int i = 0;
        do{
             rand = (int)Math.floor(Math.random() * cases.length);
-       }while(!cases[rand].estTraversable());
-
+            i++;
+       }while(!cases[rand].estTraversable() && i<cases.length);
+       
+       if(i<cases.length){
         this.caseOccupe.setOccupant(null);
         this.caseOccupe = cases[rand];
         this.caseOccupe.setOccupant(this);
+       }
+        
     }
 
 

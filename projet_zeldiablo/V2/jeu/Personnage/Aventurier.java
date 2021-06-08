@@ -15,7 +15,24 @@ public class Aventurier extends Personnage{
     }
 
     public void seDeplacer(Case[] c){
+        this.caseOccupe.setOccupant(null);
+        this.caseOccupe = c[0];
 
+        switch (super.getOrientation()) {
+            case Personnage.NORD:
+                this.y--;
+                break;
+            case Personnage.SUD:
+                this.y++;
+                break;
+            case Personnage.EST:
+                this.x++;
+                break;
+            case Personnage.OUEST:
+                this.x--;
+                break;
+        
+        }
     }
     
 }
