@@ -32,7 +32,7 @@ public class Niveau implements Jeu{
     /**
      * Url du fond du labyrinthe
      */
-    public String UrlFond;
+    public String urlFond;
 
     private int itearation = 0;
 
@@ -46,7 +46,7 @@ public class Niveau implements Jeu{
         this.laby = new Labyrinthe();
         this.listeMonstre = new ArrayList<Monstre>();
 
-        this.UrlFond = url;
+        this.urlFond = url;
 
         chargerNiveau(src);
         
@@ -207,6 +207,14 @@ public class Niveau implements Jeu{
 
     public ArrayList<Monstre> getListeMonstre(){
         return this.listeMonstre;
+    }
+
+    public void passeNiveauSuivant(String src,String uf){
+
+        this.listeMonstre.clear();
+        chargerNiveau(src);
+        this.urlFond = uf;
+
     }
 
 

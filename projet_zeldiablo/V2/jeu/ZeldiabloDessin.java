@@ -53,7 +53,7 @@ public class ZeldiabloDessin implements DessinJeu {
         
 
         try {
-            BufferedImage fond = ImageIO.read(new File(zJeu.UrlFond));
+            BufferedImage fond = ImageIO.read(new File(zJeu.urlFond));
             g.drawImage(fond, 0, 0, 800, 800, null);
         } catch (Exception e) {
            
