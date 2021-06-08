@@ -34,10 +34,14 @@ public abstract class Personnage {
         this.pv -= degats;
     }
 
+    public void setOrientation(char c){
+        this.orientation = c;
+    }
+
     public char getOrientation(){
         return orientation;
     }
-    
+
     public boolean etreMort(){
         return this.pv <= 0;
     }
