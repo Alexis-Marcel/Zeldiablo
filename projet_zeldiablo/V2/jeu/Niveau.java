@@ -61,9 +61,16 @@ public class Niveau implements Jeu{
             aventurierAttaque(commandeUser);
 
             
-            
+            if(itearation == 8){
+
+                itearation=0;
                 monstreAttaque();
                 deplacerMonstre();
+
+            }
+
+            itearation++;
+                
        
             
 
