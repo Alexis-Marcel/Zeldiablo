@@ -8,8 +8,8 @@ public class Donjon {
      */
     ArrayList<ZeldiabloJeu> listeNiveau;
 
-    private final static String cheminNiveau = "projet_zeldiablo/niveaux/";
-    private final static String cheminFond = "projet_zeldiablo/fond/";
+    private final static String cheminNiveau = "niveaux/";
+    private final static String cheminFond = "fond/";
 
 
     public Donjon() {

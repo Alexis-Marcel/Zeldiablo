@@ -9,7 +9,7 @@ import jeu.cases.*;
 
 import moteurJeu.*;
 
-public class ZeldiabloJeu implements Jeu {
+public class ZeldiabloJeu {
 
     /**
      * liste des monstres présent dans le niveau
@@ -23,7 +23,7 @@ public class ZeldiabloJeu implements Jeu {
 
     /**
      * labyrinthe sur lequel se deplaceront et attaqueront les monstres et
-     * l'acventurier
+     * l'aventurier
      */
     private Labyrinthe labyrinthe;
 
@@ -41,28 +41,10 @@ public class ZeldiabloJeu implements Jeu {
 
         this.urlFond = url;
 
-    }
-
-    @Override
-    public void evoluer(Commande commandeUser) {
-        
-        deplacerAvtenturier(commandeUser);
-        deplacerToutMonstre();
-        this.aventurier.attaquer(this.listeMonstre,commandeUser);
 
     }
 
-    @Override
-    public boolean etreFini() {
-
-        Case c = this.labyrinthe.getListeCase()[this.aventurier.getX()][this.aventurier.getY()];
-
-        if(c instanceof CaseFin){
-            return true;
-        }
-
-        return false;
-    }
+    
 
     /**
      * methode permettant deplacer tout les monstres de la liste selon le methode verifierCoord respectif
