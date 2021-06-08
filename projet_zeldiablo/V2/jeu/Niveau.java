@@ -93,31 +93,29 @@ public class Niveau implements Jeu{
      */
     public void deplacerAventurier(Commande c){
 
-        Case[] ca = new Case[1];
-
         if (c.haut) {
 
             this.heros.setOrientation(Personnage.NORD);
-            ca[0] = this.laby.getCase(this.heros.getX(),this.heros.getY(), Personnage.NORD);
-            this.heros.seDeplacer(ca);
+            Case caseDep = this.laby.getCase(this.heros.getX(),this.heros.getY(), Personnage.NORD);
+            this.heros.seDeplacer(caseDep);
 
         } else if (c.bas) {
 
             this.heros.setOrientation(Personnage.SUD);
-            ca[0] = this.laby.getCase(this.heros.getX(),this.heros.getY(), Personnage.SUD);
-            this.heros.seDeplacer(ca);
+            Case caseDep = this.laby.getCase(this.heros.getX(),this.heros.getY(), Personnage.SUD);
+            this.heros.seDeplacer(caseDep);
 
         } else if (c.gauche) {
 
             this.heros.setOrientation(Personnage.OUEST);
-            ca[0] = this.laby.getCase(this.heros.getX(),this.heros.getY(), Personnage.OUEST);
-            this.heros.seDeplacer(ca);
+            Case caseDep = this.laby.getCase(this.heros.getX(),this.heros.getY(), Personnage.OUEST);
+            this.heros.seDeplacer(caseDep);
 
         } else if (c.droite) {
 
             this.heros.setOrientation(Personnage.EST);
-            ca[0] = this.laby.getCase(this.heros.getX(),this.heros.getY(), Personnage.EST);
-            this.heros.seDeplacer(ca);
+            Case caseDep = this.laby.getCase(this.heros.getX(),this.heros.getY(), Personnage.EST);
+            this.heros.seDeplacer(caseDep);
 
         }
 
@@ -153,12 +151,12 @@ public class Niveau implements Jeu{
 
         if(c.attaque){
 
-            Case[] caseDevant = new Case[1];
-            caseDevant[0] = this.laby.getCase(this.heros.getX(),this.heros.getY(), this.heros.getOrientation());
+           
+            Case caseDevant = this.laby.getCase(this.heros.getX(),this.heros.getY(), this.heros.getOrientation());
 
-            this.heros.attaquer(caseDevant[0]);
+            this.heros.attaquer(caseDevant);
 
-            personnageMort(caseDevant[0].getOccupant());
+            personnageMort(caseDevant.getOccupant());
 
         }
 
@@ -193,10 +191,8 @@ public class Niveau implements Jeu{
 
             Monstre m = this.listeMonstre.get(i);
 
-            
-                Case[] caseDevant = new Case[1];
-                caseDevant[0]= this.laby.getCase(m.getX(),m.getY(),m.getOrientation());
-                m.attaquer(caseDevant[0]);
+                Case caseDevant= this.laby.getCase(m.getX(),m.getY(),m.getOrientation());
+                m.attaquer(caseDevant);
             
         }
     }
@@ -246,7 +242,7 @@ public class Niveau implements Jeu{
                     } else if (tempLigne.charAt(i) == 'D') {
 
                         Case c = new  Case (true,null);
-                        this.heros = new Aventurier(i, ord, "Anakin", 10, 1,c);
+                        this.heros = new Aventurier(i, ord, 10, 1,c);
                         this.laby.setListeCase(i, ord,c);
 
                     } else if (tempLigne.charAt(i) == 'S') {

@@ -4,25 +4,21 @@ import V2.jeu.Case;
 
 public class Aventurier extends Personnage{
 
-    private String nom;
-
-    public Aventurier(int px,int py,String n,int pv,int deg ,Case c){
+    public Aventurier(int px,int py,int pv,int deg ,Case c){
 
         super(px,py,pv,deg,c);
-
-        this.nom = n;
         
     }
+    
+    public void seDeplacer(Case c){
 
-    public void seDeplacer(Case[] c){
-
-        if(c[0].estTraversable()){
+        if(c.estTraversable()){
 
             this.caseOccupe.setOccupant(null);
-            this.caseOccupe = c[0];
+            this.caseOccupe = c;
             this.caseOccupe.setOccupant(this);
             
-            switch (super.getOrientation()) {
+            switch (this.orientation) {
                 case Personnage.NORD:
                     this.y--;
                     break;

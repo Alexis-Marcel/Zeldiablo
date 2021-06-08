@@ -18,8 +18,8 @@ public abstract class Monstre extends Personnage{
     /**
      * Methode qui permet de deplacer le Monstre
      */
-    @Override
-    public abstract void seDeplacer(Case[] tabCase);
+
+    public abstract void seDeplacer(Case[] cases);
 
 
 

@@ -8,7 +8,7 @@ public abstract class Personnage {
      */
 
     protected int x,y,pv,degat;
-    private char orientation;
+    protected char orientation;
 
     protected Case caseOccupe;
 
@@ -29,8 +29,6 @@ public abstract class Personnage {
 
         this.caseOccupe.setOccupant(this);
     }
-
-    public abstract void seDeplacer(Case[] tabCase);
 
     public void attaquer(Case c){
 

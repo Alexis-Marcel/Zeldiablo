@@ -23,7 +23,7 @@ public class ZeldiabloDessin implements DessinJeu {
         Graphics g = image.getGraphics();
 
         Graphics2D g2d = (Graphics2D) g;
-        RenderingHints rhints = g2d.getRenderingHints();
+       // RenderingHints rhints = g2d.getRenderingHints();
         g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
 
         int longueurCase = image.getWidth() / 10;
