@@ -1,6 +1,6 @@
 package V2.jeu.Personnage;
 
-import jeu.*;
+import V2.jeu.*;
 
 abstract class Personnage {
     
@@ -21,6 +21,8 @@ abstract class Personnage {
         this.degat = pdegat;
         this.caseOccupe = pcase;
 
+        this.orientation = this.NORD;
+
         this.caseOccupe.setOccupant(this);
     }
 
@@ -39,6 +41,9 @@ abstract class Personnage {
     }
     public int getY() {
         return y;
+    }
+    public getOrientation(){
+        return orientation;
     }
     public boolean etreMort(){
         return this.pv <= 0;
