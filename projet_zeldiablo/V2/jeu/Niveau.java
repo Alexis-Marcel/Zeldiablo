@@ -67,21 +67,21 @@ public class Niveau implements Jeu{
 
         if (c.haut) {
 
-            c[0] = this.laby.getCase(this.heros.getX(),this.heros.getY()-1);
+            ca[0] = this.laby.getCase(this.heros.getX(),this.heros.getY(), this.heros.getOrientation());
             this.heros.setOrientation(Personnage.NORD);
         } else if (c.bas) {
 
-            c[0] = this.laby.getCase(this.heros.getX(),this.heros.getY()+1);
-            his.heros.setOrientation(Personnage.SUD);
+            ca[0] = this.laby.getCase(this.heros.getX(),this.heros.getY(), this.heros.getOrientation());
+            this.heros.setOrientation(Personnage.SUD);
 
         } else if (c.gauche) {
 
-            c[0] = this.laby.getCase(this.heros.getX()-1,this.heros.getY());
-            his.heros.setOrientation(Personnage.OUEST);
+            ca[0] = this.laby.getCase(this.heros.getX(),this.heros.getY(), this.heros.getOrientation());
+            this.heros.setOrientation(Personnage.OUEST);
         } else if (c.droite) {
 
-            c[0] = this.laby.getCase(this.heros.getX()+1,this.heros.getY()-1);
-            his.heros.setOrientation(Personnage.EST);
+            ca[0] = this.laby.getCase(this.heros.getX(),this.heros.getY(), this.heros.getOrientation());
+            this.heros.setOrientation(Personnage.EST);
 
         }
 
