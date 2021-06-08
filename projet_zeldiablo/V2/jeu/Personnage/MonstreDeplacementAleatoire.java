@@ -48,9 +48,11 @@ public class MonstreDeplacementAleatoire extends Monstre{
             }
             i++;
        }while(!c.estTraversable() && i<cases.length);
+       
         this.setOrientation(o);
 
        if(i<cases.length){
+
             this.caseOccupe.setOccupant(null);
             this.caseOccupe = c;
             this.caseOccupe.setOccupant(this);

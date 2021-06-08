@@ -82,4 +82,13 @@ public class Labyrinthe{
         this.sortie[0] = x;
         this.sortie[1] = y;
     }
+
+    public boolean checkHeroSortie(int x, int y){
+
+        if(x == this.sortie[0] && y == this.sortie[1]){
+            return true;
+        }
+
+        return false;
+    }
 }

@@ -1,6 +1,5 @@
 package V2.jeu.Personnage;
 
-import V2.jeu.Personnage.Aventurier;
 import V2.jeu.*;
 
 public class Monstre extends Personnage{

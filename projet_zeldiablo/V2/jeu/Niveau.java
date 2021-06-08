@@ -66,6 +66,10 @@ public class Niveau implements Jeu{
      * méthode permettant d'indiquer si le jeu est fini
      */
     public boolean etreFini(){
+
+        if(this.heros.etreMort() || this.laby.checkHeroSortie(this.heros.getX(), this.heros.getY())){
+            return true;
+        }
         return false;
     }
 
@@ -82,20 +86,27 @@ public class Niveau implements Jeu{
             this.heros.setOrientation(Personnage.NORD);
             ca[0] = this.laby.getCase(this.heros.getX(),this.heros.getY(), this.heros.getOrientation());
             this.heros.seDeplacer(ca);
+
         } else if (c.bas) {
+
             this.heros.setOrientation(Personnage.SUD);
             ca[0] = this.laby.getCase(this.heros.getX(),this.heros.getY(), this.heros.getOrientation());
             this.heros.seDeplacer(ca);
 
         } else if (c.gauche) {
+
             this.heros.setOrientation(Personnage.OUEST);
             ca[0] = this.laby.getCase(this.heros.getX(),this.heros.getY(), this.heros.getOrientation());
             this.heros.seDeplacer(ca);
+
         } else if (c.droite) {
+
             this.heros.setOrientation(Personnage.EST);
             ca[0] = this.laby.getCase(this.heros.getX(),this.heros.getY(), this.heros.getOrientation());
             this.heros.seDeplacer(ca);
+
         }
+
         
 
     }
@@ -109,11 +120,12 @@ public class Niveau implements Jeu{
         for(int i=0; i < this.listeMonstre.size(); i++){
 
             Monstre m = this.listeMonstre.get(i);
-            if(!m.etreMort()){
+
+            
                 Case[] listeCaseAdjacentes = this.laby.casesAdjacentes(m.getX(),m.getY());
 
                 m.seDeplacer(listeCaseAdjacentes);
-            }
+    
             
         }
 
@@ -129,7 +141,22 @@ public class Niveau implements Jeu{
 
             Case[] caseDevant = new Case[1];
             caseDevant[0] = this.laby.getCase(this.heros.getX(),this.heros.getY(), this.heros.getOrientation());
+
             this.heros.attaquer(caseDevant[0]);
+
+            if(caseDevant[0].getOccupant() != null){
+
+                Monstre m = (Monstre) caseDevant[0].getOccupant();
+                if(m.etreMort()){
+
+                    System.out.println("aie");
+                    caseDevant[0].setOccupant(null);
+                    this.listeMonstre.remove(m);
+                    
+        
+                }
+            }
+
         }
 
     }
@@ -143,11 +170,11 @@ public class Niveau implements Jeu{
 
             Monstre m = this.listeMonstre.get(i);
 
-            if(!m.etreMort()){
+            
                 Case[] caseDevant = new Case[1];
                 caseDevant[0]= this.laby.getCase(m.getX(),m.getY(),m.getOrientation());
                 m.attaquer(caseDevant[0]);
-            }
+            
         }
     }
 
