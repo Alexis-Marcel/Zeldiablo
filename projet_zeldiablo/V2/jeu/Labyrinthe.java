@@ -42,7 +42,7 @@ public class Labyrinthe{
 
         Case [] l = new Case[1];
 
-        switch(orientation)
+        switch(orientation){
         case Personnage.NORD:
            l [0] = this.listeCases[x][y-1];
            break;
@@ -55,6 +55,7 @@ public class Labyrinthe{
         case Personnage.OUEST:
            l [0] = this.listeCases[x-1][y];
            break;
+        }
 
            return l;
     }
