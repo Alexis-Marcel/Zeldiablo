@@ -1,5 +1,9 @@
 package jeu.Personnage;
 
-public class Personnage {
+import jeu.*;
+
+abstract class Personnage {
     
+    private int x,y,pv,degat;
+
 }
