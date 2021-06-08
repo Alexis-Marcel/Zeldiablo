@@ -6,9 +6,9 @@ public class Aventurier extends Personnage{
 
     private String nom;
 
-    public Aventurier(int x,int y,String n,int pv,int deg ,Case c){
+    public Aventurier(String n,int pv,int deg ,Case c){
 
-        super(x, y,pv,deg,c);
+        super(pv,deg,c);
 
         this.nom = n;
         

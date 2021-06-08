@@ -4,7 +4,7 @@ import V2.jeu.*;
 
 public abstract class Personnage {
     
-    protected int x,y,pv,degat;
+    protected int pv,degat;
     private char orientation;
     private Case caseOccupe;
 
@@ -14,9 +14,7 @@ public abstract class Personnage {
     public final static char OUEST='O';
 
 
-    public Personnage(int px,int py,int ppv,int pdegat,Case pcase){
-        this.x = px;
-        this.y = py;
+    public Personnage(int ppv,int pdegat,Case pcase){
         this.pv = ppv;
         this.degat = pdegat;
         this.caseOccupe = pcase;
