@@ -63,7 +63,7 @@ public class Niveau implements Jeu{
      */
     public void deplacerAventurier(Commande c){
 
-        Case[] c = new Case[1];
+        Case[] ca = new Case[1];
 
         if (c.haut) {
 
@@ -81,7 +81,7 @@ public class Niveau implements Jeu{
 
         }
 
-        this.heros.seDeplacer(c);
+        this.heros.seDeplacer(ca);
 
     }
 
