@@ -8,11 +8,5 @@ public class MonstreImmobile extends Monstre{
         super(pv, degats, pCase);
         //TODO Auto-generated constructor stub
     }
-
-    public void attaquer(Case c){
-        if(c.getOccupant() != null){
-            c.getOccupant().prendreDegat(this.degat);
-        }
-    }
  
 }
