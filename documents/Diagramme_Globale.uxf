@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<diagram program="umlet" version="14.3.0">
-  <help_text>&lt;diagram program="umletino" version="14.4.0-SNAPSHOT"&gt;&lt;zoom_level&gt;10&lt;/zoom_level&gt;&lt;element&gt;&lt;id&gt;Relation&lt;/id&gt;&lt;coordinates&gt;&lt;x&gt;776&lt;/x&gt;&lt;y&gt;952&lt;/y&gt;&lt;w&gt;520&lt;/w&gt;&lt;h&gt;170&lt;/h&gt;&lt;/coordinates&gt;&lt;panel_attributes&gt;lt=&amp;lt;&amp;lt;&amp;lt;-&lt;/panel_attributes&gt;&lt;additional_attributes&gt;10;10;500;150&lt;/additional_attributes&gt;&lt;/element&gt;&lt;/diagram&gt;&lt;diagram program="umletino" version="14.4.0-SNAPSHOT"&gt;&lt;zoom_level&gt;10&lt;/zoom_level&gt;&lt;element&gt;&lt;id&gt;UMLClass&lt;/id&gt;&lt;coordinates&gt;&lt;x&gt;986&lt;/x&gt;&lt;y&gt;732&lt;/y&gt;&lt;w&gt;210&lt;/w&gt;&lt;h&gt;190&lt;/h&gt;&lt;/coordinates&gt;&lt;panel_attributes&gt;PotionPV
+<diagram program="umletino" version="14.4.0-SNAPSHOT"><zoom_level>10</zoom_level><help_text>&lt;diagram program="umletino" version="14.4.0-SNAPSHOT"&gt;&lt;zoom_level&gt;10&lt;/zoom_level&gt;&lt;element&gt;&lt;id&gt;Relation&lt;/id&gt;&lt;coordinates&gt;&lt;x&gt;776&lt;/x&gt;&lt;y&gt;952&lt;/y&gt;&lt;w&gt;520&lt;/w&gt;&lt;h&gt;170&lt;/h&gt;&lt;/coordinates&gt;&lt;panel_attributes&gt;lt=&amp;lt;&amp;lt;&amp;lt;-&lt;/panel_attributes&gt;&lt;additional_attributes&gt;10;10;500;150&lt;/additional_attributes&gt;&lt;/element&gt;&lt;/diagram&gt;&lt;diagram program="umletino" version="14.4.0-SNAPSHOT"&gt;&lt;zoom_level&gt;10&lt;/zoom_level&gt;&lt;element&gt;&lt;id&gt;UMLClass&lt;/id&gt;&lt;coordinates&gt;&lt;x&gt;986&lt;/x&gt;&lt;y&gt;732&lt;/y&gt;&lt;w&gt;210&lt;/w&gt;&lt;h&gt;190&lt;/h&gt;&lt;/coordinates&gt;&lt;panel_attributes&gt;PotionPV
 --
 - x : int
 - y : int
@@ -197,17 +195,7 @@ Case
 --
 
 --
-&lt;/panel_attributes&gt;&lt;additional_attributes&gt;&lt;/additional_attributes&gt;&lt;/element&gt;&lt;/diagram&gt;Space for diagram noteseclench</help_text>
-  <zoom_level>7</zoom_level>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>392</x>
-      <y>224</y>
-      <w>133</w>
-      <h>133</h>
-    </coordinates>
-    <panel_attributes>Labyrinthe
+&lt;/panel_attributes&gt;&lt;additional_attributes&gt;&lt;/additional_attributes&gt;&lt;/element&gt;&lt;/diagram&gt;Space for diagram noteseclench</help_text><element><id>UMLClass</id><coordinates><x>530</x><y>345</y><w>190</w><h>190</h></coordinates><panel_attributes>Labyrinthe
 --
 - listeCases : Case[][] 
 --
@@ -216,18 +204,7 @@ Case
 + coordonneeCaseDepart(): int[ ]
 + getListeCase() : Case[ ][ ]
 
-</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>644</x>
-      <y>224</y>
-      <w>245</w>
-      <h>175</h>
-    </coordinates>
-    <panel_attributes>Niveau
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>920</x><y>355</y><w>350</w><h>250</h></coordinates><panel_attributes>Niveau
 --
 - labyrinthe : Labyrinthe 
 - listeMonstre : ArrayList&lt;Monstre&gt;
@@ -243,18 +220,7 @@ Case
 --
 + getListeMonstre( ) : ArrayList&lt;Monstre&gt;
 + getAventurier( ) : Aventurier
-+ getLabyrinthe( ) : Labyrinthe</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>294</x>
-      <y>399</y>
-      <w>147</w>
-      <h>133</h>
-    </coordinates>
-    <panel_attributes>&lt;&lt;abstract&gt;&gt;
++ getLabyrinthe( ) : Labyrinthe</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>420</x><y>605</y><w>210</w><h>190</h></coordinates><panel_attributes>&lt;&lt;abstract&gt;&gt;
 Case
 --
 - x : int
@@ -263,18 +229,7 @@ Case
 + Case(String,int,int)
 + getX() : int
 + getY() : int
-</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>427</x>
-      <y>560</y>
-      <w>147</w>
-      <h>133</h>
-    </coordinates>
-    <panel_attributes>CaseVide
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>610</x><y>835</y><w>210</w><h>190</h></coordinates><panel_attributes>CaseVide
 --
 - x : int
 - y : int
@@ -282,18 +237,7 @@ Case
 + Case(String,int,int)
 + getX() : int
 + getY() : int
-</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>0</x>
-      <y>553</y>
-      <w>147</w>
-      <h>133</h>
-    </coordinates>
-    <panel_attributes>CasePleine
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>825</y><w>210</w><h>190</h></coordinates><panel_attributes>CasePleine
 --
 - x : int
 - y : int
@@ -301,18 +245,7 @@ Case
 + Case(String,int,int)
 + getX() : int
 + getY() : int
-</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>210</x>
-      <y>868</y>
-      <w>147</w>
-      <h>133</h>
-    </coordinates>
-    <panel_attributes>CaseDepart
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>300</x><y>1275</y><w>210</w><h>190</h></coordinates><panel_attributes>CaseDepart
 --
 - x : int
 - y : int
@@ -320,18 +253,7 @@ Case
 + CaseDepart(String,int,int)
 + getX() : int
 + getY() : int
-</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>49</x>
-      <y>742</y>
-      <w>147</w>
-      <h>133</h>
-    </coordinates>
-    <panel_attributes>CaseFin
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>70</x><y>1095</y><w>210</w><h>190</h></coordinates><panel_attributes>CaseFin
 --
 - x : int
 - y : int
@@ -339,62 +261,7 @@ Case
 + CaseFin(String,int,int)
 + getX() : int
 + getY() : int
-</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>273</x>
-      <y>658</y>
-      <w>168</w>
-      <h>224</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>220.0;10.0;10.0;300.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>189</x>
-      <y>623</y>
-      <w>252</w>
-      <h>154</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>340.0;10.0;10.0;200.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>357</x>
-      <y>350</y>
-      <w>105</w>
-      <h>63</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;70.0;130.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>518</x>
-      <y>287</y>
-      <w>140</w>
-      <h>21</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;180.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>385</x>
-      <y>896</y>
-      <w>147</w>
-      <h>133</h>
-    </coordinates>
-    <panel_attributes>CasePiege
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>390</x><y>975</y><w>240</w><h>320</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>220;10;10;300</additional_attributes></element><element><id>Relation</id><coordinates><x>270</x><y>925</y><w>360</w><h>220</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>340;10;10;200</additional_attributes></element><element><id>Relation</id><coordinates><x>510</x><y>525</y><w>120</w><h>100</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;80;100;10</additional_attributes></element><element><id>Relation</id><coordinates><x>710</x><y>435</y><w>230</w><h>40</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;210;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>550</x><y>1315</y><w>210</w><h>190</h></coordinates><panel_attributes>CasePiege
 --
 - x : int
 - y : int
@@ -402,29 +269,7 @@ Case
 + CasePiege(String,int,int)
 + getX() : int
 + getY() : int
-</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>434</x>
-      <y>686</y>
-      <w>56</w>
-      <h>217</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>60.0;10.0;10.0;290.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>567</x>
-      <y>889</y>
-      <w>147</w>
-      <h>133</h>
-    </coordinates>
-    <panel_attributes>CaseDeclencheur
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>620</x><y>1015</y><w>80</w><h>310</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>60;10;10;290</additional_attributes></element><element><id>UMLClass</id><coordinates><x>810</x><y>1305</y><w>210</w><h>190</h></coordinates><panel_attributes>CaseDeclencheur
 --
 - x : int
 - y : int
@@ -432,40 +277,7 @@ Case
 + CaseDeclencheur(String,int,int)
 + getX() : int
 + getY() : int
-</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>539</x>
-      <y>693</y>
-      <w>112</w>
-      <h>217</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;140.0;290.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>567</x>
-      <y>665</y>
-      <w>266</w>
-      <h>245</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;360.0;330.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>749</x>
-      <y>889</y>
-      <w>147</w>
-      <h>133</h>
-    </coordinates>
-    <panel_attributes>CaseOuverturePassageSecret
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>770</x><y>1025</y><w>160</w><h>310</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;140;290</additional_attributes></element><element><id>Relation</id><coordinates><x>810</x><y>985</y><w>380</w><h>350</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;360;330</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1070</x><y>1305</y><w>210</w><h>190</h></coordinates><panel_attributes>CaseOuverturePassageSecret
 --
 - x : int
 - y : int
@@ -473,18 +285,7 @@ Case
 + CaseOuverturePassageSecret(String,int,int)
 + getX() : int
 + getY() : int
-</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>924</x>
-      <y>784</y>
-      <w>147</w>
-      <h>133</h>
-    </coordinates>
-    <panel_attributes>CaseFermeturePassageSecret
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1320</x><y>1155</y><w>210</w><h>190</h></coordinates><panel_attributes>CaseFermeturePassageSecret
 --
 - x : int
 - y : int
@@ -492,51 +293,7 @@ Case
 + CaseFermeturePassageSecret(String,int,int)
 + getX() : int
 + getY() : int
-</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>567</x>
-      <y>630</y>
-      <w>371</w>
-      <h>217</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;510.0;290.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>434</x>
-      <y>497</y>
-      <w>77</w>
-      <h>77</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;90.0;90.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>105</x>
-      <y>455</y>
-      <w>203</w>
-      <h>112</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>270.0;10.0;10.0;140.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>644</x>
-      <y>21</y>
-      <w>133</w>
-      <h>133</h>
-    </coordinates>
-    <panel_attributes>Donjon
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>810</x><y>935</y><w>530</w><h>310</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;510;290</additional_attributes></element><element><id>Relation</id><coordinates><x>620</x><y>745</y><w>110</w><h>110</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;90;90</additional_attributes></element><element><id>Relation</id><coordinates><x>150</x><y>685</y><w>290</w><h>160</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>270;10;10;140</additional_attributes></element><element><id>UMLClass</id><coordinates><x>920</x><y>65</y><w>190</w><h>190</h></coordinates><panel_attributes>Donjon
 --
 - listeJeu : ArrayList&lt;Jeu&gt;
 --
@@ -545,29 +302,7 @@ Case
 --
 + getListeJeu ( ) : ArrayList&lt;Jeu&gt;
 
-</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>700</x>
-      <y>147</y>
-      <w>21</w>
-      <h>91</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;110.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>917</x>
-      <y>616</y>
-      <w>147</w>
-      <h>133</h>
-    </coordinates>
-    <panel_attributes>PotionPV
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1000</x><y>245</y><w>30</w><h>130</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;110;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1310</x><y>915</y><w>210</w><h>190</h></coordinates><panel_attributes>PotionPV
 --
 - x : int
 - y : int
@@ -575,29 +310,7 @@ Case
 + PotionPV (String,int,int)
 + getX() : int
 + getY() : int
-</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>560</x>
-      <y>588</y>
-      <w>371</w>
-      <h>105</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;510.0;130.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>833</x>
-      <y>448</y>
-      <w>147</w>
-      <h>133</h>
-    </coordinates>
-    <panel_attributes>PotionDegat
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>800</x><y>875</y><w>530</w><h>150</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;510;130</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1190</x><y>675</y><w>210</w><h>190</h></coordinates><panel_attributes>PotionDegat
 --
 - x : int
 - y : int
@@ -605,40 +318,7 @@ Case
 + PotionDegat(String,int,int)
 + getX() : int
 + getY() : int
-</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>560</x>
-      <y>504</y>
-      <w>287</w>
-      <h>84</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;100.0;390.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>882</x>
-      <y>294</y>
-      <w>224</w>
-      <h>28</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>300.0;20.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>1092</x>
-      <y>210</y>
-      <w>147</w>
-      <h>189</h>
-    </coordinates>
-    <panel_attributes>&lt;&lt;Abstract&gt;&gt;
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>800</x><y>755</y><w>410</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;100;390;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1260</x><y>455</y><w>320</w><h>40</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>300;20;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1560</x><y>335</y><w>210</w><h>270</h></coordinates><panel_attributes>&lt;&lt;Abstract&gt;&gt;
 Personnage
 --
 - x : int
@@ -658,29 +338,7 @@ Personnage
 +etreMort() : boolean
 
 
-</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>1232</x>
-      <y>77</y>
-      <w>231</w>
-      <h>196</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>10.0;260.0;310.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>1449</x>
-      <y>21</y>
-      <w>189</w>
-      <h>105</h>
-    </coordinates>
-    <panel_attributes>Aventurier
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1760</x><y>145</y><w>330</w><h>280</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;260;310;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>2070</x><y>65</y><w>270</w><h>150</h></coordinates><panel_attributes>Aventurier
 --
 - nom : String
 --
@@ -694,18 +352,7 @@ Personnage
 
 
 
-</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>1442</x>
-      <y>350</y>
-      <w>189</w>
-      <h>105</h>
-    </coordinates>
-    <panel_attributes>&lt;&lt;Abstract&gt;&gt;
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>2060</x><y>535</y><w>270</w><h>150</h></coordinates><panel_attributes>&lt;&lt;Abstract&gt;&gt;
 Monstre
 --
 --
@@ -717,29 +364,7 @@ Monstre
 
 
 
-</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>1232</x>
-      <y>308</y>
-      <w>224</w>
-      <h>112</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;300.0;140.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>1708</x>
-      <y>231</y>
-      <w>189</w>
-      <h>77</h>
-    </coordinates>
-    <panel_attributes>MonstreImmobile
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1760</x><y>475</y><w>320</w><h>160</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;10;300;140</additional_attributes></element><element><id>UMLClass</id><coordinates><x>2440</x><y>365</y><w>270</w><h>110</h></coordinates><panel_attributes>MonstreImmobile
 --
 --
 + MonstreImmobile(int,int,int,int)
@@ -750,29 +375,7 @@ Monstre
 
 
 
-</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>1582</x>
-      <y>266</y>
-      <w>140</w>
-      <h>98</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>10.0;120.0;180.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>1708</x>
-      <y>357</y>
-      <w>210</w>
-      <h>70</h>
-    </coordinates>
-    <panel_attributes>MonstreDeplacementAleatoire
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>2260</x><y>415</y><w>200</w><h>140</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;120;180;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>2440</x><y>535</y><w>300</w><h>100</h></coordinates><panel_attributes>MonstreDeplacementAleatoire
 --
 --
 + MonstreDeplacementAleatoire(int,int,int,int)
@@ -783,29 +386,7 @@ Monstre
 
 
 
-</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>1624</x>
-      <y>378</y>
-      <w>98</w>
-      <h>35</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;120.0;30.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>1708</x>
-      <y>490</y>
-      <w>210</w>
-      <h>77</h>
-    </coordinates>
-    <panel_attributes>MonstreAttireParHeros
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>2320</x><y>575</y><w>140</w><h>40</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;10;120;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>2440</x><y>735</y><w>300</w><h>110</h></coordinates><panel_attributes>MonstreAttireParHeros
 --
 --
 + MonstreAttireParHeros(int,int,int,int)
@@ -817,7 +398,4 @@ Monstre
 
 
 
-</panel_attributes>
-    <additional_attributes/>
-  </element>
-</diagram>
+</panel_attributes><additional_attributes></additional_attributes></element></diagram>
