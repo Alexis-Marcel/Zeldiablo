@@ -42,7 +42,7 @@ abstract class Personnage {
     public int getY() {
         return y;
     }
-    public getOrientation(){
+    public char getOrientation(){
         return orientation;
     }
     public boolean etreMort(){
