@@ -33,4 +33,14 @@ abstract class Personnage {
     public void prendreDegat(int degats){
         this.pv -= degats;
     }
+
+    public int getX() {
+        return x;
+    }
+    public int getY() {
+        return y;
+    }
+    public boolean etreMort(){
+        return this.pv <= 0;
+    }
 }
