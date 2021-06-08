@@ -38,23 +38,25 @@ public class Labyrinthe{
      * @param y ordonnée du personnage
      * @param orientation orientation du personnage
      */
-    public Case[] getCase(int x,int y,char orientation){
+    public Case getCase(int x,int y,char orientation){
 
-        Case [] l = new Case[1];
+        Case l;
 
         switch(orientation){
         case Personnage.NORD:
-           l [0] = this.listeCases[x][y-1];
+           l = this.listeCases[x][y-1];
            break;
         case Personnage.SUD:
-           l [0] = this.listeCases[x][y+1];
+           l = this.listeCases[x][y+1];
            break;
         case Personnage.EST:
-           l [0] = this.listeCases[x+1][y];
+           l = this.listeCases[x+1][y];
            break;
         case Personnage.OUEST:
-           l [0] = this.listeCases[x-1][y];
+           l = this.listeCases[x-1][y];
            break;
+        default : 
+            l = this.listeCases[x][y-1];
         }
 
            return l;
