@@ -4,7 +4,7 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>0</x>
+      <x>30</x>
       <y>320</y>
       <w>240</w>
       <h>190</h>
@@ -14,6 +14,8 @@
 - listeCases : Case[][] 
 - sortie : int[]
 --
++ Labyrinthe(String)
++ chargerLabyritne(String) : void
 + casesAdjacentes(int,int) : Cases[]
 + getCase(int,int) : Case
 </panel_attributes>
@@ -22,7 +24,7 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>30</x>
+      <x>60</x>
       <y>620</y>
       <w>210</w>
       <h>190</h>
@@ -43,7 +45,7 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>120</x>
+      <x>150</x>
       <y>500</y>
       <w>90</w>
       <h>140</h>
@@ -57,7 +59,7 @@ m2=*</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>430</x>
+      <x>460</x>
       <y>260</y>
       <w>260</w>
       <h>230</h>
@@ -70,7 +72,6 @@ m2=*</panel_attributes>
 - url : String
 --
 +Niveau(String)
-+ chargerLabyritne(String) : void
 + deplacerAventurier(Commande) : void
 + deplaceMonstres() : void
 + aventurierAttaque(Commande) : void
@@ -82,7 +83,7 @@ m2=*</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>230</x>
+      <x>260</x>
       <y>370</y>
       <w>220</w>
       <h>50</h>
@@ -96,7 +97,7 @@ m2=*</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>850</x>
+      <x>880</x>
       <y>200</y>
       <w>210</w>
       <h>300</h>
@@ -129,7 +130,7 @@ Personnage
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>830</x>
+      <x>860</x>
       <y>570</y>
       <w>270</w>
       <h>150</h>
@@ -153,7 +154,7 @@ Monstre
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>950</x>
+      <x>980</x>
       <y>490</y>
       <w>30</w>
       <h>100</h>
@@ -164,7 +165,7 @@ Monstre
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1230</x>
+      <x>1260</x>
       <y>430</y>
       <w>270</w>
       <h>130</h>
@@ -186,7 +187,7 @@ Monstre
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1090</x>
+      <x>1120</x>
       <y>480</y>
       <w>160</w>
       <h>150</h>
@@ -197,7 +198,7 @@ Monstre
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1090</x>
+      <x>1120</x>
       <y>660</y>
       <w>170</w>
       <h>80</h>
@@ -208,7 +209,7 @@ Monstre
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>950</x>
+      <x>980</x>
       <y>140</y>
       <w>30</w>
       <h>80</h>
@@ -219,7 +220,7 @@ Monstre
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>820</x>
+      <x>850</x>
       <y>0</y>
       <w>270</w>
       <h>150</h>
@@ -242,7 +243,7 @@ Monstre
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>680</x>
+      <x>710</x>
       <y>40</y>
       <w>160</w>
       <h>280</h>
@@ -256,7 +257,7 @@ m2=*</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>680</x>
+      <x>710</x>
       <y>410</y>
       <w>170</w>
       <h>290</h>
@@ -270,7 +271,7 @@ m2=*</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1240</x>
+      <x>1270</x>
       <y>660</y>
       <w>300</w>
       <h>130</h>
