@@ -83,6 +83,12 @@ public class Labyrinthe{
         this.sortie[1] = y;
     }
 
+    /**
+     * méthode permettant de verifier si une personnage de coordonée x et y sont à la sortie du niveau
+     * @param x abscisse du personnage
+     * @param y ordonnée du personnage
+     * @return true si le personnage est à la sortie
+     */
     public boolean checkHeroSortie(int x, int y){
 
         if(x == this.sortie[0] && y == this.sortie[1]){

@@ -8,5 +8,9 @@ public class MonstreImmobile extends Monstre{
         super(x, y, pv, degats, pCase);
         //TODO Auto-generated constructor stub
     }
+
+    public void seDeplacer(Case[] c){
+        
+    }
  
 }

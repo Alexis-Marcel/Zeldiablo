@@ -2,7 +2,7 @@ package V2.jeu.Personnage;
 
 import V2.jeu.*;
 
-public class Monstre extends Personnage{
+public abstract class Monstre extends Personnage{
     
     /**
      * Constructeur de Monstre prenant en parametre sa position, ses points de vie et ses degats
@@ -19,15 +19,8 @@ public class Monstre extends Personnage{
      * Methode qui permet de deplacer le Monstre
      */
     @Override
-    public void seDeplacer(Case[] tabCase) {
-        
-    }
+    public abstract void seDeplacer(Case[] tabCase);
 
-    public void attaquer(Case c){
-        if(c.getOccupant() != null){
-            c.getOccupant().prendreDegat(this.degat);
-        }
-    }
 
 
 }

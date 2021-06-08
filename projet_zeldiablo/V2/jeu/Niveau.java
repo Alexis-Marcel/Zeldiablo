@@ -144,7 +144,7 @@ public class Niveau implements Jeu{
 
             this.heros.attaquer(caseDevant[0]);
 
-            monstreMort(caseDevant[0].getOccupant());
+            personnageMort(caseDevant[0].getOccupant());
 
         }
 
@@ -154,7 +154,7 @@ public class Niveau implements Jeu{
      * méthode permettant de supprimer un personnage quand il est mort
      * @param m Personnage a supprimer
      */
-    public void monstreMort(Personnage m){
+    public void personnageMort(Personnage m){
 
         if(m != null){
 
