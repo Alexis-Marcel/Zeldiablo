@@ -20,7 +20,7 @@ public class LabyrintheTest{
 
     @Test
     public void testSetListeCase(){
-        Niveau j = new Niveau("../niveaux/niveau1.txt");
+        Niveau j = new Niveau();
         Labyrinthe l = j.getLabyrinthe();
         l.setListeCase(0, 0, new CaseVide(0, 0));
         boolean res = l.getListeCase()[0][0] instanceof CaseVide;
