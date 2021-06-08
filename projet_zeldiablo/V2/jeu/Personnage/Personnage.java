@@ -8,6 +8,12 @@ abstract class Personnage {
     private char orientation;
     private Case caseOccupe;
 
+    final static char NORD ='N';
+    final static char SUD  ='S';
+    final static char EST  ='E';
+    final static char OUEST='O';
+
+
     public Personnage(int px,int py,int ppv,int pdegat,Case pcase){
         this.x = px;
         this.y = py;
@@ -20,5 +26,11 @@ abstract class Personnage {
 
     abstract void seDeplacer(Case[]);
 
-    
+    public void attaquer(Case c){
+
+    }
+
+    public void prendreDegat(int degats){
+        this.pv -= degats;
+    }
 }
