@@ -35,7 +35,7 @@ public abstract class Personnage {
      * @param py position ordonnee initiale
      * @param pv pv initaux 
      * @param deg degats initial
-     * @param c case sur leuquel demarre le personnage
+     * @param c case sur lequel demarre le personnage
      */
     public Personnage(int px,int py,int ppv,int pdegat,Case pcase){
         this.x = px;

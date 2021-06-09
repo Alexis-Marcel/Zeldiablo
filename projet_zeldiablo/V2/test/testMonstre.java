@@ -10,21 +10,53 @@ import org.junit.Test;
 public class testMonstre {
     
     @Test
-    public void testConstructeur(){
+    public void testConstructeurImmobile(){
         Monstre m = new MonstreImmobile(0,0,0,0,new Case(true,null));
         boolean res = m.getX() == 0 && m.getY() == 0;
-        assertEquals("Le constructeur n'initialise pas les bonnes coordonnees", res, true);
+        assertTrue("Le constructeur n'initialise pas les bonnes coordonnees", res);
     }
 
     @Test
-    public void testAttaquer(){
+    public void testMonstreImmobileAttaqueAventurier(){
+        Case c = new Case(true,null);
+        Personnage p = new Aventurier(0,0,1,0, c);
+        Monstre m = new MonstreImmobile(0,0,0,1,new Case(true,null));
+        m.attaquer(c);
+        boolean res = p.etreMort();
+
+        assertTrue("L'aventurier devrait etre mort", res);
+    }
+
+    @Test
+    public void testMonstreImmobileAttaqueMonstre(){
         Case c = new Case(true,null);
         Personnage p = new MonstreImmobile(0,0,1,0, c);
         Monstre m = new MonstreImmobile(0,0,0,1,new Case(true,null));
         m.attaquer(c);
         boolean res = p.etreMort();
 
-        assertEquals("Le monstre n'a pas été actualisé", res, true);
+        assertTrue("Le monstre ne devrait pas etre mort", !res);
+    }
+
+    @Test
+    public void testMonstresEstAttaque(){
+        Case c = new Case(true,null);
+        Monstre m = new MonstreImmobile(0,0,1,0, c);
+        Aventurier a = new Aventurier(0,0,0,1,new Case(true,null));
+        a.attaquer(c);
+        boolean res = m.etreMort();
+
+        assertTrue("Le monstre devrait etre mort", res);
+    }
+
+    @Test
+    public void testMonstreImmobileDeplacer(){
+        Case[] c = { new Case(true,null),new Case(true,null),new Case(true,null),new Case(true,null)};
+        Monstre m = new MonstreImmobile(0,0,0,1,new Case(true,null));
+        m.seDeplacer(c);
+
+        assertEquals("Le monstre ne devrait pas avoir bouger",m.getX(),0 );
+        assertEquals("Le monstre ne devrait pas avoir bouger",m.getX(),0 );
     }
 
 }
