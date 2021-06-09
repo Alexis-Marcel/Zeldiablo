@@ -12,7 +12,7 @@ import java.io.*;
  * Niveau
  */
 
-public class Niveau implements Jeu{ 
+public class Niveau { 
 
     /**
      * Labyrinthe sur lequel va se dérouler le jeu
@@ -34,8 +34,6 @@ public class Niveau implements Jeu{
      */
     public String urlFond;
 
-    private int itearation = 0;
-
 
     /**
      * Constructeur permettant d'initialiser le labyrithe, l'aventurier et la liste des monstres grâce à un fichier texte
@@ -55,37 +53,7 @@ public class Niveau implements Jeu{
     /**
      * méthode permettant de mofiier les objets composants le jeu 
      */
-    public void evoluer(Commande commandeUser){
-
-            deplacerAventurier(commandeUser);
-            aventurierAttaque(commandeUser);
-
-            
-            if(itearation == 8){
-
-                itearation=0;
-                monstreAttaque();
-                deplacerMonstre();
-
-            }
-
-            itearation++;
-                
-       
-            
-
-    }
-
-    /**
-     * méthode permettant d'indiquer si le jeu est fini
-     */
-    public boolean etreFini(){
-
-        if(this.heros.etreMort() || this.laby.checkHeroSortie(this.heros.getX(), this.heros.getY())){
-            return true;
-        }
-        return false;
-    }
+    
 
     /**
      * méthode permettant de déplacer l'aventurier
@@ -205,13 +173,10 @@ public class Niveau implements Jeu{
         return this.listeMonstre;
     }
 
-    public void passeNiveauSuivant(String src,String uf){
-
-        this.listeMonstre.clear();
-        chargerNiveau(src);
-        this.urlFond = uf;
-
+    public Labyrinthe getLabyrinthe(){
+        return this.laby;
     }
+
 
 
     /**
@@ -273,6 +238,7 @@ public class Niveau implements Jeu{
 
         } catch (IOException e) {
             System.out.println(e.getMessage());
+            System.out.println("lis le niveau fdp");
 
         }
         

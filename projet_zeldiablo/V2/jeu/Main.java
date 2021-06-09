@@ -6,9 +6,9 @@ public class Main {
 
     public static void main(String[] args){
 
-        Niveau jeu = new Niveau("projet_zeldiablo/V2/niveaux/niveau1.txt","projet_zeldiablo/V2/fond/niveau1.png");
-        ZeldiabloDessin dess = new ZeldiabloDessin(jeu);
-        MoteurGraphique m = new MoteurGraphique(jeu, dess);
+        Donjon dj = new Donjon();
+        ZeldiabloDessin dess = new ZeldiabloDessin(dj);
+        MoteurGraphique m = new MoteurGraphique(dj, dess);
 
         try{
 
