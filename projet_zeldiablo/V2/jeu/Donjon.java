@@ -34,13 +34,14 @@ public class Donjon implements Jeu{
 
         for(int i=1; i<=NOMBRENIVEAUX;i++){
             this.listeNiveau.add(new Niveau(Donjon.cheminNiveau + "niveau" +i+".txt",Donjon.cheminFond+"niveau"+i+".png"));
-        }
-        
-
-        
+        }      
 
     }
 
+    /**
+     * méthode permettant de faire évoluer le jeu
+     * @param commandeUser permet de récuperer les commandes envoyés par l'utilisateur
+     */
     public void evoluer(Commande commandeUser){
 
         if(this.niveauActuelle < this.listeNiveau.size()){
@@ -72,6 +73,7 @@ public class Donjon implements Jeu{
     
     /**
     * méthode permettant d'indiquer si le jeu est fini
+    *@return true si le jeu doit etre arrete
     */
     public boolean etreFini(){
         

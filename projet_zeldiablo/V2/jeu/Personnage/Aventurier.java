@@ -2,14 +2,29 @@ package V2.jeu.Personnage;
 
 import V2.jeu.Case;
 
+/**
+ * class Aventurier qui correspond au heros controlé par l'utilisateur
+ */
 public class Aventurier extends Personnage{
 
+    /**
+     * Constructeur
+     * @param px position abscisse initiale
+     * @param py position ordonnee initiale
+     * @param pv pv initaux 
+     * @param deg degats initial
+     * @param c case sur leuquel demarre le personnage
+     */
     public Aventurier(int px,int py,int pv,int deg ,Case c){
 
         super(px,py,pv,deg,c);
         
     }
     
+    /**
+     * méthode permettant au personnage de se déplacer vers la case c
+     * @param c case vers laquelle le personnage va essayer de se deplacer
+     */
     public void seDeplacer(Case c){
 
         if(c.estTraversable()){
@@ -37,6 +52,10 @@ public class Aventurier extends Personnage{
 
     }
 
+
+    /**
+     * méthode permettant de savoir si le personnage est un aventurier ou pas
+     */
     public boolean etreAventurier(){
         return true;
     }
