@@ -1,0 +1,26 @@
+*Fonctionnalités version 5
+
+-fonctionnalité 1 :  Création de case interactive : case Potion, case Piège
+-          descriptif texte : ajout de cases qui ont un effet quand un personnage passe dessus
+-          critères de validation :
+
+-fonctionnalité 2 :  Création d'un menu permettant à l'utilisateur de connaitre l'état du heros
+-          descriptif texte : menu donner des caractéristiques du heros suivant son évolution
+-          critères de validation :
+
+
+
+
+
+
+
+
+		
+		
+
+
+
+		
+
+
+  

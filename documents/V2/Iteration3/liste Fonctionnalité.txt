@@ -1,21 +1,26 @@
 *Fonctionnalités version 3
 
--fonctionnalité 1 :  Création d'un systeme de donjon comprenant plusieurs niveau permettant un changemant de niveau
--          descriptif texte : Un donjon possède plusieurs niveaux et permet à l'aventurier de changer de niveau quand il est sur la case sorti
--          critères de validation :
-
-		• création d'un donjon avec une liste de niveau
-		• méthode permettantun changement de niveau quand le personnage est à la sortie
-		• ajout de getters permettant de récuperer le niveau actuelle ainsi que la liste des niveaux
-        • méthode permettant de vérifier si le hero est sur la sortie et une autre pour définir la sortie
-
--fonctionnalité 2 : évolution du système d'attaque permettant au monstre de ne pas s'attaquer entre eux et ajout de la gestion de la mort
--          descriptif texte : permet de gérer la mort du heros par l'arret du jeu ou bien la mort d'un monstre seulement par le heros
+-fonctionnalité 1 : ajout d'un monstre au déplacement aléatoire et d'une méthode permettant de déplacer tous les monstres
+-          descriptif texte : un nouveau monstre qui n'est plus immobile et qui se déplace de façon alétoire vers une case vide (traversable et non occupe)
 -          critères de validation :
 		
-		• méthode permettant d'identifier un personnage (aventurier ou monstre)
-        • méthode gérant la mort d'un monstre en l'enlevant de sa case et de la liste des monstres
-        • arret du jeu si le heros controlé par l'utilisateur meurt
+		• méthode dans la class case permettant de récuperer les 4cases autour du monstre
+        • création d'une class MonstreDeplacementAleatoire avec une méthode seDeplacer qui permet au monstre de se déplacer vers une case aléatoire
+        • De la même manière que aventurier le monstre devra alors changer la case qu'il occupe
+
+
+-fonctionnamité 2 : Création d'un systeme d'attaque entre les personnages
+-          descriptif texte : un personnage va alors pouvoir attaquer un autre personnage
+-          critères de validation : 
+		• ajout d'attribut pv et degat au personnage
+        • méthode permettant d'attaquer l'occupant d'une case donnée selon l'orientation de l'attaquant
+        • deux getter qui retourne chacun les degats et pv du personnage
+        • méthode permettant à un personnage de prendre des dégats
+        • méthode permettant à l'aventurier d'attaquer devant lui selon l'utilisateur
+        • méthode permettant à tous les monstres d'attaques devant eux
+
+
+
 
 
 

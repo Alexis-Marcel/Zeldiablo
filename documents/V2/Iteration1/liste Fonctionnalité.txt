@@ -27,14 +27,7 @@
         • deux getter qui retourne chacun les coordonée X et Y de la case;
         • création d'un aventurier et d'un monstre immobile qui herite de personnage
 
--fonctionnamité 4 : Création d'un systeme de déplacement pour les personnages
--          descriptif texte : le personnage pourra se déplacer sur les cases qui sont traversables et qui n'ont pas d'occupant
--          critères de validation : 
-		• un personnage a une orientation qui correspond à la direction dans laquelle il se déplace
-        • méthode permettant au personnage de se déplacer en actualisant ses coordonées et en changeant de case qu'il occupe
-        • méthodes dans la class case retournant la case devant le personnage selon son orientation 
-        • deux getter qui retourne l'orientation du personnage et l'autre qui retourne la case sur laquel est le personnage
-        • un setter qui modifie l'orientation de personnage en fonction de son déplacement
+
 		
 
 

@@ -52,7 +52,6 @@ m2=*</panel_attributes><additional_attributes>10;400;10;10</additional_attribute
 - aventurier : Aventurier
 --
 + Niveau(String)
-+ deplacerAventurier(Commande) : void
 
 --
 + evoluer(Commande) : void
@@ -66,20 +65,15 @@ Personnage
 # x : int
 # y : int
 
-- orientation : char
 # caseOccupe : Case
-_+ NORD: char = 'N'_
-_+ SUD: char = 'S'_
-_+ OUEST: char = 'O'_
-_+ EST: char = 'E'_
+
 --
 + Personnage(int,int,Case)
-+setOrientation(char) : void
 --
 +getX() : int
 +getY() : int
 +getCase() : Case
-+getOrientation() : char
+
 
 
 </panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>930</x><y>360</y><w>270</w><h>150</h></coordinates><panel_attributes>&lt;&lt;Abstract&gt;&gt;
@@ -88,7 +82,6 @@ Monstre
 
 --
 + Monstre(int,int,Case)
-/+ seDeplacer(Case[]) : void /
 --
 
 
@@ -100,7 +93,6 @@ Monstre
 
 --
 + MonstreImmobile(int,int,Case)
-+ seDeplacer(Cases[]) : void
 
 
 
@@ -111,7 +103,6 @@ Monstre
 
 --
 + Aventurier(int,int,Case)
-+ seDeplacer(Cases[]) : void
 --
 
 
