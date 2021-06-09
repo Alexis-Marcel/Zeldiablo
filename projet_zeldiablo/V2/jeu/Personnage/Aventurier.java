@@ -36,5 +36,9 @@ public class Aventurier extends Personnage{
         }
 
     }
+
+    public boolean etreAventurier(){
+        return true;
+    }
     
 }

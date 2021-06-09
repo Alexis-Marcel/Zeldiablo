@@ -21,6 +21,10 @@ public abstract class Monstre extends Personnage{
 
     public abstract void seDeplacer(Case[] cases);
 
+    public boolean etreAventurier(){
+        return false;
+    }
+
 
 
 }
