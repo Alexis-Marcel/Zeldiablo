@@ -1,0 +1,36 @@
+*Fonctionnalités version 2
+
+-fonctionnalité 1 :  Création d'un labyrinthe selon un fichier texte
+-          descriptif texte : Au lancement du Niveau, un labyrinthe, une liste de monstre et un aventurier sont crées en fonction d'un fichier texte
+-          critères de validation :
+
+		• Le labyrinthe est initialiser avec des cases traversables ou non
+		• Le labyrinthe créer une liste de monstre
+		• Le labyrinthe place l'aventurier sur la case de départ
+		• ajout d'un attribut sortie qui indiquera si le heros a fini le niveau
+        • méthode permettant de vérifier si le hero est sur la sortie et une autre pour définir la sortie
+
+-fonctionnalité 2 : ajout d'un monstre au déplacement aléatoire et d'une méthode permettant de déplacer tous les monstres
+-          descriptif texte : un nouveau monstre qui n'est plus immobile et qui se déplace de façon alétoire vers une case vide (traversable et non occupe)
+-          critères de validation :
+		
+		• méthode dans la class case permettant de récuperer les 4cases autour du monstre
+        • création d'une class MonstreDeplacementAleatoire avec une méthode seDeplacer qui permet au monstre de se déplacer vers une case aléatoire
+        • De la même manière que aventurier le monstre devra alors changer la case qu'il occupe
+
+
+
+-fonctionnamité 3 : Création d'un systeme d'attaque entre les personnages
+-          descriptif texte : un personnage va alors pouvoir attaquer un autre personnage
+-          critères de validation : 
+		• ajout d'attribut pv et degat au personnage
+        • méthode permettant d'attaquer l'occupant d'une case donnée selon l'orientation de l'attaquant
+        • deux getter qui retourne chacun les degats et pv du personnage
+        • méthode permettant à un personnage de prendre des dégats
+        • méthode permettant à l'aventurier d'attaquer devant lui selon l'utilisateur
+        • méthode permettant à tous les monstres d'attaques devant eux
+
+		
+
+
+  
