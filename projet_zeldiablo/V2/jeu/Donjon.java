@@ -12,8 +12,8 @@ public class Donjon implements Jeu{
     private int niveauActuelle;
     private int iteration;
 
-    private final static String cheminNiveau = "V2/niveaux/";
-    private final static String cheminFond = "V2/fond/";
+    private final static String cheminNiveau = "projet_zeldiablo/V2/niveaux/";
+    private final static String cheminFond = "projet_zeldiablo/V2/fond/";
 
 
     public Donjon() {
