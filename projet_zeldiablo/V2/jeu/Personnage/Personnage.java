@@ -32,11 +32,14 @@ public abstract class Personnage {
 
     public void attaquer(Case c){
 
-        if(c.getOccupant() != null){
+        Personnage cible = c.getOccupant();
 
-            c.getOccupant().prendreDegat(this.degat);
-            System.out.println("Donne ton gouter");
+        if(cible != null){
 
+            if (cible.etreAventurier() != this.etreAventurier()) {
+                cible.prendreDegat(this.degat);
+                System.out.println("Donne ton gouter");
+            }
         }   
     }
 
@@ -44,6 +47,8 @@ public abstract class Personnage {
         this.pv -= degats;
 
     }
+
+    public abstract boolean etreAventurier();
 
     public int getX() {
         return x;
