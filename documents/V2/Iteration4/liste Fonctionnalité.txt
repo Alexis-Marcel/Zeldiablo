@@ -1,8 +1,18 @@
 *Fonctionnalités version 4
 
--fonctionnalité 1 :  
+-fonctionnalité 1 :  Création de case interactive : case Potion, case Piège
+-          descriptif texte : ajout de cases qui ont un effet quand un personnage passe dessus
+-          critères de validation :
 
--fonctionnalité 2 : 
+
+-fonctionnalité 2 : création d'une menu afficher les degats, la vie et d'autre caractéristiques de l'aventurier
+-          descriptif texte : permet à l'utilisateurd'avoir des informations sur l'évolution de son personnage
+-          critères de validation :
+
+
+		
+		
+
 
 
 		

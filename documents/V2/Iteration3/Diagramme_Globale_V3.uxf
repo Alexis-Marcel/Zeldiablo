@@ -82,7 +82,7 @@ _+ EST: char = 'E'_
 + Personnage(int,int,int,int,Case)
 + attaquer(Case) : void
 + prendreDegat(int) : void
-/ etreAventurier() : boolean/
+/+ etreAventurier() : boolean/
 +setOrientation(char) : void
 --
 +getX() : int
@@ -100,7 +100,7 @@ Monstre
 
 --
 + Monstre(int,int,int,int,Case)
-/ seDeplacer(Case[]) : void /
+/+ seDeplacer(Case[]) : void /
 + etreAventurier() : boolean
 --
 
@@ -174,4 +174,16 @@ _-NOMBRENIVEAUX: int = 3_
 </panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>858</x><y>240</y><w>80</w><h>110</h></coordinates><panel_attributes>lt=&lt;-
 liseNiveau
 m1=1
-m2=*</panel_attributes><additional_attributes>10;90;10;10</additional_attributes></element></diagram>
+m2=*</panel_attributes><additional_attributes>10;90;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1189</x><y>30</y><w>310</w><h>190</h></coordinates><panel_attributes>ZeldiabloDessin
+--
+- dj : Donjon
+_-cheminPerso: String = "projet_zeldiablo/fond/"_
+
+--
++ ZeldiabloDessin(Donjon)
++ dessiner(BufferedImage) : void
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1049</x><y>110</y><w>160</w><h>50</h></coordinates><panel_attributes>lt=&lt;-
+dj
+m1=1
+m2=*</panel_attributes><additional_attributes>10;20;140;20</additional_attributes></element></diagram>

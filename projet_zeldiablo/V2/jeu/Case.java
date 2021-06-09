@@ -20,9 +20,9 @@ public class Case {
      * @param tr
      * @param p
      */
-    public Case(boolean tr, Personnage p){
+    public Case(boolean tr){
         this.traversable = tr ;
-        this.occupant = p;
+        this.occupant = null;
     }
 
     /**
