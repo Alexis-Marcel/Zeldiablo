@@ -10,6 +10,7 @@ public class Main {
         ZeldiabloDessin dess = new ZeldiabloDessin(dj);
         MoteurGraphique m = new MoteurGraphique(dj, dess);
 
+
         try{
 
             m.lancerJeu(800, 800);
