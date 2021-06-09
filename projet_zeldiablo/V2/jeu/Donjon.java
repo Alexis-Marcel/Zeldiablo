@@ -32,7 +32,7 @@ public class Donjon implements Jeu{
         this.listeNiveau = new ArrayList<Niveau>();
         this.niveauActuelle = 0;
 
-        for(int i=1; i<NOMBRENIVEAUX;i++){
+        for(int i=1; i<=NOMBRENIVEAUX;i++){
             this.listeNiveau.add(new Niveau(Donjon.cheminNiveau + "niveau" +i+".txt",Donjon.cheminFond+"niveau"+i+".png"));
         }
         
