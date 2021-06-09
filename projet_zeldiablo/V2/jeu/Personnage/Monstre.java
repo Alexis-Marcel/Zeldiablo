@@ -17,10 +17,16 @@ public abstract class Monstre extends Personnage{
     
     /**
      * Methode qui permet de deplacer le Monstre
+     * 
+     * @param cases 
      */
-
     public abstract void seDeplacer(Case[] cases);
 
+    /**
+     * methode permettant de savoir si monstre est un aventurier ou non
+     * 
+     * @return un boolean false
+     */
     public boolean etreAventurier(){
         return false;
     }
