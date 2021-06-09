@@ -42,7 +42,6 @@ public class Donjon implements Jeu{
 
         if(this.niveauActuelle < this.listeNiveau.size()){
 
-            passeNiveauSuivant();
 
             Niveau nivAct = this.listeNiveau.get(niveauActuelle);
 
@@ -60,6 +59,9 @@ public class Donjon implements Jeu{
         
             iteration++;
 
+
+            passeNiveauSuivant();
+
         
         }
             
@@ -69,13 +71,13 @@ public class Donjon implements Jeu{
     * méthode permettant d'indiquer si le jeu est fini
     */
     public boolean etreFini(){
+        
     
     if(this.niveauActuelle >= this.listeNiveau.size()){
         return true;
     }
     else if(this.listeNiveau.get(niveauActuelle).getAventurier().etreMort()){
 
-        System.out.println("fin");
         return true;
     }
     return false;
@@ -88,7 +90,6 @@ public class Donjon implements Jeu{
 
             if(nivAct.getLabyrinthe().checkHeroSortie(nivAct.getAventurier().getX(),nivAct.getAventurier().getY())){
 
-        
                   this.niveauActuelle++;
             }
         

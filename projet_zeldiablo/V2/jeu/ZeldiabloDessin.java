@@ -24,7 +24,7 @@ public class ZeldiabloDessin implements DessinJeu {
 
         if(this.dj.getNiveauActuel() < this.dj.getListeNiveau().size()){
 
-
+          
                 Niveau zJeu = dj.getListeNiveau().get(dj.getNiveauActuel());
             Graphics g = image.getGraphics();
 
