@@ -13,7 +13,7 @@ public class Aventurier extends Personnage{
      * @param py position ordonnee initiale
      * @param pv pv initaux 
      * @param deg degats initial
-     * @param c case sur leuquel demarre le personnage
+     * @param c case sur lequel demarre le personnage
      */
     public Aventurier(int px,int py,int pv,int deg ,Case c){
 
