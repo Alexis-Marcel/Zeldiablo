@@ -157,6 +157,7 @@ m2=*</panel_attributes><additional_attributes>10;20;550;20</additional_attribute
 - iteration : int
 _-cheminNiveau: String = "projet_zeldiablo/niveaux/"_
 _-cheminFond: String = "projet_zeldiablo/niveaux/"_
+_-NOMBRENIVEAUX: int = 3_
 
 --
 + Donjon()
