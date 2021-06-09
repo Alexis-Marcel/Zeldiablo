@@ -36,8 +36,7 @@ public class Donjon implements Jeu{
             this.listeNiveau.add(new Niveau(Donjon.cheminNiveau + "niveau" +i+".txt",Donjon.cheminFond+"niveau"+i+".png"));
         }
         
-       
-        this.listeNiveau.add(new Niveau(Donjon.cheminNiveau + "niveau2.txt",Donjon.cheminFond+"niveau2.png"));
+
         
 
     }
