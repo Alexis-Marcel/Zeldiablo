@@ -16,10 +16,13 @@ public class Case {
 
     /**
      * CONSTRUCTEUR
+     * 
+     * @param tr
+     * @param p
      */
-    public Case(boolean tr, Personnage p){
+    public Case(boolean tr){
         this.traversable = tr ;
-        this.occupant = p;
+        this.occupant = null;
     }
 
     /**
@@ -38,16 +41,18 @@ public class Case {
     }
 
     /**
-     * methode 
+     * methode  qui donne un personnage a la case
+     * 
+     * @param p le personnage qui est donne a la case
      */
     public void setOccupant(Personnage p){
        this.occupant = p;
     }
 
     /**
-     * methode qui retourne l'attribut occupant
+     * methode qui retourne  occupant de la case
      * 
-     * @return 
+     * @return Personnage qui est sur la case
      */
     public Personnage getOccupant(){
         return this.occupant;

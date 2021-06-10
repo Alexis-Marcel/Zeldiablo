@@ -10,16 +10,16 @@ public class testMonstreDeplacementAleatoire {
 
     @Test
     public void testConstructeur(){
-        MonstreDeplacementAleatoire m = new MonstreDeplacementAleatoire(0,0,0,0,new Case(true,null));
+        MonstreDeplacementAleatoire m = new MonstreDeplacementAleatoire(0,0,0,0,new Case(true));
         boolean res = m.getX() == 0 && m.getY() == 0;
         assertEquals("Le constructeur n'initialise pas les bonnes coordonnees", res, true);
     }
 
     @Test
     public void testAttaquer(){
-        Case c = new Case(true, null);
+        Case c = new Case(true);
         Personnage p = new MonstreDeplacementAleatoire(0,0,1,0, c);
-        MonstreDeplacementAleatoire m = new MonstreDeplacementAleatoire(0,0,0,1,new Case(true,null));
+        MonstreDeplacementAleatoire m = new MonstreDeplacementAleatoire(0,0,0,1,new Case(true));
         m.attaquer(c);
         boolean res = p.etreMort();
 
@@ -29,10 +29,10 @@ public class testMonstreDeplacementAleatoire {
     @Test
     public void testSeDeplacer(){
         Case[] cases = new Case[2];
-        cases[0] = new Case(true,null);
-        cases[1] = new Case(true,null);
+        cases[0] = new Case(true);
+        cases[1] = new Case(true);
 
-        MonstreDeplacementAleatoire m = new MonstreDeplacementAleatoire(0,0,0,0,new Case(true,null));
+        MonstreDeplacementAleatoire m = new MonstreDeplacementAleatoire(0,0,0,0,new Case(true));
         
         m.seDeplacer(cases);
         boolean res = m.getCase() == cases[0] || m.getCase() == cases[1];
