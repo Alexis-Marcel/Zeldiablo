@@ -1,0 +1,33 @@
+*Fonctionnalités version 2
+
+-fonctionnalité 1 :  Création d'un labyrinthe selon un fichier texte
+-          descriptif texte : Au lancement du Niveau, un labyrinthe, une liste de monstre et un aventurier sont crées en fonction d'un fichier texte
+-          critères de validation :
+
+		• Le labyrinthe est initialiser avec des cases traversables ou non
+		• Le labyrinthe créer une liste de monstre
+		• Le labyrinthe place l'aventurier sur la case de départ
+		• ajout d'un attribut sortie qui indiquera si le heros a fini le niveau
+        • méthode permettant de vérifier si le hero est sur la sortie et une autre pour définir la sortie
+Chargé : Alexis et Théo
+
+
+-fonctionnamité 2 : Création d'un systeme de déplacement pour les personnages
+-          descriptif texte : le personnage pourra se déplacer sur les cases qui sont traversables et qui n'ont pas d'occupant
+-          critères de validation : 
+		• un personnage a une orientation qui correspond à la direction dans laquelle il se déplace
+        • méthode permettant au personnage de se déplacer en actualisant ses coordonées et en changeant de case qu'il occupe
+        • méthodes dans la class case retournant la case devant le personnage selon son orientation 
+        • deux getter qui retourne l'orientation du personnage et l'autre qui retourne la case sur laquel est le personnage
+        • un setter qui modifie l'orientation de personnage en fonction de son déplacement
+Chargé : Lucas et Léo
+        
+
+
+
+
+
+		
+
+
+  
