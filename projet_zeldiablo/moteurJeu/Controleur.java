@@ -1,4 +1,4 @@
-package V2.moteurJeu;
+package moteurJeu;
 
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
@@ -94,8 +94,6 @@ public class Controleur implements KeyListener {
 				this.commandeARetourner.droite = true;
 				break;
 		}
-
-		int haut = KeyEvent.VK_UP;
 
 	}
 
