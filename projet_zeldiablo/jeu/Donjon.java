@@ -23,8 +23,8 @@ public class Donjon implements Jeu{
     /**
      * attributs correspondant aux chemins pour aller jusqu'au fichiers
      */
-    private final static String cheminNiveau = "projet_zeldiablo/V2/niveaux/";
-    private final static String cheminFond = "projet_zeldiablo/V2/fond/";
+    private final static String cheminNiveau = "projet_zeldiablo/niveaux/";
+    private final static String cheminFond = "projet_zeldiablo/fond/";
     private final static int NOMBRENIVEAUX = 4;
 
 

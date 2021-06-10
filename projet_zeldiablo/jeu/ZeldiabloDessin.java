@@ -12,7 +12,7 @@ import javax.imageio.*;
 public class ZeldiabloDessin implements DessinJeu {
 
     private Donjon dj;
-    private static final String cheminPerso = "projet_zeldiablo/V2/fond/";
+    private static final String cheminPerso = "projet_zeldiablo/fond/";
 
     public ZeldiabloDessin(Donjon j) {
 
