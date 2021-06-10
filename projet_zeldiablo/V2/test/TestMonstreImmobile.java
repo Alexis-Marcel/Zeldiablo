@@ -7,7 +7,7 @@ import V2.jeu.Case;
 import static org.junit.Assert.*;
 import org.junit.Test;
 
-public class testMonstre {
+public class TestMonstreImmobile {
     
     @Test
     public void testConstructeurImmobile(){
