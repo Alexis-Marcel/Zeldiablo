@@ -6,7 +6,7 @@ import V2.jeu.Case;
 import static org.junit.Assert.*;
 import org.junit.Test;
 
-public class testMonstreDeplacementAleatoire {
+public class TestMonstreDeplacementAleatoire {
 
     @Test
     public void testConstructeur(){
