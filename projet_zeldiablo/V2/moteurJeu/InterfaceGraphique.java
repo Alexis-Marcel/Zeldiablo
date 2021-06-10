@@ -35,6 +35,8 @@ public class InterfaceGraphique {
 		JFrame f = new JFrame();
 		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
+		f.setResizable(false);
+
 		// creation panel
 		this.panel = new PanelDessin(x, y, afficheurUtil);
 		f.setContentPane(this.panel);
@@ -48,6 +50,8 @@ public class InterfaceGraphique {
 		f.pack();
 		f.getContentPane().setFocusable(true);
 		f.getContentPane().requestFocus();
+
+		f.setLocationRelativeTo(null);
 
 		f.setVisible(true);
 

@@ -68,13 +68,34 @@ public class Controleur implements KeyListener {
 			this.commandeEnCours.bas = true;
 			this.commandeARetourner.bas = true;
 			break;
-		
 		}
 
 		if(e.getKeyChar() == KeyEvent.VK_SPACE){
 			this.commandeEnCours.attaque = true;
 			this.commandeARetourner.attaque = true;
 		}
+
+		int key = e.getKeyCode();
+		switch (key) {
+			case KeyEvent.VK_UP:
+				this.commandeEnCours.haut = true;
+				this.commandeARetourner.haut = true;
+				break;
+			case KeyEvent.VK_DOWN:
+				this.commandeEnCours.bas = true;
+				this.commandeARetourner.bas = true;
+				break;
+			case KeyEvent.VK_LEFT:
+				this.commandeEnCours.gauche = true;
+				this.commandeARetourner.gauche = true;
+				break;
+			case KeyEvent.VK_RIGHT:
+				this.commandeEnCours.droite = true;
+				this.commandeARetourner.droite = true;
+				break;
+		}
+
+		int haut = KeyEvent.VK_UP;
 
 	}
 
@@ -100,6 +121,22 @@ public class Controleur implements KeyListener {
 		if(e.getKeyChar() == KeyEvent.VK_SPACE){
 			this.commandeEnCours.attaque = false;
 			
+		}
+
+		int key = e.getKeyCode();
+		switch (key) {
+			case KeyEvent.VK_UP:
+				this.commandeEnCours.haut = false;
+				break;
+			case KeyEvent.VK_DOWN:
+				this.commandeEnCours.bas = false;
+				break;
+			case KeyEvent.VK_LEFT:
+				this.commandeEnCours.gauche = false;
+				break;
+			case KeyEvent.VK_RIGHT:
+				this.commandeEnCours.droite = false;
+				break;
 		}
 
 	}
