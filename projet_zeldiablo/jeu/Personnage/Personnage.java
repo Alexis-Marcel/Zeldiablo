@@ -61,7 +61,7 @@ public abstract class Personnage {
 
             if (cible.etreAventurier() != this.etreAventurier()) {
                 cible.prendreDegat(this.degat);
-                System.out.println("Donne ton gouter");
+                System.out.println("attaque");
             }
         }   
     }
