@@ -26,7 +26,21 @@ public class MonstreImmobile extends Monstre{
      * @param cases : tableau de de Cases (cases autour du Monstre où il peut se déplacer)
      */
     public void seDeplacer(Case[] c){
-        //ici le monstre est immabolie donc il ne se déplace pas
+        int rand = (int)Math.floor(Math.random()*4);
+        switch (rand) {
+            case 0:
+                this.setOrientation(Personnage.NORD);
+                break;
+            case 1:
+                this.setOrientation(Personnage.SUD);
+                break;
+            case 2:
+                this.setOrientation(Personnage.EST);
+                break;
+            case 3:
+                this.setOrientation(Personnage.OUEST);
+                break;
+        }
     }
  
 }
