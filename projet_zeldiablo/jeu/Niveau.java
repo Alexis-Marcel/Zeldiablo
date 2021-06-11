@@ -197,10 +197,12 @@ public class Niveau {
             while (tempLigne != null) { // tant que la lecture du fichier n'est pas fini
                 for (int i = 0; i < tempLigne.length(); i++) { // pour chaque caractère de la ligne
 
-                    
+                    //Si # alors c'est un mur
                     if (tempLigne.charAt(i) == '#') {
 
                         this.laby.setListeCase(i, ord, new Case(false));
+
+                    //Si " " alors c'est une case traversable
                     } else if (tempLigne.charAt(i) == ' ') {
 
                         this.laby.setListeCase(i, ord, new Case(true));
@@ -238,8 +240,6 @@ public class Niveau {
 
         } catch (IOException e) {
             System.out.println(e.getMessage());
-            System.out.println("lis le niveau fdp");
-
         }
         
 
