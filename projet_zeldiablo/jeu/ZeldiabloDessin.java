@@ -185,7 +185,7 @@ public class ZeldiabloDessin implements DessinJeu {
                 BufferedImage fond = ImageIO.read(new File(cheminPerso+"fondMort.jpg"));
                 g.drawImage(fond, 0, 0, 800, 800, null);
                 g.setFont(new Font("Segoe Script",Font.BOLD + Font.ITALIC, 40));
-                g.drawString("Vous avez gagné !",50, image.getHeight()/2);
+                g.drawString("Vous avez gagné !",150, image.getHeight()/2);
             }
             catch (Exception e) {
 
