@@ -10,4 +10,7 @@ dist/
 # Compiled Java class files
 *.class
 
+# visual Studio
+.vscode
+
 
