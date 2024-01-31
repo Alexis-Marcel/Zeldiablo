@@ -9,7 +9,6 @@ Zeldiablo is a Java-based video game developed as a major project during my stud
 - Navigate through intricate mazes to find the exit and advance to the next level.
 - Encounter and combat various monsters throughout the labyrinth.
 - Immersive gameplay with intuitive controls and compelling game mechanics.
-- (Any other notable features of the game, like power-ups, special abilities, etc.)
 
 ## Technologies Used
 
